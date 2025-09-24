@@ -71,7 +71,7 @@ add file in the folder
 4. Navigate to book and open `intro.md` and click `edit this file`.
 5. Copy the code below into that file, and change the figure name to your own figure's name.
 
-````{code}
+````{code} myst
 ``` {figure} figures/incl_fig.PNG
 ---
 width: 50%
