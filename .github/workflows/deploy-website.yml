@@ -1,8 +1,8 @@
-# This file was created automatically with `myst init --gh-pages` 🪄 💚
+# This file has been modified, but was initially created automatically with `myst init --gh-pages` 🪄 💚
 # Ensure your GitHub Pages settings for this repository are set to deploy with **GitHub Actions**.
 # ... 
 
-name: MyST GitHub Pages Deploy
+name: Build and Deploy Website
 on:
   push:
     # Runs on pushes targeting the default branch
