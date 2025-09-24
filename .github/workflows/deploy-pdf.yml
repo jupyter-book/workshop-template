@@ -1,7 +1,8 @@
 name: Build and Commit PDF with Typst
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
