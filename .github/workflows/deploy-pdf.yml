@@ -1,4 +1,4 @@
-name: MyST PDF Builder [Typst]
+name: Build and Commit PDF with Typst
 
 on:
   workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Install MyST Markdown
+      - name: Install MyST Markdown with npm
         run: npm install -g mystmd
 
       - name: Install Typst
@@ -40,6 +40,7 @@ jobs:
           if grep -qiE '\berror\b' build_stderr.log || [ "$status" -ne 0 ]; then
             exit 1
           fi
+          echo "PDF build completed successfully."
 
           
       # Commit exports only if build succeeded
@@ -55,6 +56,7 @@ jobs:
             timestamp=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
             git commit -m "Update exports folder [Typst] (${timestamp})"
             git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+            echo "Exports committed and pushed"
           else
             echo "No changes to commit"
           fi
