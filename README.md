@@ -8,7 +8,8 @@ This repository provides a template for creating JB2 books using [MystMD](https:
 - Pre-configured structure for MystMD book projects using two MyST Templates: `book-theme` for websites and `plain_typst_book` for PDF output. 
 - Example content, configuration files and GitHub Actions workflow.
 - Exercises for users to learn to easily edit and create content.
-- Installation and editing on a personal computer not required.
+- Website and PDF are built and deployed using two separate GitHub Actions workflows.
+- Installation and editing on a personal computer not required (due to GH Actions workflows).
 
 ## Getting Started
 
