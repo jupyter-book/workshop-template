@@ -16,9 +16,11 @@ A Jupyter Book is a collection of files and folders that together make up the co
 
 As explained in the previous chapter, your files are on GitHub and the template ensures the book is built. You can make changes directly to the files online in GitHub, and create or upload new files.
 
-Some files are already present in the template book. The folder structure is shown in {numref}`Figure {number} <fig_templatecontent>`.
+Some files are already present in the template book. The folder structure is shown in ... BROKEN REF
+<!-- {numref}`Figure {number} <fig_templatecontent>`. -->
 
-``` {figure} figures/templatecontent.PNG
+``` {figure} ../figures/blank.png
+<!-- ``` {figure} figures/templatecontent.PNG -->
 ---
 width: 80%
 name: fig_templatecontent
@@ -33,7 +35,8 @@ Navigate to the file `book/some_content/overview.md`. Then click on the pencil o
 
 Change the text after the `#`. This is the title of the file.
 
-``` {figure} figures/eersteedit.gif
+``` {figure} ../figures/blank.png
+<!-- ``` {figure} figures/eersteedit.gif -->
 ```
 
 Optionally, make other changes in the text editor and when you're done, commit your changes to the "remote repository" by clicking the green `Commit changes` button.
@@ -60,7 +63,9 @@ So, we first need to upload a figure to GitHub and then refer to that figure in 
 On GitHub, under the `code` tab...
 
 1. Navigate to book/figures and click on `add file` {fa}`right-long` `Upload files`.
-```` {figure} figures/incl_fig.PNG
+
+```` {figure} ../figures/blank.png
+<!-- ```` {figure} figures/incl_fig.PNG -->
 ---
 width: 50%
 ---
