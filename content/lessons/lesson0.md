@@ -12,7 +12,8 @@ Follow these instruction to use this template for your own book.
 3. Choose a proper name of your repository (this will be also part of your URL!) and choose the option `public`.
 4. In your repository, click on `settings` and in the left menu on Pages and choose `Github actions`
 
-``` {figure} figures/start.mp4
+```{figure} ../figures/blank.png
+<!-- ``` {figure} figures/start.mp4 -->
 :name: vid_1
 
 Follow these steps to create your own repository from the template.
@@ -25,8 +26,8 @@ Follow these steps to create your own repository from the template.
 
 The book will now be deployed again - where now it can actually load GitHub pages. 
 
-
-``` {figure} figures/2ndpart.mp4
+```{figure} ../figures/blank.png
+<!-- ``` {figure} figures/2ndpart.mp4 -->
 :name: vid_2
 
 Follow these steps to create your own GHpages from the template.
@@ -70,9 +71,11 @@ It is possible to work directly in the GitHub environment: no need to install an
 
 1. Click on the index.md file in the Content folder
 2. Click on the drop down icon next to the pencil icon and choose `open in github.dev` This will start the GitHub development environment where you can edit the files directly in your browser.
-3. Edit the file by replacing the names with your own and commit your changes (see {numref}`vid_3`).
+3. Edit the file by replacing the names with your own and commit your changes (see  ... BROKEN REF
+<!-- {numref}`vid_3`). -->
 
-```{figure} figures/GHdev.mp4
+```{figure} ../figures/blank.png
+<!-- ```{figure} figures/GHdev.mp4 -->
 :name: vid_3
 
 Working directly in the GitHub development environment.

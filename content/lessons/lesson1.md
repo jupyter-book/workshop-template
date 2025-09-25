@@ -116,7 +116,9 @@ So, we first need to upload a figure to GitHub and then refer to that figure in 
 On GitHub, under the `code` tab...
 
 1. Navigate to book/figures and click on `add file` {fa}`right-long` `Upload files`.
-```` {figure} figures/incl_fig.PNG
+
+```` {figure} ../figures/blank.png
+<!-- ```` {figure} figures/incl_fig.PNG -->
 ---
 width: 50%
 ---
@@ -127,7 +129,7 @@ add file in the folder
 4. Navigate to book and open `intro.md` and click `edit this file`.
 5. Copy the code below into that file, and change the figure name to your own figure's name.
 
-````{code}
+````{code} myst
 ``` {figure} figures/incl_fig.PNG
 ---
 width: 50%
