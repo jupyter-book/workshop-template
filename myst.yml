@@ -18,6 +18,12 @@ project:
   plugins: 
     # links to GH
 
+  # options for pdf output
+  options:
+    - cover: logo.svg
+    - logo: logo.svg
+    - ToC_depth: 2
+
   # exports and downloads
   exports:
     - format: typst
