@@ -1,8 +1,8 @@
-# This file was created automatically with `myst init --gh-pages` 🪄 💚
+# This file has been modified, but was initially created automatically with `myst init --gh-pages` 🪄 💚
 # Ensure your GitHub Pages settings for this repository are set to deploy with **GitHub Actions**.
 # ... 
 
-name: MyST GitHub Pages Deploy
+name: Build and Deploy Website
 on:
   push:
     # Runs on pushes targeting the default branch
@@ -36,18 +36,30 @@ jobs:
         with:
           node-version: 18.x
 
+      # install mystmd
       - name: Install MyST Markdown
         run: npm install -g mystmd
 
+      # include date of last build
+      - name:  build date and replace in myst.yml
+        shell: bash
+        run: |
+          BUILD_DATE="$(date +'%Y-%m-%d')"
+          sed -i "s|${BUILD_DATE}|${BUILD_DATE}|g" myst.yml
+          echo "myst.yml:"
+          grep -nE '^\s*date:' myst.yml
+
+      # build the site 
       - name: Build HTML Assets
         run: myst build --html
 
-
+      # 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_build/html'
-          
+      
+      # deploy the GH page
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

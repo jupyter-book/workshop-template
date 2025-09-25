@@ -1,6 +1,6 @@
-# Lesson 0: Headstart with GH template 
+# Lesson 0: Head start with GH template 
 
-This lesson gives you a headstart in creating your own online book using GitHub and the template repository [JB2_book_template](https://github.com/FreekPols/JB2_book_template).
+This lesson gives you a head start in creating your own online book using GitHub and the template repository [JB2_book_template](https://github.com/FreekPols/JB2_book_template).
 
 
 ## Set up your own repository
@@ -12,7 +12,8 @@ Follow these instruction to use this template for your own book.
 3. Choose a proper name of your repository (this will be also part of your URL!) and choose the option `public`.
 4. In your repository, click on `settings` and in the left menu on Pages and choose `Github actions`
 
-``` {figure} figures/start.mp4
+```{figure} ../figures/blank.png
+<!-- ``` {figure} figures/start.mp4 -->
 :name: vid_1
 
 Follow these steps to create your own repository from the template.
@@ -25,8 +26,8 @@ Follow these steps to create your own repository from the template.
 
 The book will now be deployed again - where now it can actually load GitHub pages. 
 
-
-``` {figure} figures/2ndpart.mp4
+```{figure} ../figures/blank.png
+<!-- ``` {figure} figures/2ndpart.mp4 -->
 :name: vid_2
 
 Follow these steps to create your own GHpages from the template.
@@ -63,21 +64,32 @@ Your GitHub repository looks like the one shown in {numref}`fig_folderstructure`
 Once the book has been deploy, you can visit your site which looks like this.
 ```
 
-
-
-
-## Working in the GitHub development environment
+::::{tab-set}
+:::{tab-item} Using the GH IDE
 
 It is possible to work directly in the GitHub environment: no need to install anything as this is already covered with the GH actions that we created. 
 
 1. Click on the index.md file in the Content folder
 2. Click on the drop down icon next to the pencil icon and choose `open in github.dev` This will start the GitHub development environment where you can edit the files directly in your browser.
-3. Edit the file by replacing the names with your own and commit your changes (see {numref}`vid_3`).
+3. Edit the file by replacing the names with your own and commit your changes (see  ... BROKEN REF
+<!-- {numref}`vid_3`). -->
 
-```{figure} figures/GHdev.mp4
+```{figure} ../figures/blank.png
+<!-- ```{figure} figures/GHdev.mp4 -->
 :name: vid_3
 
 Working directly in the GitHub development environment.
 ```
 
 Now, if you go back to your repository and click on `actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
+:::
+:::{tab-item} Working locally
+**PLACEHOLDER: add instructions to work locally**
+To work locally on your computer, follow these steps:
+
+1. Clone the repository to your local machine using Git.
+2. Install the necessary dependencies (e.g., Python, Jupyter) to build and preview the book.
+3. Make changes to the content files in the `Content` folder.
+4. Build the book locally using the provided scripts or commands.
+5. Preview the book in your browser to see the changes.
+:::
