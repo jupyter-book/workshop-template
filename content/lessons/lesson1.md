@@ -67,7 +67,8 @@ Navigate to the file `book/some_content/overview.md`. Then click on the pencil o
 
 Change the text after the `#`. This is the title of the file.
 
-``` {figure} Figures/eersteedit.gif
+``` {figure} ../figures/blank.png
+<!-- ``` {figure} figures/eersteedit.gif -->
 ```
 
 Optionally, make other changes in the text editor and when you're done, commit your changes to the "remote repository" by clicking the green `Commit changes` button.
