@@ -40,7 +40,7 @@ jobs:
       - name: Install MyST Markdown with npm
         run: npm install -g mystmd
 
-      # include date of last build
+      # set and show date to date of last build 
       - name: Add current date to myst.yml
         shell: bash
         run: |
@@ -48,7 +48,6 @@ jobs:
           sed -i "s|\${BUILD_DATE}|${BUILD_DATE}|g" myst.yml
           echo "myst.yml:"
           grep -nE '^\s*date:' myst.yml
-
 
 
       # build the site 

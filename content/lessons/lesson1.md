@@ -152,7 +152,7 @@ So, we first need to upload a figure to GitHub and then refer to that figure in 
 `````{exercise}
 On GitHub, under the `code` tab...
 
-1. Navigate to book/figures and click on `add file` {fa}`right-long` `Upload files`.
+1. Navigate to book/figures and click on `add file` $\rightarrow$ `Upload files`.
 
 ```` {figure} ../figures/blank.png
 <!-- ```` {figure} figures/incl_fig.PNG -->
