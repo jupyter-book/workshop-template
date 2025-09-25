@@ -22,7 +22,9 @@ project:
   options:
     cover: logo.svg
     logo: logo.svg
+    logo_width: 10
     ToC_depth: 2
+    
 
   # exports and downloads
   exports:
