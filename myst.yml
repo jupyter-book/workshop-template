@@ -20,14 +20,14 @@ project:
 
   # options for pdf output
   options:
-    - cover: logo.svg
-    - logo: logo.svg
-    - ToC_depth: 2
+    cover: logo.svg
+    logo: logo.svg
+    ToC_depth: 2
 
   # exports and downloads
   exports:
     - format: typst
-      template: https://github.com/FreekPols/plain_typst_book.git             #plain_typst_book
+      template: https://github.com/myst-templates/plain_typst_book.git             #plain_typst_book
       output: exports/book.pdf
       id: output-pdf
   downloads:
