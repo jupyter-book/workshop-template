@@ -60,42 +60,41 @@ jobs:
         run: |
           typst --version
 
-      - name: build pdf
-        run: myst build --pdf    
+
       # Build PDFs step with error capture
-      # - name: Build PDF with Typst
-      #   run: |
-      #     set -euo pipefail
-      #     myst build --typst 2> build_stderr.log || status=$?
-      #     : "${status:=0}"
-      #     if [ -s build_stderr.log ]; then
-      #       echo "### Build stderr" >> $GITHUB_STEP_SUMMARY
-      #       cat build_stderr.log >> $GITHUB_STEP_SUMMARY
-      #     fi
-      #     # Fail only if stderr contains “error”
-      #     if grep -qiE '\berror\b' build_stderr.log || [ "$status" -ne 0 ]; then
-      #       exit 1
-      #     fi
-      #     echo "PDF build completed successfully."
+      - name: Build PDF with Typst
+        run: |
+          set -euo pipefail
+          myst build --typst 2> build_stderr.log || status=$?
+          : "${status:=0}"
+          if [ -s build_stderr.log ]; then
+            echo "### Build stderr" >> $GITHUB_STEP_SUMMARY
+            cat build_stderr.log >> $GITHUB_STEP_SUMMARY
+          fi
+          # Fail only if stderr contains “error”
+          if grep -qiE '\berror\b' build_stderr.log || [ "$status" -ne 0 ]; then
+            exit 1
+          fi
+          echo "PDF build completed successfully."
 
           
-      # # Commit exports only if build succeeded
-      # - name: Commit and push exports
-      #   if: success()
-      #   run: |
-      #     git config user.name "github-actions[bot]"
-      #     git config user.email "github-actions[bot]@users.noreply.github.com"
-      #     git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      # Commit exports only if build succeeded
+      - name: Commit and push exports
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
-      #     git add exports/book.pdf
-      #     if ! git diff --cached --quiet; then
-      #       timestamp=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
-      #       git commit -m "Update exports folder [Typst] (${timestamp})"
-      #       git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
-      #       echo "Exports committed and pushed"
-      #     else
-      #       echo "No changes to commit"
-      #     fi
+          git add exports/book.pdf
+          if ! git diff --cached --quiet; then
+            timestamp=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+            git commit -m "Update exports folder [Typst] (${timestamp})"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+            echo "Exports committed and pushed"
+          else
+            echo "No changes to commit"
+          fi
 
       # 
       - name: Upload Artifact
