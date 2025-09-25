@@ -41,13 +41,15 @@ jobs:
         run: npm install -g mystmd
 
       # include date of last build
-      - name:  Add current date to myst.yml
+      - name: Add current date to myst.yml
         shell: bash
         run: |
           BUILD_DATE="$(date +'%Y-%m-%d')"
-          sed -i "s|${BUILD_DATE}|${BUILD_DATE}|g" myst.yml
+          sed -i "s|\${BUILD_DATE}|${BUILD_DATE}|g" myst.yml
           echo "myst.yml:"
           grep -nE '^\s*date:' myst.yml
+
+
 
       # build the site 
       - name: Build HTML Assets
