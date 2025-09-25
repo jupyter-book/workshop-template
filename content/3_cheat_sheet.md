@@ -237,6 +237,31 @@ Text in tab 2
 :::
 ::::
 
+
+### Cards
+::::{tab-set}
+:::{tab-item} cards
+```{card} Title
+:header: header
+:footer: footer
+
+With some text
+```
+:::
+:::{tab-item} syntax
+````markdown
+```{card} Title
+:header: header
+:footer: footer
+
+With some text
+```
+````
+:::
+::::
+
+
+
 ### Checklists 
 ::::{tab-set}
 :::{tab-item} list
