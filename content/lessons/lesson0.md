@@ -1,6 +1,6 @@
-# Lesson 0: Headstart with GH template 
+# Lesson 0: Head start with GH template 
 
-This lesson gives you a headstart in creating your own online book using GitHub and the template repository [JB2_book_template](https://github.com/FreekPols/JB2_book_template).
+This lesson gives you a head start in creating your own online book using GitHub and the template repository [JB2_book_template](https://github.com/FreekPols/JB2_book_template).
 
 
 ## Set up your own repository
@@ -64,10 +64,8 @@ Your GitHub repository looks like the one shown in {numref}`fig_folderstructure`
 Once the book has been deploy, you can visit your site which looks like this.
 ```
 
-
-
-
-## Working in the GitHub development environment
+::::{tab-set}
+:::{tab-item} Using the GH IDE
 
 It is possible to work directly in the GitHub environment: no need to install anything as this is already covered with the GH actions that we created. 
 
@@ -84,3 +82,14 @@ Working directly in the GitHub development environment.
 ```
 
 Now, if you go back to your repository and click on `actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
+:::
+:::{tab-item} Working locally
+**PLACEHOLDER: add instructions to work locally**
+To work locally on your computer, follow these steps:
+
+1. Clone the repository to your local machine using Git.
+2. Install the necessary dependencies (e.g., Python, Jupyter) to build and preview the book.
+3. Make changes to the content files in the `Content` folder.
+4. Build the book locally using the provided scripts or commands.
+5. Preview the book in your browser to see the changes.
+:::

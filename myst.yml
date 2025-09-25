@@ -12,7 +12,7 @@ project:
     - name: Kirstie Whitaker
 
   # abstract: Optional
-  date: 2025-17-09
+  date:  ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
 
   plugins: 
@@ -39,14 +39,14 @@ project:
     - file: content/2_jup_nb.ipynb
     - file: content/3_cheat_sheet.md
     - file: content/4_pdfoutput.md
-    - file: content/lessons/Your_turn.md          # dropdown menu
+    - file: content/lessons/your_turn.md          # dropdown menu
       children:
-        - file: content/lessons/Lesson0.md
-        - file: content/lessons/Lesson1.md
-        - file: content/lessons/Lesson2.md
-        - file: content/lessons/Lesson3.ipynb
-        - file: content/lessons/Lesson4.md
-    - file: content/Software.md
+        - file: content/lessons/lesson0.md
+        - file: content/lessons/lesson1.md
+        - file: content/lessons/lesson2.md
+        - file: content/lessons/lesson3.ipynb
+        - file: content/lessons/lesson4.md
+    - file: content/software.md
     
 site:
   template: book-theme
