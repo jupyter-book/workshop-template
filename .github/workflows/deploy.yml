@@ -2,7 +2,7 @@
 # Ensure your GitHub Pages settings for this repository are set to deploy with **GitHub Actions**.
 # ... 
 
-name: Build and Deploy Website
+name: Build and Deploy Website and PDF
 on:
   push:
     # Runs on pushes targeting the default branch
@@ -30,18 +30,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - uses: actions/configure-pages@v3
       - uses: actions/setup-node@v4
         with:
           node-version: 18.x
+      - uses: typst-community/setup-typst@v4
 
       # install mystmd
-      - name: Install MyST Markdown
+      - name: Install MyST Markdown with npm
         run: npm install -g mystmd
 
       # include date of last build
-      - name:  build date and replace in myst.yml
+      - name:  Add current date to myst.yml
         shell: bash
         run: |
           BUILD_DATE="$(date +'%Y-%m-%d')"
@@ -53,8 +53,48 @@ jobs:
       - name: Build HTML Assets
         run: myst build --html
 
+
+      - name: Install Typst
+        run: |
+          typst --version
+
+      # Build PDFs step with error capture
+      - name: Build PDF with Typst
+        run: |
+          set -euo pipefail
+          myst build --typst 2> build_stderr.log || status=$?
+          : "${status:=0}"
+          if [ -s build_stderr.log ]; then
+            echo "### Build stderr" >> $GITHUB_STEP_SUMMARY
+            cat build_stderr.log >> $GITHUB_STEP_SUMMARY
+          fi
+          # Fail only if stderr contains “error”
+          if grep -qiE '\berror\b' build_stderr.log || [ "$status" -ne 0 ]; then
+            exit 1
+          fi
+          echo "PDF build completed successfully."
+
+          
+      # # Commit exports only if build succeeded
+      # - name: Commit and push exports
+      #   if: success()
+      #   run: |
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "github-actions[bot]@users.noreply.github.com"
+      #     git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      #     git add exports/book.pdf
+      #     if ! git diff --cached --quiet; then
+      #       timestamp=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+      #       git commit -m "Update exports folder [Typst] (${timestamp})"
+      #       git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+      #       echo "Exports committed and pushed"
+      #     else
+      #       echo "No changes to commit"
+      #     fi
+
       # 
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './_build/html'
