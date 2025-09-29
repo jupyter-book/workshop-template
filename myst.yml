@@ -10,12 +10,14 @@ project:
     - name: Luuk Fröling
     - name: Robert Lanzafame
     - name: Kirstie Whitaker
+  license:
+    content: CC-BY-4.0
 
   # abstract: Optional
-  date:  ${BUILD_DATE} 
+  date:  ${BUILD_DATE}
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
 
-  plugins: 
+  plugins:
     # links to GH
 
   # options for pdf output
@@ -24,7 +26,7 @@ project:
     logo: logo.svg
     logo_width: 10
     ToC_depth: 2
-    
+
 
   # exports and downloads
   exports:
@@ -34,14 +36,14 @@ project:
       id: output-pdf
   downloads:
     - id: output-pdf
-    
+
   # Jupyter Notebook configuration
   jupyter:
     binder:
       repo: https://github.com/executablebooks/thebe-binder-base
 
   # To autogenerate a Table of Contents, run "myst init --write-toc"
-  toc:    
+  toc:
     - file: index.md                      # the landing page
     - file: content/1_intro.md
     - file: content/2_jup_nb.ipynb
@@ -55,7 +57,7 @@ project:
         - file: content/lessons/lesson3.ipynb
         - file: content/lessons/lesson4.md
     - file: content/software.md
-    
+
 site:
   template: book-theme
   options:
@@ -64,7 +66,7 @@ site:
     logo: logo.svg            # path to your logo, shown top left at site
     folders: false
     hide_authors: true
-  
+
   actions:
     - title: report issue
       url: https://github.com/FreekPols/JB2_book_template/issues
