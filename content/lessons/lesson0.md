@@ -69,8 +69,7 @@ It is possible to work directly in the GitHub environment: no need to install an
 
 1. Click on the index.md file in the Content folder
 2. Click on the drop down icon next to the pencil icon and choose `open in github.dev` This will start the GitHub development environment where you can edit the files directly in your browser.
-3. Edit the file by replacing the names with your own and commit your changes (see  ... BROKEN REF
-<!-- {numref}`vid_3`). -->
+3. Edit the file by replacing the names with your own and commit your changes, see [](#vid_3)
 
 ```{figure} figures/GHdev.*
 :name: vid_3
