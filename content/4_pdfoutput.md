@@ -10,7 +10,7 @@ See the `myst.yml` file, or [](#code_export) for the syntax.
 
 :::{literalinclude} ../myst.yml
 :start-after: exports
-:end-before: # Jupyter Notebook configuration
+:end-at: - id: output-pdf
 :lineno-match:
 :caption: Example of the export section in the `myst.yml` file.
 :label: code_export

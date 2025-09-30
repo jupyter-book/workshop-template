@@ -15,7 +15,7 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 
 :::{literalinclude} ../myst.yml
 :start-after: toc
-:end-before: site
+:end-at: - file: content/software.md
 :lineno-match:
 :caption: The Table of Contents (ToC) for this book.
 :label: code_toc
