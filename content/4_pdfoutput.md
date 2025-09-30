@@ -3,15 +3,18 @@
 You can export your book to a pdf in two ways: using LaTeX or Typst. Both have their advantages and disadvantages. For this template we made an automated GH action that builds the pdf for you utilizing Typst.
 
 ## Specify output in myst.yml
-We specified in the `myst.yml` file that we want to export to pdf using Typst. You can also choose LaTeX. See the `myst.yml` file, or {numref}`fig_export` for the syntax.
 
-```{figure} figures/export.png
-:width: 70%
-:align: center
-:name: fig_export
+We specified in the `myst.yml` file that we want to export to pdf using Typst.
+You can also choose LaTeX.
+See the `myst.yml` file, or [](#code_export) for the syntax.
 
-Example of the export section in the `myst.yml` file.
-```
+:::{literalinclude} ../myst.yml
+:start-after: exports
+:end-before: # Jupyter Notebook configuration
+:lineno-match:
+:caption: Example of the export section in the `myst.yml` file.
+:label: code_export
+:::
 
 Using the export option, a pdf will be generated in the `Exports` folder every time you push to GitHub. You can specify the [output template](https://github.com/myst-templates). We won't go into detail here, but you can find more information [here](https://mystmd.org/guide/creating-pdf-documents).
 
