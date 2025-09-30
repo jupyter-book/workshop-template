@@ -14,7 +14,7 @@ project:
     content: CC-BY-4.0
 
   # abstract: Optional
-  date:  ${BUILD_DATE}
+  date: 2025-09-29 # ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
 
   plugins:
