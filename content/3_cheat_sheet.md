@@ -1,31 +1,35 @@
 # Markdown (Cheat sheet)
 
-Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code. 
+Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
 
 
 ## Book structure
 We can distinguish between two structures: that of the book's content (a collection of different documents), and the (internal) structure of the chapters which consists of content structured in sections and subsections.
 
 ### Table of Contents
-In the `myst.yml` file, you can specify the structure of the book as shown in {numref}`fig_toc`. Here you can indicate which files belong to the book and in what order. You can also create dropdown menus. When not specifying a ToC, all files are automatically included in alphabetical order.
 
-```{figure} figures/toc.png
-:width: 70%
-:align: center
-:name: fig_toc
+In the `myst.yml` file, you can specify the structure of the book as shown in [](#code_toc).
+Here you can indicate which files belong to the book and in what order.
+You can also create dropdown menus.
+When not specifying a ToC, all files are automatically included in alphabetical order.
 
-The Table of Contents (ToC) for this book.
-```
+:::{literalinclude} ../myst.yml
+:start-after: toc
+:end-before: site
+:lineno-match:
+:caption: The Table of Contents (ToC) for this book.
+:label: code_toc
+:::
 
 If you create a new file, you need to add it to the `myst.yml` file to include it in the book.
 
-### Chapters, sections and subsections    
+### Chapters, sections and subsections
 To distinguish between chapter, section, and subsection (and further), use a number of `#` symbols, as shown below.
 
 ```markdown
-# H1 chapter  
-## H1.1 section   
-### H1.1.3 subsection  
+# H1 chapter
+## H1.1 section
+### H1.1.3 subsection
 ```
 
 ```{tip}
@@ -33,20 +37,20 @@ Do not number your chapters and sections! This happens automatically.
 ```
 
 ```{note}
-Files below `children` in the `myst.yml` file are considered sections, even when the heading has a single `#`. 
+Files below `children` in the `myst.yml` file are considered sections, even when the heading has a single `#`.
 ```
 
 ## Basic Formatting
 Markdown is a markup language where text formatting is done with small pieces of code (just like HTML). This is a table with some frequently used formatting options.
 
-| Element | Syntax | Example | 
+| Element | Syntax | Example |
 | --- | --- | --- |
 | Bold | `**bold text**` | **Bold** |
 | Italic | `*italics*` | *Italics* |
 | Emphasis | `***emphasis***` | ***emphasis*** |
 | Inline Formula | `$F = m \cdot a$` | $F = m \cdot a$ |
-| Footnote | ` - A footnote reference[^myref]` <br> `[^myref]: This is an auto-numbered footnote definition.` | - A footnote reference[^myref] | 
- 
+| Footnote | ` - A footnote reference[^myref]` <br> `[^myref]: This is an auto-numbered footnote definition.` | - A footnote reference[^myref] |
+
 [^myref]: This is an auto-numbered footnote definition.
 
 
@@ -58,7 +62,7 @@ Generally, in markdown, a single hard enter does not create a new line. You need
 
 ::::{tab-set}
 :::{tab-item} ways for a new line
-A new line with double space.  
+A new line with double space.
 A new line with a `\`.\
 A new line with a hard enter and blank line.
 
@@ -67,7 +71,7 @@ Like this
 :::
 :::{tab-item} syntax
 ```markdown
-A new line with double space.  
+A new line with double space.
 A new line with a `\`.\
 A new line with a hard enter and blank line.
 
@@ -185,9 +189,9 @@ Or via ...
 * - Behavior
     - Sanction for 1st time
     - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered 
-    - A penalty                                       
-    - exclusion              
+* - Not (timely or with a valid reason) deregistered
+    - A penalty
+    - exclusion
 ```
 
 :::
@@ -201,10 +205,10 @@ Or via ...
 * - Behavior
     - Sanction for 1st time
     - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered 
-    - A penalty                                       
-    - exclusion              
-``` 
+* - Not (timely or with a valid reason) deregistered
+    - A penalty
+    - exclusion
+```
 ````
 
 :::
@@ -262,7 +266,7 @@ With some text
 
 
 
-### Checklists 
+### Checklists
 ::::{tab-set}
 :::{tab-item} list
 - [x] Create a markdown cheat sheet
@@ -286,20 +290,20 @@ You can add special blocks that are highlighted in the text. See, for example, t
 Here is a warning
 ```
 
-Created using: 
+Created using:
 
 ````markdown
-```{warning}    
+```{warning}
 Here is a warning
 ```
 ````
 
 There are different variants such as:
-* tip 
-* admonition 
-* warning 
-* note 
-* objective 
+* tip
+* admonition
+* warning
+* note
+* objective
 * see also ...
 
 ```{tip} The golden...
@@ -307,7 +311,7 @@ Exercises are a special kind of admonition.
 ```
 
 ### Exercises
-A special case is the exercises which can be labeled and can come with a solution that is linked to the exercise: 
+A special case is the exercises which can be labeled and can come with a solution that is linked to the exercise:
 ```{exercise} Exercise 1
 :label: ex_opdr_1
 
@@ -399,17 +403,17 @@ Below a few examples of links and references to labeled items.
 
 ::::{tab-set}
 :::{tab-item} list
-* This is a [hyperlink](https://nos.nl)  
-* This is a reference to equation {eq}`eq:Newton`  
-* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`  
-* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`  
+* This is a [hyperlink](https://nos.nl)
+* This is a reference to equation {eq}`eq:Newton`
+* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`
+* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`
 :::
 :::{tab-item} syntax
 ```markdown
-* This is a [hyperlink](https://nos.nl)  
-* This is a reference to equation {eq}`eq:Newton`  
-* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`  
-* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`  
+* This is a [hyperlink](https://nos.nl)
+* This is a reference to equation {eq}`eq:Newton`
+* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`
+* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`
 ```
 :::
 ::::
