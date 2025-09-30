@@ -67,7 +67,7 @@ Once the book has been deploy, you can visit your site which looks like this.
 You have a number of options for making changes to the book's source and seeing how they affect the output.
 
 ::::{tab-set}
-:::{tab-item} Using the GH IDE
+:::{tab-item} Using the GitHub IDE
 
 It is possible to work directly in the GitHub environment: no need to install anything as this is already covered with the GH actions that we created.
 
@@ -121,9 +121,31 @@ npm install -g mystmd
 pip install mystmd
 ```
 
-```{hint}
-To build a pdf using LaTeX or Typst you will need to install additional packages.
+`````{hint}
+To build a pdf using Typst you will need to install the Typst CLI.
+There are a [number of options for installing Typst](https://github.com/typst/typst?tab=readme-ov-file#installation).
+
+````{dropdown} Common options for installing Typst
+Using brew
+
+```console
+brew install typst
 ```
+
+Using cargo
+
+```console
+cargo install --locked typst-cli
+```
+
+Using winget
+
+```console
+winget install --id Typst.Typst
+```
+
+````
+`````
 
 3. Make changes to the content files in the `content` directory using your text editor.
 4. Serve the book locally.
