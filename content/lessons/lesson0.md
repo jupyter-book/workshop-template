@@ -62,15 +62,18 @@ Your GitHub repository looks like the one shown in {numref}`fig_folderstructure`
 Once the book has been deploy, you can visit your site which looks like this.
 ```
 
-::::{tab-set}
-:::{tab-item} Using the GH IDE
+## Making and deploying changes
 
-It is possible to work directly in the GitHub environment: no need to install anything as this is already covered with the GH actions that we created. 
+You have a number of options for making changes to the book's source and seeing how they affect the output.
+
+::::{tab-set}
+:::{tab-item} Using the GitHub IDE
+
+It is possible to work directly in the GitHub environment: no need to install anything as this is already covered with the GH actions that we created.
 
 1. Click on the index.md file in the Content folder
 2. Click on the drop down icon next to the pencil icon and choose `open in github.dev` This will start the GitHub development environment where you can edit the files directly in your browser.
-3. Edit the file by replacing the names with your own and commit your changes (see  ... BROKEN REF
-<!-- {numref}`vid_3`). -->
+3. Edit the file by replacing the names with your own and commit your changes, see [](#vid_3)
 
 ```{figure} figures/GHdev.*
 :name: vid_3
@@ -80,13 +83,82 @@ Working directly in the GitHub development environment.
 
 Now, if you go back to your repository and click on `actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
 :::
-:::{tab-item} Working locally
-**PLACEHOLDER: add instructions to work locally**
-To work locally on your computer, follow these steps:
+:::{tab-item} Using your favourite editor
+You can also make changes locally then push them back to your GitHub repository.
+1. Clone the repository to your local machine using Git.
+
+```console
+git clone git@github.com:<github_user_name>/JB2_book_template.git
+```
+
+2. Make changes to the content files in the `content` directory using your text editor.
+3. Commit and push your changes. For example
+
+```console
+git commit -a
+git push -u origin main
+```
+
+Now, if you go back to your repository and click on `actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
+
+:::
+:::{tab-item} Entirely locally
+If you prefer, you can also work entirely locally using command-line tools and a text editor.
 
 1. Clone the repository to your local machine using Git.
-2. Install the necessary dependencies (e.g., Python, Jupyter) to build and preview the book.
-3. Make changes to the content files in the `Content` folder.
-4. Build the book locally using the provided scripts or commands.
-5. Preview the book in your browser to see the changes.
+
+```console
+git clone git@github.com:<github_user_name>/JB2_book_template.git
+```
+
+2. Install MyST Markdown. Using `npm` or `pip`
+
+```console
+npm install -g mystmd
+```
+
+```console
+pip install mystmd
+```
+
+`````{hint}
+To build a pdf using Typst you will need to install the Typst CLI.
+There are a [number of options for installing Typst](https://github.com/typst/typst?tab=readme-ov-file#installation).
+
+````{dropdown} Common options for installing Typst
+Using brew
+
+```console
+brew install typst
+```
+
+Using cargo
+
+```console
+cargo install --locked typst-cli
+```
+
+Using winget
+
+```console
+winget install --id Typst.Typst
+```
+
+````
+`````
+
+3. Make changes to the content files in the `content` directory using your text editor.
+4. Serve the book locally.
+
+```console
+myst start
+```
+
+5. Preview the book in your browser at [`http://localhost:3000`](http://localhost:3000)
+
+```{tip}
+Once the MyST server is running, it will automatically update as you make changes to the source.
+```
+
 :::
+::::
