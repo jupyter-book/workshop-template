@@ -122,9 +122,11 @@ Some examples of the notation
 
 You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
 
-## Lists & tables
+## Lists
 
-### Lists Option 1
+### Ordered lists
+
+Ordered lists can be made with automatically numbered items.
 
 ::::{card}
 1. item 1
@@ -139,7 +141,7 @@ You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](
 :::
 ::::
 
-### Lists Option 2
+Or you can manually number the items
 
 ::::{card}
 1. item 1
@@ -154,7 +156,42 @@ You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](
 :::
 ::::
 
-### Tables
+### Unordered lists
+
+Unordered lists use `-` or `*` for each item.
+
+::::{card}
+- a
+- b
+- c
+:::{dropdown} Markdown syntax
+```markdown
+- a
+- b
+- c
+```
+:::
+::::
+
+### Checklists
+
+You can also create checklists.
+The checks are interactive, you can tick or untick them.
+
+::::{card}
+- [x] Create a markdown cheat sheet
+- [x] Publish online
+- [ ] Let others test
+:::{dropdown} Markdown syntax
+```markdown
+- [x] Create a markdown cheat sheet
+- [x] Publish online
+- [ ] Let others test
+```
+:::
+::::
+
+## Tables
 
 Tables are created with the separator `|`
 
@@ -204,6 +241,8 @@ Or via …
 
 Method 2 has the advantage of allowing references to {numref}`Table {number} <tl_sanctions>`
 
+## Blocks
+
 ### Tabs
 
 ::::::{card}
@@ -251,20 +290,6 @@ With some text
 ::::
 :::::
 
-### Checklists
-
-::::{card}
-- [x] Create a markdown cheat sheet
-- [x] Publish online
-- [ ] Let others test
-:::{dropdown} Markdown syntax
-```markdown
-- [x] Create a markdown cheat sheet
-- [x] Publish online
-- [ ] Let others test
-```
-:::
-::::
 
 ## Admonitions
 
