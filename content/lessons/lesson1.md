@@ -4,29 +4,13 @@
 
 A Jupyter Book is a collection of files and folders that together make up the content and structure of your book. The structure of the book is specified in the `myst.yml` file, which is located in the root directory of your book. This file contains information about the title, author, and other metadata of the book, as well as documents and its structure to build the book itself.
 
-````{card} myst.yml file
-```yaml
-# See docs at: https://mystmd.org/guide/frontmatter
-version: 1
-project:
-  # title:
-  # description:
-  keywords: []
-  authors: []
-  # github:
-  # bibliography: []
-site:
-  template: book-theme
-  # title:
-  # options:
-  #   logo: my_logo.png
-  nav: []
-  actions:
-    - title: Learn More
-      url: https://mystmd.org/guide
-  domains: []
-```
-````
+:::{literalinclude} ../../myst.yml
+:start-at: # See docs
+:end-at: content
+:lineno-match:
+:caption: The head of this book's `myst.yml`
+:label: less1_code_head
+:::
 
 
 ```{card} Official documentation
@@ -39,24 +23,13 @@ As explained in the previous chapter, your files are on GitHub and the template 
 
 Some files are already present in the template book. The folder structure is shown below
 
-````{card} ToC
-```yml
-  toc:                                            # table of contents
-    - file: index.md                              # the landing page
-    - file: content/1_intro.md
-    - file: content/2_jup_nb.ipynb
-    - file: content/3_cheat_sheet.md
-    - file: content/4_pdfoutput.md
-    - file: content/lessons/your_turn.md          
-      children:                                   # dropdown menu
-        - file: content/lessons/lesson0.md        # first item in dropdown, note indentation
-        - file: content/lessons/lesson1.md
-        - file: content/lessons/lesson2.md
-        - file: content/lessons/lesson3.ipynb
-        - file: content/lessons/lesson4.md
-    - file: content/software.md                   # not in dropdown menu
-```
-````
+:::{literalinclude} ../../myst.yml
+:start-after: toc
+:end-at: - file: content/software.md
+:lineno-match:
+:caption: The Table of Contents (ToC) for this book.
+:label: lesson1_code_toc
+:::
 
 We will now make a small change to one of the files and then look at the result of that change.
 
