@@ -2,11 +2,12 @@
 
 Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
 
-
 ## Book structure
+
 We can distinguish between two structures: that of the book's content (a collection of different documents), and the (internal) structure of the chapters which consists of content structured in sections and subsections.
 
 ### Table of Contents
+
 In the `myst.yml` file, you can specify the structure of the book as shown in {numref}`fig_toc`. Here you can indicate which files belong to the book and in what order. You can also create dropdown menus. When not specifying a ToC, all files are automatically included in alphabetical order.
 
 ```{figure} figures/toc.png
@@ -20,6 +21,7 @@ The Table of Contents (ToC) for this book.
 If you create a new file, you need to add it to the `myst.yml` file to include it in the book.
 
 ### Chapters, sections and subsections
+
 To distinguish between chapter, section, and subsection (and further), use a number of `#` symbols, as shown below.
 
 ```markdown
@@ -37,6 +39,7 @@ Files below `children` in the `myst.yml` file are considered sections, even when
 ```
 
 ## Basic Formatting
+
 Markdown is a markup language where text formatting is done with small pieces of code (just like HTML). This is a table with some frequently used formatting options.
 
 | Element | Syntax | Example |
@@ -52,7 +55,7 @@ Markdown is a markup language where text formatting is done with small pieces of
 
 You can create a new line by either a hard enter and a blank line, a `\` at the end of the line and enter, or two spaces at the end of the line.
 
-### New Line
+### New Lines
 
 Generally, in markdown, a single hard enter does not create a new line. You need to use one of the options below.
 
@@ -75,35 +78,49 @@ Like this
 :::
 ::::
 
-### Equations & Symbols
+## Mathematics and equations
 
-For STEM subjects, mathematical equations and symbols ($\Delta \lambda$) are essential. You can include equations in JB's. What is possible in LaTeX is also possible in JB, for example:
+For STEM subjects, mathematical equations and symbol are essential.
+You can include equations in JupyterBooks using the LaTeX syntax for mathematics.
 
-$$ F_{res} = m \cdot a$$ (eq:Newton)
+Labelled equations using double dollars, such as {eq}`eq:Newton`, can be referenced.
 
-Where labeled equations, such as {eq}`eq:Newton`, can be referenced.
+::::{card}
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+:::{dropdown} Markdown syntax
+```markdown
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+```
+:::
+::::
 
-`$$ Equation $$ (<label>)`
 
-But you can also include inline equations like this: $s=v_{avg}t$. Use a single dollar sign before and after: `$ Equation $`
+But you can also write inline equations with single dollars.
 
-|Name|Script|Symbols|
-|---|---|---|
-|root|`\sqrt{4}`|$\sqrt{4}$|
-|power|`^{2x}`|$^{2x}$|
-|fraction|`\frac{2}{3}`|$\frac{2}{3}$|
-|subscript|`_{avg}`|$_{avg}$|
-|superscript|`^{N}`|$^{N}$|
-|multiply|`\cdot`|$\cdot$|
+::::{card}
+$s=v_{\mathrm{avg}}t$
+:::{dropdown} Markdown syntax
+```markdown
+$s=v_{\mathrm{avg}}t$
+```
+:::
+::::
 
-Some examples:
-|Name|Script|Output|
-|---|---|---|
-|Derivative|`\frac{\Delta f}{\Delta t}`|$\frac{\Delta f}{\Delta t}$|
-|Integral|`\int_a^b dx`|$\int_a^b dx$|
-|sine|`sin(x)`|$sin(x)$|
+Some examples of the notation
 
-More: https://en.wikibooks.org/wiki/LaTeX/Mathematics
+| Name              | Syntax                      | Output                      |
+| ---               | ---                         | ---                         |
+| Greek script      | `\Delta \lambda`            | $\Delta \lambda$            |
+| root              | `\sqrt{4}`                  | $\sqrt{4}$                  |
+| superscript/power | `x^{2a}`                    | $x^{2a}$                    |
+| fraction          | `\frac{2}{3}`               | $\frac{2}{3}$               |
+| subscript         | `x_{\mathrm{avg}}`          | $x_{\mathrm{avg}}$          |
+| multiply          | `a \cdot b`                 | $a \cdot b$                 |
+| derivative        | `\frac{\Delta f}{\Delta t}` | $\frac{\Delta f}{\Delta t}$ |
+| integral          | `\int_a^b f(x) \mathrm{d}x` | $\int_a^b f(x) \mathrm{d}x$ |
+| sine              | `\sin(x)`                   | $\sin(x)$                   |
+
+You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
 
 ## Lists & tables
 
