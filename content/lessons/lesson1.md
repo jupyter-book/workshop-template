@@ -158,7 +158,7 @@ The code is case sensitive. So it matters whether your extension is .png or .PNG
 ```
 
 ```{tip}
-We have a page with all important [codes](./Cheatsheet.md).
+We have a page with all important [codes](#cheatsheet).
 
 You can find more information about figure options [here](https://teachbooks.io/manual/basic-features/figures.html).
 ```
@@ -168,7 +168,7 @@ You can position figures in different places (left / center / right / margin), a
 ## Your favorite equation
 
 ```{exercise} Add an equation
-Take a look at the [Cheatsheet page](./Cheatsheet.md) to see how to add a formula and give it a try...
+Take a look at the [Cheatsheet page](#cheatsheet) to see how to add a formula and give it a try...
 ```
 
 ## Other changes
