@@ -1,6 +1,6 @@
 # Markdown (Cheat sheet)
 
-Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code. 
+Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
 
 
 ## Book structure
@@ -19,13 +19,13 @@ The Table of Contents (ToC) for this book.
 
 If you create a new file, you need to add it to the `myst.yml` file to include it in the book.
 
-### Chapters, sections and subsections    
+### Chapters, sections and subsections
 To distinguish between chapter, section, and subsection (and further), use a number of `#` symbols, as shown below.
 
 ```markdown
-# H1 chapter  
-## H1.1 section   
-### H1.1.3 subsection  
+# H1 chapter
+## H1.1 section
+### H1.1.3 subsection
 ```
 
 ```{tip}
@@ -33,20 +33,20 @@ Do not number your chapters and sections! This happens automatically.
 ```
 
 ```{note}
-Files below `children` in the `myst.yml` file are considered sections, even when the heading has a single `#`. 
+Files below `children` in the `myst.yml` file are considered sections, even when the heading has a single `#`.
 ```
 
 ## Basic Formatting
 Markdown is a markup language where text formatting is done with small pieces of code (just like HTML). This is a table with some frequently used formatting options.
 
-| Element | Syntax | Example | 
+| Element | Syntax | Example |
 | --- | --- | --- |
 | Bold | `**bold text**` | **Bold** |
 | Italic | `*italics*` | *Italics* |
 | Emphasis | `***emphasis***` | ***emphasis*** |
 | Inline Formula | `$F = m \cdot a$` | $F = m \cdot a$ |
-| Footnote | ` - A footnote reference[^myref]` <br> `[^myref]: This is an auto-numbered footnote definition.` | - A footnote reference[^myref] | 
- 
+| Footnote | ` - A footnote reference[^myref]` <br> `[^myref]: This is an auto-numbered footnote definition.` | - A footnote reference[^myref] |
+
 [^myref]: This is an auto-numbered footnote definition.
 
 
@@ -56,18 +56,16 @@ You can create a new line by either a hard enter and a blank line, a `\` at the 
 
 Generally, in markdown, a single hard enter does not create a new line. You need to use one of the options below.
 
-::::{tab-set}
-:::{tab-item} ways for a new line
-A new line with double space.  
+::::{card}
+A new line with double space.
 A new line with a `\`.\
 A new line with a hard enter and blank line.
 
 No new line with just a hard enter and text on the next line.
 Like this
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
-A new line with double space.  
+A new line with double space.
 A new line with a `\`.\
 A new line with a hard enter and blank line.
 
@@ -107,18 +105,15 @@ Some examples:
 
 More: https://en.wikibooks.org/wiki/LaTeX/Mathematics
 
-
 ## Lists & tables
 
-
 ### Lists Option 1
-::::{tab-set}
-:::{tab-item} list
+
+::::{card}
 1. item 1
 1. item 2.
 1. item 3.
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
 1. item 1
 1. item 2.
@@ -128,13 +123,12 @@ More: https://en.wikibooks.org/wiki/LaTeX/Mathematics
 ::::
 
 ### Lists Option 2
-::::{tab-set}
-:::{tab-item} list
+
+::::{card}
 1. item 1
 2. item 2.
 3. item 3.
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
 1. item 1
 2. item 2.
@@ -143,57 +137,39 @@ More: https://en.wikibooks.org/wiki/LaTeX/Mathematics
 :::
 ::::
 
-
 ### Tables
 
 Tables are created with the separator `|`
 
-::::{tab-set}
-:::{tab-item} Tables
-
-```
+::::{card}
+|Header 1|Header 2|Header 3|
+|---|---|---|
+|text 1|text 2|text 3|
+|text 4|text 5|text 6|
+:::{dropdown} Markdown syntax
+```markdown
 |Header 1|Header 2|Header 3|
 |---|---|---|
 |text 1|text 2|text 3|
 |text 4|text 5|text 6|
 ```
-
-:::
-
-:::{tab-item} MyST Syntax
-
-````markdown
-```
-|Header 1|Header 2|Header 3|
-|---|---|---|
-|text 1|text 2|text 3|
-|text 4|text 5|text 6|
-```
-````
-
 :::
 ::::
 
-Or via ...
+Or via …
 
-::::{tab-set}
-:::{tab-item} Tables
-
+::::{card}
 ```{list-table} Overview of sanctions for certain behavior
 :header-rows: 1
 :name: tl_sanctions
 * - Behavior
     - Sanction for 1st time
     - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered 
-    - A penalty                                       
-    - exclusion              
+* - Not (timely or with a valid reason) deregistered
+    - A penalty
+    - exclusion
 ```
-
-:::
-
-:::{tab-item} MyST Syntax
-
+:::{dropdown} Markdown syntax
 ````markdown
 ```{list-table} Overview of sanctions for certain behavior
 :header-rows: 1
@@ -201,12 +177,11 @@ Or via ...
 * - Behavior
     - Sanction for 1st time
     - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered 
-    - A penalty                                       
-    - exclusion              
-``` 
+* - Not (timely or with a valid reason) deregistered
+    - A penalty
+    - exclusion
+```
 ````
-
 :::
 ::::
 
@@ -214,6 +189,16 @@ Method 2 has the advantage of allowing references to {numref}`Table {number} <tl
 
 ### Tabs
 
+::::::{card}
+::::{tab-set}
+:::{tab-item} Tab 1
+Text in tab 1
+:::
+
+:::{tab-item} Tab 2
+Text in tab 2
+::::
+:::::{dropdown} Markdown syntax
 ```markdown
 ::::{tab-set}
 :::{tab-item} Tab 1
@@ -225,30 +210,19 @@ Text in tab 2
 :::
 ::::
 ```
-Will create this tab:
-
-::::{tab-set}
-:::{tab-item} Tab 1
-Text in tab 1
-:::
-
-:::{tab-item} Tab 2
-Text in tab 2
-:::
-::::
-
+:::::
+::::::
 
 ### Cards
-::::{tab-set}
-:::{tab-item} cards
+
+:::::{card}
 ```{card} Title
 :header: header
 :footer: footer
 
 With some text
 ```
-:::
-:::{tab-item} syntax
+::::{dropdown} Markdown syntax
 ````markdown
 ```{card} Title
 :header: header
@@ -257,19 +231,16 @@ With some text
 With some text
 ```
 ````
-:::
 ::::
+:::::
 
+### Checklists
 
-
-### Checklists 
-::::{tab-set}
-:::{tab-item} list
+::::{card}
 - [x] Create a markdown cheat sheet
 - [x] Publish online
 - [ ] Let others test
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
 - [x] Create a markdown cheat sheet
 - [x] Publish online
@@ -278,36 +249,39 @@ With some text
 :::
 ::::
 
-
 ## Admonitions
+
 You can add special blocks that are highlighted in the text. See, for example, the warning below.
 
+::::{card}
 ```{warning}
 Here is a warning
 ```
-
-Created using: 
-
+:::{dropdown} Markdown syntax
 ````markdown
-```{warning}    
+```{warning}
 Here is a warning
 ```
 ````
+:::
+::::
 
 There are different variants such as:
-* tip 
-* admonition 
-* warning 
-* note 
-* objective 
-* see also ...
+* tip
+* admonition
+* warning
+* note
+* objective
 
-```{tip} The golden...
+```{tip} The golden…
 Exercises are a special kind of admonition.
 ```
 
 ### Exercises
-A special case is the exercises which can be labeled and can come with a solution that is linked to the exercise: 
+
+A special case is the exercises which can be labelled and can come with a solution that is linked to the exercise:
+
+::::{card}
 ```{exercise} Exercise 1
 :label: ex_opdr_1
 
@@ -319,19 +293,35 @@ Calculate $4+2$
 
 6
 ```
+:::{dropdown} Markdown syntax
+````markdown
+```{exercise} Exercise 1
+:label: ex_opdr_1
+
+Calculate $4+2$
+```
+
+```{solution} ex_opdr_1
+:class: dropdown
+
+6
+```
+````
+:::
+::::
 
 ## Figures
 A site/book naturally needs figures. There are roughly two ways to add a figure:
 
-*Quick figure, without formatting options*
+Quick figure, without formatting options
 
-| Quick figure | `![](link to figure)` |
+```markdown
+![](path/to/figure)
+```
 
-*Better way with more control:*
+Better way with more control:
 
-::::{tab-set}
-:::{tab-item} Figures
-
+::::{card}
 ```{figure} https://github.com/rowanc1/pics/blob/main/sunset.png
 :label: fig_sunset
 :width: 70%
@@ -339,40 +329,34 @@ A site/book naturally needs figures. There are roughly two ways to add a figure:
 
 With a nice caption
 ```
-
-:::
-
-:::{tab-item} MyST Syntax
-
+:::{dropdown} Markdown syntax
 ````markdown
 ```{figure} https://github.com/rowanc1/pics/blob/main/sunset.png
-:label: fig1
+:label: fig_sunset
 :width: 70%
 :align: center
 
 With a nice caption
 ```
 ````
-
 :::
 ::::
 
-Here we used figures hosted online, but you can also add figures to a folder (e.g., called *Figures*), and then use a relative path.
+Here we used figures hosted online, but you can also add figures to a folder (_e.g._, called `figures`), and then use a relative path.
 
 
 ## YouTube
+
 To embed YouTube videos on the site, you need the embed YT link. The code is then:
 
-::::{tab-set}
-:::{tab-item} YouTube
+::::{card}
 ```{iframe} https://www.youtube.com/embed/YDBr1Lof_mI?si=thWYK9MFi5QJv-tW
 :width: 80%
 :align: center
 
 A super fun video from the project [Show the Physics](https://interactivetextbooks.tudelft.nl/showthephysics)
 ```
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ````markdown
 ```{iframe} https://www.youtube.com/embed/YDBr1Lof_mI?si=thWYK9MFi5QJv-tW
 :width: 80%
@@ -397,19 +381,17 @@ It also possible to include reference through the reference.bib file, or directl
 
 Below a few examples of links and references to labeled items.
 
-::::{tab-set}
-:::{tab-item} list
-* This is a [hyperlink](https://nos.nl)  
-* This is a reference to equation {eq}`eq:Newton`  
-* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`  
-* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`  
-:::
-:::{tab-item} syntax
+::::{card}
+* This is a [hyperlink](https://nos.nl)
+* This is a reference to equation {eq}`eq:Newton`
+* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`
+* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`
+:::{dropdown} Markdown syntax
 ```markdown
-* This is a [hyperlink](https://nos.nl)  
-* This is a reference to equation {eq}`eq:Newton`  
-* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`  
-* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`  
+* This is a [hyperlink](https://nos.nl)
+* This is a reference to equation {eq}`eq:Newton`
+* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`
+* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`
 ```
 :::
 ::::
