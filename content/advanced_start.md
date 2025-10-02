@@ -4,12 +4,12 @@
 The Jupyter Book and MyST CLIs both include tools to help get started writing quickly.
 If you are: a) feeling confident and want to jump straight into creating a document without the template, and/or b) don't like to wait for GitHub Actions, using the CLI can be a good option.
 
-You might want to follow this approach if,
+You might want to follow this approach if
 
 - You are already familiar with using Markdown dialects to build documents and websites
 - You have previously used Jupyter Book 1
 - You are comfortable working with command line tools and reading documentation
-- You don't like waiting for GitHub Actions to build and deploy your book
+- You don't like waiting for GitHub Actions to see updates to your book as you edit it
 
 The [MyST Markdown guide](https://mystmd.org/guide) will be a valuable resource if you follow this route.
 
