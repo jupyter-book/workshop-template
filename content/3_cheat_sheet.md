@@ -10,8 +10,8 @@ We can distinguish between two structures: that of the book's content (a collect
 ### Table of Contents
 
 In the `myst.yml` file, you can specify the structure of the book as shown in [](#code_toc).
-Here you can indicate which files belong to the book and in what order.
-You can also create dropdown menus.
+Here you can indicate which files belong to the book and in what order.  
+You can also create dropdown menus in your ToC by including `children`
 When not specifying a ToC, all files are automatically included in alphabetical order.
 
 :::{literalinclude} ../myst.yml
@@ -22,12 +22,12 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 :label: code_toc
 :::
 
-If you create a new file, you need to add it to the `myst.yml` file to include it in the book.
+If you have specified a ToC and create a new file, you'll need to add it to the `myst.yml` file to include it in the book.
 
 
 ### Headings
 
-To make sections within a page, use a number of `#` symbols at the beginning of al line.
+To make sections within a page, use a number of `#` symbols at the beginning of a line.
 The more `#`s increases the level of the heading.
 
 ```markdown
@@ -40,6 +40,8 @@ Typically, a page only has a single level 1 heading, the page's title and higher
 
 ```{tip}
 Do not number your chapters and sections! This happens automatically.
+
+Note also that a structured sections are preferred, that is not skipping a heading.
 ```
 
 ## Basic Formatting
@@ -284,15 +286,44 @@ With some text
 ```
 ::::{dropdown} Markdown syntax
 ````markdown
+
 ```{card} Title
 :header: header
 :footer: footer
 
 With some text
 ```
+
 ````
 ::::
 :::::
+
+### Grids
+Cards can be arranged side by side, with the number of cards shown adapting to different screen sizes from small to large.
+:::{grid} 1 1 2 2
+```{card} With a nice header
+And cool text
+```
+```{card} Also with a nice header
+Without cool text
+```
+:::
+
+::::{dropdown} Markdown syntax
+````markdown
+
+:::{grid} 1 1 2 2
+```{card} With a nice header
+And cool text
+```
+```{card} Also with a nice header
+Without cool text
+```
+:::
+
+````
+::::
+
 
 
 ## Admonitions
@@ -319,6 +350,11 @@ There are different variants such as:
 * note
 * objective
 
+Using [plugins](PLACEHOLDER) you can add your own custom admonitions:
+
+```{experiment} Here is a custom admonition
+Made for our [physics book](https://freekpols.github.io/Mechanica/) which includes experiments.
+```
 
 ### Exercises
 
@@ -385,7 +421,7 @@ With a nice caption
 :::
 ::::
 
-Here we used figures hosted online, but you can also add figures to a folder (_e.g._, called `figures`), and then use a relative path.
+Here we used figures hosted online, but you can also add figures to a folder (_e.g._, called `figures`), and then use a relative path (e.g. `../figures/sunset.png`).
 
 
 ## YouTube
@@ -412,15 +448,13 @@ A super fun video from the project [Show the Physics](https://interactivetextboo
 ::::
 
 ```{warning} YT in pdf
-Embedded YT videos are not included in the PDF. A solution could be to include a QR code, for example.
+Embedded YT videos are not included in the PDF. A solution could be to include our plugin [REF] which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
 ```
 
 (sec-ref)=
 ## References & Links
 
 You can included [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this. With the markdown syntax: `[text](link)`.
-
-It also possible to include reference through the reference.bib file, or directly by including the DOI: [](https://doi.org/10.1088/1361-6552/abf208) (syntax: `[](https://doi.org/10.1088/1361-6552/abf208)`) or [@doi:10.1088/1361-6552/abf208] (syntax: `[@doi:10.1088/1361-6552/abf208]`).
 
 Below a few examples of links and references to labeled items.
 
@@ -438,3 +472,14 @@ Below a few examples of links and references to labeled items.
 ```
 :::
 ::::
+
+### Cite
+It also possible by including the DOI: 
+- [](https://doi.org/10.1088/1361-6552/abf208) (syntax: `[](https://doi.org/10.1088/1361-6552/abf208)`) 
+- [@doi:10.1088/1361-6552/abf208] (syntax: `[@doi:10.1088/1361-6552/abf208]`) 
+
+and even to specific pages of a book 
+- [@feynman1965feynman, p. 750]. (syntax: `[@feynman1965feynman, p. 750]`) 
+- @feynman1965feynman [p. 750] (syntax: `@feynman1965feynman [p. 750]`)
+
+Note that for the latter references, we made use of the `reference.bib` file which is located at `root`.
