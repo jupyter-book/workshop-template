@@ -4,13 +4,29 @@
 
 A Jupyter Book is a collection of files and folders that together make up the content and structure of your book. The structure of the book is specified in the `myst.yml` file, which is located in the root directory of your book. This file contains information about the title, author, and other metadata of the book, as well as documents and its structure to build the book itself.
 
-:::{literalinclude} ../../myst.yml
-:start-at: # See docs
-:end-at: content
-:lineno-match:
-:caption: The head of this book's `myst.yml`
-:label: less1_code_head
-:::
+````{card} myst.yml file
+```yaml
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  # title:
+  # description:
+  keywords: []
+  authors: []
+  # github:
+  # bibliography: []
+site:
+  template: book-theme
+  # title:
+  # options:
+  #   logo: my_logo.png
+  nav: []
+  actions:
+    - title: Learn More
+      url: https://mystmd.org/guide
+  domains: []
+```
+````
 
 
 ```{card} Official documentation
@@ -23,13 +39,24 @@ As explained in the previous chapter, your files are on GitHub and the template 
 
 Some files are already present in the template book. The folder structure is shown below
 
-:::{literalinclude} ../../myst.yml
-:start-after: toc
-:end-at: - file: content/software.md
-:lineno-match:
-:caption: The Table of Contents (ToC) for this book.
-:label: lesson1_code_toc
-:::
+````{card} ToC
+```yml
+  toc:                                            # table of contents
+    - file: index.md                              # the landing page
+    - file: content/1_intro.md
+    - file: content/2_jup_nb.ipynb
+    - file: content/3_cheat_sheet.md
+    - file: content/4_pdfoutput.md
+    - file: content/lessons/your_turn.md          
+      children:                                   # dropdown menu
+        - file: content/lessons/lesson0.md        # first item in dropdown, note indentation
+        - file: content/lessons/lesson1.md
+        - file: content/lessons/lesson2.md
+        - file: content/lessons/lesson3.ipynb
+        - file: content/lessons/lesson4.md
+    - file: content/software.md                   # not in dropdown menu
+```
+````
 
 We will now make a small change to one of the files and then look at the result of that change.
 
@@ -75,42 +102,6 @@ If you are working with multiple people in GitHub, or on a large project yoursel
 
 ### Include an equation
 
-# Your first changes via GitHub
-
-As explained in the previous chapter, your files are on GitHub and the template ensures the book is built. You can make changes directly to the files online in GitHub, and create or upload new files.
-
-Some files are already present in the template book. The folder structure is shown in ... BROKEN REF
-<!-- {numref}`Figure {number} <fig_templatecontent>`. -->
-
-``` {figure} ../figures/blank.png
-<!-- ``` {figure} figures/templatecontent.PNG -->
----
-width: 80%
-name: fig_templatecontent
----
-The folder structure in the template book.
-```
-
-We will now make a small change to one of the files and then look at the result of that change.
-
-````{exercise} Your first change
-Navigate to the file `book/some_content/overview.md`. Then click on the pencil on the right (edit this file).
-
-Change the text after the `#`. This is the title of the file.
-
-``` {figure} ../figures/blank.png
-<!-- ``` {figure} figures/eersteedit.gif -->
-```
-
-Optionally, make other changes in the text editor and when you're done, commit your changes to the "remote repository" by clicking the green `Commit changes` button.
-
-The book will now be rebuilt. Once that's done, you can view the result on the GitHub page.
-````
-
-```{admonition} Commit summary
-:class: dropdown
-If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed. This way, you can detect and undo any errors early. You can also explain why certain changes were made.
-```
 
 ## Adding a figure
 
@@ -125,7 +116,7 @@ So, we first need to upload a figure to GitHub and then refer to that figure in 
 `````{exercise}
 On GitHub, under the `code` tab...
 
-1. Navigate to book/figures and click on `add file` $\rightarrow$ `Upload files`.
+1. Navigate to book/figures and click on `add file` {fa}`right-long` `Upload files`.
 
 ```` {figure} ../figures/blank.png
 <!-- ```` {figure} figures/incl_fig.PNG -->
@@ -158,7 +149,7 @@ The code is case sensitive. So it matters whether your extension is .png or .PNG
 ```
 
 ```{tip}
-We have a page with all important [codes](#cheatsheet).
+We have a page with all important [codes](./Cheatsheet.md).
 
 You can find more information about figure options [here](https://teachbooks.io/manual/basic-features/figures.html).
 ```
@@ -168,7 +159,7 @@ You can position figures in different places (left / center / right / margin), a
 ## Your favorite equation
 
 ```{exercise} Add an equation
-Take a look at the [Cheatsheet page](#cheatsheet) to see how to add a formula and give it a try...
+Take a look at the [Cheatsheet page](./Cheatsheet.md) to see how to add a formula and give it a try...
 ```
 
 ## Other changes
