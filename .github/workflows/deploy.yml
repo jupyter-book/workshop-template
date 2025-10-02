@@ -50,11 +50,7 @@ jobs:
       #     grep -nE '^\s*date:' myst.yml
 
 
-      # build the site 
-      - name: Build HTML Assets
-        run: myst build --html
-
-
+      
       - name: Install Typst
         run: |
           typst --version
@@ -96,6 +92,12 @@ jobs:
       #     fi
 
       # 
+
+      # build the site 
+      - name: Build HTML Assets
+        run: myst build --html
+
+        
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
