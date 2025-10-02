@@ -98,7 +98,7 @@ git push -u origin main
 Now, if you go back to your repository and click on `actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
 
 :::
-:::{tab-item} Entirely locally &#127798; 
+:::{tab-item} Entirely locally
 If you prefer, you can also work entirely locally using command-line tools and a text editor.
 
 1. Clone the repository to your local machine using Git.
