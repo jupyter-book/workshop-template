@@ -1,3 +1,4 @@
+(cheatsheet)=
 # Markdown (Cheat sheet)
 
 Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
@@ -8,15 +9,18 @@ We can distinguish between two structures: that of the book's content (a collect
 
 ### Table of Contents
 
-In the `myst.yml` file, you can specify the structure of the book as shown in {numref}`fig_toc`. Here you can indicate which files belong to the book and in what order. You can also create dropdown menus. When not specifying a ToC, all files are automatically included in alphabetical order.
+In the `myst.yml` file, you can specify the structure of the book as shown in [](#code_toc).
+Here you can indicate which files belong to the book and in what order.
+You can also create dropdown menus.
+When not specifying a ToC, all files are automatically included in alphabetical order.
 
-```{figure} figures/toc.png
-:width: 70%
-:align: center
-:name: fig_toc
-
-The Table of Contents (ToC) for this book.
-```
+:::{literalinclude} ../myst.yml
+:start-after: toc
+:end-at: - file: content/software.md
+:lineno-match:
+:caption: The Table of Contents (ToC) for this book.
+:label: code_toc
+:::
 
 If you create a new file, you need to add it to the `myst.yml` file to include it in the book.
 
@@ -315,9 +319,6 @@ There are different variants such as:
 * note
 * objective
 
-```{tip} The golden…
-Exercises are a special kind of admonition.
-```
 
 ### Exercises
 
