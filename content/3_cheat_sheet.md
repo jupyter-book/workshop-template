@@ -3,8 +3,8 @@
 
 Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
 
-
 ## Book structure
+
 We can distinguish between two structures: that of the book's content (a collection of different documents), and the (internal) structure of the chapters which consists of content structured in sections and subsections.
 
 ### Table of Contents
@@ -24,6 +24,7 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 
 If you create a new file, you need to add it to the `myst.yml` file to include it in the book.
 
+
 ### Headings
 
 To make sections within a page, use a number of `#` symbols at the beginning of al line.
@@ -42,6 +43,7 @@ Do not number your chapters and sections! This happens automatically.
 ```
 
 ## Basic Formatting
+
 Markdown is a markup language where text formatting is done with small pieces of code (just like HTML). This is a table with some frequently used formatting options.
 
 | Element | Syntax | Example |
@@ -57,20 +59,18 @@ Markdown is a markup language where text formatting is done with small pieces of
 
 You can create a new line by either a hard enter and a blank line, a `\` at the end of the line and enter, or two spaces at the end of the line.
 
-### New Line
+### New Lines
 
 Generally, in markdown, a single hard enter does not create a new line. You need to use one of the options below.
 
-::::{tab-set}
-:::{tab-item} ways for a new line
+::::{card}
 A new line with double space.
 A new line with a `\`.\
 A new line with a hard enter and blank line.
 
 No new line with just a hard enter and text on the next line.
 Like this
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
 A new line with double space.
 A new line with a `\`.\
@@ -82,48 +82,61 @@ Like this
 :::
 ::::
 
-### Equations & Symbols
+## Mathematics and equations
 
-For STEM subjects, mathematical equations and symbols ($\Delta \lambda$) are essential. You can include equations in JB's. What is possible in LaTeX is also possible in JB, for example:
+For STEM subjects, mathematical equations and symbol are essential.
+You can include equations in JupyterBooks using the LaTeX syntax for mathematics.
 
-$$ F_{res} = m \cdot a$$ (eq:Newton)
+Labelled equations using double dollars, such as {eq}`eq:Newton`, can be referenced.
 
-Where labeled equations, such as {eq}`eq:Newton`, can be referenced.
-
-`$$ Equation $$ (<label>)`
-
-But you can also include inline equations like this: $s=v_{avg}t$. Use a single dollar sign before and after: `$ Equation $`
-
-|Name|Script|Symbols|
-|---|---|---|
-|root|`\sqrt{4}`|$\sqrt{4}$|
-|power|`^{2x}`|$^{2x}$|
-|fraction|`\frac{2}{3}`|$\frac{2}{3}$|
-|subscript|`_{avg}`|$_{avg}$|
-|superscript|`^{N}`|$^{N}$|
-|multiply|`\cdot`|$\cdot$|
-
-Some examples:
-|Name|Script|Output|
-|---|---|---|
-|Derivative|`\frac{\Delta f}{\Delta t}`|$\frac{\Delta f}{\Delta t}$|
-|Integral|`\int_a^b dx`|$\int_a^b dx$|
-|sine|`sin(x)`|$sin(x)$|
-
-More: https://en.wikibooks.org/wiki/LaTeX/Mathematics
+::::{card}
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+:::{dropdown} Markdown syntax
+```markdown
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+```
+:::
+::::
 
 
-## Lists & tables
+But you can also write inline equations with single dollars.
 
+::::{card}
+$s=v_{\mathrm{avg}}t$
+:::{dropdown} Markdown syntax
+```markdown
+$s=v_{\mathrm{avg}}t$
+```
+:::
+::::
 
-### Lists Option 1
-::::{tab-set}
-:::{tab-item} list
+Some examples of the notation
+
+| Name              | Syntax                      | Output                      |
+| ---               | ---                         | ---                         |
+| Greek script      | `\Delta \lambda`            | $\Delta \lambda$            |
+| root              | `\sqrt{4}`                  | $\sqrt{4}$                  |
+| superscript/power | `x^{2a}`                    | $x^{2a}$                    |
+| fraction          | `\frac{2}{3}`               | $\frac{2}{3}$               |
+| subscript         | `x_{\mathrm{avg}}`          | $x_{\mathrm{avg}}$          |
+| multiply          | `a \cdot b`                 | $a \cdot b$                 |
+| derivative        | `\frac{\Delta f}{\Delta t}` | $\frac{\Delta f}{\Delta t}$ |
+| integral          | `\int_a^b f(x) \mathrm{d}x` | $\int_a^b f(x) \mathrm{d}x$ |
+| sine              | `\sin(x)`                   | $\sin(x)$                   |
+
+You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+
+## Lists
+
+### Ordered lists
+
+Ordered lists can be made with automatically numbered items.
+
+::::{card}
 1. item 1
 1. item 2.
 1. item 3.
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
 1. item 1
 1. item 2.
@@ -132,14 +145,13 @@ More: https://en.wikibooks.org/wiki/LaTeX/Mathematics
 :::
 ::::
 
-### Lists Option 2
-::::{tab-set}
-:::{tab-item} list
+Or you can manually number the items
+
+::::{card}
 1. item 1
 2. item 2.
 3. item 3.
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
 1. item 1
 2. item 2.
@@ -148,42 +160,63 @@ More: https://en.wikibooks.org/wiki/LaTeX/Mathematics
 :::
 ::::
 
+### Unordered lists
 
-### Tables
+Unordered lists use `-` or `*` for each item.
+
+::::{card}
+- a
+- b
+- c
+:::{dropdown} Markdown syntax
+```markdown
+- a
+- b
+- c
+```
+:::
+::::
+
+### Checklists
+
+You can also create checklists.
+The checks are interactive, you can tick or untick them.
+
+::::{card}
+- [x] Create a markdown cheat sheet
+- [x] Publish online
+- [ ] Let others test
+:::{dropdown} Markdown syntax
+```markdown
+- [x] Create a markdown cheat sheet
+- [x] Publish online
+- [ ] Let others test
+```
+:::
+::::
+
+## Tables
 
 Tables are created with the separator `|`
 
-::::{tab-set}
-:::{tab-item} Tables
-
-```
+::::{card}
+|Header 1|Header 2|Header 3|
+|---|---|---|
+|text 1|text 2|text 3|
+|text 4|text 5|text 6|
+:::{dropdown} Markdown syntax
+```markdown
 |Header 1|Header 2|Header 3|
 |---|---|---|
 |text 1|text 2|text 3|
 |text 4|text 5|text 6|
 ```
-
-:::
-
-:::{tab-item} MyST Syntax
-
-````markdown
-```
-|Header 1|Header 2|Header 3|
-|---|---|---|
-|text 1|text 2|text 3|
-|text 4|text 5|text 6|
-```
-````
-
 :::
 ::::
 
-Or via ...
+Or via …
 
-::::{tab-set}
-:::{tab-item} Tables
-
+::::{card}
 ```{list-table} Overview of sanctions for certain behavior
 :header-rows: 1
 :name: tl_sanctions
@@ -194,11 +227,7 @@ Or via ...
     - A penalty
     - exclusion
 ```
-
-:::
-
-:::{tab-item} MyST Syntax
-
+:::{dropdown} Markdown syntax
 ````markdown
 ```{list-table} Overview of sanctions for certain behavior
 :header-rows: 1
@@ -211,14 +240,25 @@ Or via ...
     - exclusion
 ```
 ````
-
 :::
 ::::
 
 Method 2 has the advantage of allowing references to {numref}`Table {number} <tl_sanctions>`
 
+## Blocks
+
 ### Tabs
 
+::::::{card}
+::::{tab-set}
+:::{tab-item} Tab 1
+Text in tab 1
+:::
+
+:::{tab-item} Tab 2
+Text in tab 2
+::::
+:::::{dropdown} Markdown syntax
 ```markdown
 ::::{tab-set}
 :::{tab-item} Tab 1
@@ -230,30 +270,19 @@ Text in tab 2
 :::
 ::::
 ```
-Will create this tab:
-
-::::{tab-set}
-:::{tab-item} Tab 1
-Text in tab 1
-:::
-
-:::{tab-item} Tab 2
-Text in tab 2
-:::
-::::
-
+:::::
+::::::
 
 ### Cards
-::::{tab-set}
-:::{tab-item} cards
+
+:::::{card}
 ```{card} Title
 :header: header
 :footer: footer
 
 With some text
 ```
-:::
-:::{tab-item} syntax
+::::{dropdown} Markdown syntax
 ````markdown
 ```{card} Title
 :header: header
@@ -262,42 +291,26 @@ With some text
 With some text
 ```
 ````
-:::
 ::::
-
-
-
-### Checklists
-::::{tab-set}
-:::{tab-item} list
-- [x] Create a markdown cheat sheet
-- [x] Publish online
-- [ ] Let others test
-:::
-:::{tab-item} syntax
-```markdown
-- [x] Create a markdown cheat sheet
-- [x] Publish online
-- [ ] Let others test
-```
-:::
-::::
+:::::
 
 
 ## Admonitions
+
 You can add special blocks that are highlighted in the text. See, for example, the warning below.
 
+::::{card}
 ```{warning}
 Here is a warning
 ```
-
-Created using:
-
+:::{dropdown} Markdown syntax
 ````markdown
 ```{warning}
 Here is a warning
 ```
 ````
+:::
+::::
 
 There are different variants such as:
 * tip
@@ -305,14 +318,13 @@ There are different variants such as:
 * warning
 * note
 * objective
-* see also ...
 
-```{tip} The golden...
-Exercises are a special kind of admonition.
-```
 
 ### Exercises
-A special case is the exercises which can be labeled and can come with a solution that is linked to the exercise:
+
+A special case is the exercises which can be labelled and can come with a solution that is linked to the exercise:
+
+::::{card}
 ```{exercise} Exercise 1
 :label: ex_opdr_1
 
@@ -324,19 +336,35 @@ Calculate $4+2$
 
 6
 ```
+:::{dropdown} Markdown syntax
+````markdown
+```{exercise} Exercise 1
+:label: ex_opdr_1
+
+Calculate $4+2$
+```
+
+```{solution} ex_opdr_1
+:class: dropdown
+
+6
+```
+````
+:::
+::::
 
 ## Figures
 A site/book naturally needs figures. There are roughly two ways to add a figure:
 
-*Quick figure, without formatting options*
+Quick figure, without formatting options
 
-| Quick figure | `![](link to figure)` |
+```markdown
+![](path/to/figure)
+```
 
-*Better way with more control:*
+Better way with more control:
 
-::::{tab-set}
-:::{tab-item} Figures
-
+::::{card}
 ```{figure} https://github.com/rowanc1/pics/blob/main/sunset.png
 :label: fig_sunset
 :width: 70%
@@ -344,40 +372,34 @@ A site/book naturally needs figures. There are roughly two ways to add a figure:
 
 With a nice caption
 ```
-
-:::
-
-:::{tab-item} MyST Syntax
-
+:::{dropdown} Markdown syntax
 ````markdown
 ```{figure} https://github.com/rowanc1/pics/blob/main/sunset.png
-:label: fig1
+:label: fig_sunset
 :width: 70%
 :align: center
 
 With a nice caption
 ```
 ````
-
 :::
 ::::
 
-Here we used figures hosted online, but you can also add figures to a folder (e.g., called *Figures*), and then use a relative path.
+Here we used figures hosted online, but you can also add figures to a folder (_e.g._, called `figures`), and then use a relative path.
 
 
 ## YouTube
+
 To embed YouTube videos on the site, you need the embed YT link. The code is then:
 
-::::{tab-set}
-:::{tab-item} YouTube
+::::{card}
 ```{iframe} https://www.youtube.com/embed/YDBr1Lof_mI?si=thWYK9MFi5QJv-tW
 :width: 80%
 :align: center
 
 A super fun video from the project [Show the Physics](https://interactivetextbooks.tudelft.nl/showthephysics)
 ```
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ````markdown
 ```{iframe} https://www.youtube.com/embed/YDBr1Lof_mI?si=thWYK9MFi5QJv-tW
 :width: 80%
@@ -402,14 +424,12 @@ It also possible to include reference through the reference.bib file, or directl
 
 Below a few examples of links and references to labeled items.
 
-::::{tab-set}
-:::{tab-item} list
+::::{card}
 * This is a [hyperlink](https://nos.nl)
 * This is a reference to equation {eq}`eq:Newton`
 * This is a reference to a table like {numref}`Table {number} <tl_sanctions>`
 * This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`
-:::
-:::{tab-item} syntax
+:::{dropdown} Markdown syntax
 ```markdown
 * This is a [hyperlink](https://nos.nl)
 * This is a reference to equation {eq}`eq:Newton`
