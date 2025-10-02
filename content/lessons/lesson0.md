@@ -1,7 +1,6 @@
-# Lesson 0: Head start with GH template 
+# Lesson 0: Head start with GitHub template
 
 This lesson gives you a head start in creating your own online book using GitHub and the template repository [JB2_book_template](https://github.com/FreekPols/JB2_book_template).
-
 
 ## Set up your own repository
 
@@ -62,7 +61,7 @@ Your GitHub repository looks like the one shown in {numref}`fig_folderstructure`
 Once the book has been deploy, you can visit your site which looks like this.
 ```
 
-## Making and deploying changes
+## Make and deploy changes
 
 You have a number of options for making changes to the book's source and seeing how they affect the output.
 
@@ -162,3 +161,45 @@ Once the MyST server is running, it will automatically update as you make change
 
 :::
 ::::
+
+## Export to pdf
+
+You can export your book to a pdf in two ways, with LaTeX or Typst.
+Both methods have [advantages and disadvantages](https://mystmd.org/guide/creating-pdf-documents).
+
+### Configure pdf output
+
+We specified in the `myst.yml` file that we want to export to pdf using Typst.
+You can also choose LaTeX.
+See the `myst.yml` file, or [](#code_export) for the syntax.
+
+:::{literalinclude} ../../myst.yml
+:start-after: exports
+:end-at: - id: output-pdf
+:lineno-match:
+:caption: Example of the export section in the `myst.yml` file.
+:label: code_export
+:::
+
+You can specify the [output template](https://github.com/myst-templates).
+We won't go into detail here, but you can find more information [in the MyST Markdown documentations](https://mystmd.org/guide/creating-pdf-documents).
+
+### GitHub workflow
+
+This template includes a GitHub workflow that automatically builds the pdf for you with Typst when you push changes.
+Using the export options in `myst.yml`, a pdf will be built and committed to the `exports` directory when you push to GitHub.
+
+```{note}
+The GitHub workflow this only works when there are no errors in the markdown files.
+For instance, it breaks when figures are missing.
+```
+
+### Local pdf build
+
+If you have the Typst CLI installed, you can also build a pdf locally.
+
+```console
+myst build --typst
+```
+
+The book will be written to `exports/book.pdf`.

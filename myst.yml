@@ -48,7 +48,6 @@ project:
     - file: content/1_intro.md
     - file: content/2_jup_nb.ipynb
     - file: content/3_cheat_sheet.md
-    - file: content/4_pdfoutput.md
     - file: content/lessons/your_turn.md          # dropdown menu
       children:
         - file: content/lessons/lesson0.md
@@ -56,6 +55,7 @@ project:
         - file: content/lessons/lesson2.md
         - file: content/lessons/lesson3.ipynb
         - file: content/lessons/lesson4.md
+    - file: content/advanced_start.md
     - file: content/software.md
 
 site:
