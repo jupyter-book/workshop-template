@@ -17,7 +17,8 @@ project:
   # abstract: Optional
   date: 2025-09-29 # ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
-
+  edit_url: 
+  
   plugins:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
     # links to GH

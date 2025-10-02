@@ -4,7 +4,7 @@
 The Jupyter Book and MyST CLIs both include tools to help get started writing quickly.
 If you are feeling confident and want to jump straight into creating a document without the template, this is a good option.
 
-You might want to follow this approach if,
+You might want to follow this approach if:
 
 - You are already familiar with using Markdown dialects to build documents and websites
 - You have previously used Jupyter Book 1
