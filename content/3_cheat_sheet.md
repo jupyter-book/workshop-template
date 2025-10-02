@@ -24,22 +24,22 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 
 If you create a new file, you need to add it to the `myst.yml` file to include it in the book.
 
-### Chapters, sections and subsections
 
-To distinguish between chapter, section, and subsection (and further), use a number of `#` symbols, as shown below.
+### Headings
+
+To make sections within a page, use a number of `#` symbols at the beginning of al line.
+The more `#`s increases the level of the heading.
 
 ```markdown
-# H1 chapter
-## H1.1 section
-### H1.1.3 subsection
+# Heading level 1
+## Heading level 2
+### Heading level 3
 ```
+
+Typically, a page only has a single level 1 heading, the page's title and higher level headings are used for sections and subsections.
 
 ```{tip}
 Do not number your chapters and sections! This happens automatically.
-```
-
-```{note}
-Files below `children` in the `myst.yml` file are considered sections, even when the heading has a single `#`.
 ```
 
 ## Basic Formatting
