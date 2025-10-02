@@ -33,7 +33,7 @@ Follow these steps to create your own GHpages from the template.
 
 
 8. Use the book link  (`code` $\rightarrow$ below **About**) to your Github page where the book is hosted.
-9. The output resembles {numref}`Figuur {number} <fig_startscreen>`.
+9. The output resembles {numref}`Figure {number} <fig_startscreen>`.
 
 ```{figure} figures/startscreen.png
 :name: fig_startscreen
