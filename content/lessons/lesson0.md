@@ -174,7 +174,7 @@ We specified in the `myst.yml` file that we want to export to pdf using Typst.
 You can also choose LaTeX.
 See the `myst.yml` file, or [](#code_export) for the syntax.
 
-:::{literalinclude} ../myst.yml
+:::{literalinclude} ../../myst.yml
 :start-after: exports
 :end-at: - id: output-pdf
 :lineno-match:
