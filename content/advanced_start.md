@@ -1,5 +1,5 @@
 (advanced-start)=
-# Advanced start
+# Advanced start &#127798; 
 
 The Jupyter Book and MyST CLIs both include tools to help get started writing quickly.
 If you are feeling confident and want to jump straight into creating a document without the template, this is a good option.
