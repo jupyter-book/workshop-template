@@ -21,7 +21,6 @@ Follow these steps to create your own repository from the template.
 6. Check the box **Use your GitHub Pages website**.
 7. Go to `actions` in the topmenu, click on the (red) `initial commit` and click `re-run all jobs`
 
-
 The book will now be deployed again - where now it can actually load GitHub pages. 
 
 ``` {figure} figures/2ndpart.*
@@ -29,8 +28,6 @@ The book will now be deployed again - where now it can actually load GitHub page
 
 Follow these steps to create your own GHpages from the template.
 ```
-
-
 
 8. Use the book link  (`code` $\rightarrow$ below **About**) to your Github page where the book is hosted.
 9. The output resembles {numref}`Figuur {number} <fig_startscreen>`.
@@ -52,7 +49,7 @@ Your GitHub repository looks like the one shown in {numref}`fig_folderstructure`
 - Lessons: the folder which includes the lessons of this tutorial (*could be in Content folder*)
 - .github/workflows: the folder which includes the GitHub actions (automated workflows) to build and deploy your book
 - css: the folder which includes the custom css file to change the layout of your book
-- pdf_template_book: the folder which includes the typst template to create a pdf export of your book
+- pdf_template_book: the folder which includes the [typst template](https://github.com/myst-templates/plain_typst_book) to create a pdf export of your book
 
 ```{figure} figures/Folderstructure.png
 :name: fig_folderstructure
@@ -101,7 +98,7 @@ git push -u origin main
 Now, if you go back to your repository and click on `actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
 
 :::
-:::{tab-item} Entirely locally
+:::{tab-item} Entirely locally &#127798; 
 If you prefer, you can also work entirely locally using command-line tools and a text editor.
 
 1. Clone the repository to your local machine using Git.

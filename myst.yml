@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 7204695b-7485-4989-863c-16cf6e4db155
-  title: Jupyter Book 2 Headstart Template
+  title: Jupyter Book 2 Head Start Template
   # description:
   # keywords: []
   authors:
@@ -10,6 +10,7 @@ project:
     - name: Luuk Fröling
     - name: Robert Lanzafame
     - name: Kirstie Whitaker
+    - name: Jim Madge
   license:
     content: CC-BY-4.0
 
@@ -18,6 +19,7 @@ project:
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
 
   plugins:
+    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
     # links to GH
 
   # options for pdf output
@@ -31,7 +33,7 @@ project:
   # exports and downloads
   exports:
     - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git             #plain_typst_book
+      template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
       output: exports/book.pdf
       id: output-pdf
   downloads:
