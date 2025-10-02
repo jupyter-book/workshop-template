@@ -55,6 +55,7 @@ project:
         - file: content/lessons/lesson2.md
         - file: content/lessons/lesson3.ipynb
         - file: content/lessons/lesson4.md
+    - file: content/advanced_start.md
     - file: content/software.md
 
 site:
