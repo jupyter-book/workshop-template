@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 7204695b-7485-4989-863c-16cf6e4db155
-  title: Jupyter Book 2 Head Start Template
+  title: Jupyter Book 2 Headstart Template
   # description:
   # keywords: []
   authors:
@@ -10,31 +10,18 @@ project:
     - name: Luuk Fröling
     - name: Robert Lanzafame
     - name: Kirstie Whitaker
-    - name: Jim Madge
-  license:
-    content: CC-BY-4.0
 
   # abstract: Optional
-  date: 2025-09-29 # ${BUILD_DATE} 
+  date:  ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
-  edit_url: 
-  
-  plugins:
-    - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
+
+  plugins: 
     # links to GH
-
-  # options for pdf output
-  options:
-    cover: logo.svg
-    logo: logo.svg
-    logo_width: 10
-    ToC_depth: 2
-
 
   # exports and downloads
   exports:
     - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
+      template: https://github.com/FreekPols/plain_typst_book.git             #plain_typst_book
       output: exports/book.pdf
       id: output-pdf
   downloads:
@@ -47,11 +34,12 @@ project:
       repo: https://github.com/executablebooks/thebe-binder-base
 
   # To autogenerate a Table of Contents, run "myst init --write-toc"
-  toc:
+  toc:    
     - file: index.md                      # the landing page
     - file: content/1_intro.md
     - file: content/2_jup_nb.ipynb
     - file: content/3_cheat_sheet.md
+    - file: content/4_pdfoutput.md
     - file: content/lessons/your_turn.md          # dropdown menu
       children:
         - file: content/lessons/lesson0.md
@@ -59,9 +47,8 @@ project:
         - file: content/lessons/lesson2.md
         - file: content/lessons/lesson3.ipynb
         - file: content/lessons/lesson4.md
-    - file: content/advanced_start.md
     - file: content/software.md
-
+    
 site:
   template: book-theme
   options:
@@ -70,7 +57,7 @@ site:
     logo: logo.svg            # path to your logo, shown top left at site
     folders: false
     hide_authors: true
-
+  
   actions:
     - title: report issue
       url: https://github.com/FreekPols/JB2_book_template/issues
