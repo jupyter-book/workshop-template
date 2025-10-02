@@ -22,5 +22,5 @@ Materials in this document are under construction; the contents and order of the
 ```
 
 <div style="text-align: center", font-size: 1.2em>
-Freek Pols, Luuk Fröling, Robert Lanzafame, Kirstie Whitaker
+Freek Pols, Luuk Fröling, Robert Lanzafame, Kirstie Whitaker, Jim Madge
 </div>
