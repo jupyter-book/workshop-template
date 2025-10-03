@@ -61,6 +61,7 @@ project:
         - file: content/lessons/lesson6.md
     - file: content/advanced_start.md
     - file: content/software.md
+    - file: content/gallery.md
 
 site:
   template: book-theme

@@ -1,4 +1,9 @@
-# Lesson 1: Make your own content
+---
+numbering:
+  title:
+    offset: 0
+---
+# Make your own content
 
 ## Anatomy of a Jupyter Book
 

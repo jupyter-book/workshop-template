@@ -1,3 +1,9 @@
+---
+numbering:
+  title:
+    offset: 0
+---
+
 # Styling etc
 
 

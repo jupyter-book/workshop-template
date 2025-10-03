@@ -1,3 +1,8 @@
+---
+numbering:
+  title:
+    offset: 0
+---
 # Create pdf output
 FREEK
 

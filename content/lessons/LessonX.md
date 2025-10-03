@@ -1,3 +1,8 @@
+---
+numbering:
+  title:
+    offset: 0
+---
 # Going local
 
 Lokaal bouwen

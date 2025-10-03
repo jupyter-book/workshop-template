@@ -1,10 +1,15 @@
 ---
+
+numbering:
+  title:
+    offset: 0
+
 kernelspec:
   name: python3
   display_name: 'Python 3'
 ---
 
-# Lesson 2: Include awesomeness
+# Include awesomeness
 
 ## Embed video from YouTube using iframe or video
 
@@ -77,3 +82,5 @@ for i in range(5):
     print(f"{start} + {next} = {start + next}")
     start, next = next, start + next
 ```
+
+## The cruel difficulty of including correct chapter numbering
