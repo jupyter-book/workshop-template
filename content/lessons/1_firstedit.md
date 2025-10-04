@@ -22,7 +22,7 @@ A Jupyter Book is a collection of files and folders that together make up the co
 See [here](https://mystmd.org/guide/table-of-contents) for a full explanation of the structure and TOC and [here](https://mystmd.org/guide/quickstart#configure-site-and-page-options) for more the website options.
 ```
 
-## Your first changes via GitHub &#127798; 
+## Your first changes via GitHub
 
 As explained in the previous chapter, your files are on GitHub and the template ensures the book is built. You can make changes directly to the files online in GitHub, and create or upload new files.
 
