@@ -38,6 +38,7 @@ project:
 
   downloads:
     - id: output-pdf
+      title: Download Book as PDF
 
   # Jupyter Notebook configuration
   jupyter:
