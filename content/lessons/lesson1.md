@@ -1,4 +1,9 @@
-# Lesson 1: Make your own content
+---
+numbering:
+  title:
+    offset: 0
+---
+# Make your own content
 
 ## Anatomy of a Jupyter Book
 
@@ -112,58 +117,6 @@ The book will now be rebuilt. Once that's done, you can view the result on the G
 If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed. This way, you can detect and undo any errors early. You can also explain why certain changes were made.
 ```
 
-## Adding a figure
-
-A figure sometimes says more than 1000 words...
-
-![External image](https://polslab.tnw.tudelft.nl/figures/training.JPG)
-
-If we want to add a figure to our book, we can refer to another website (as in the figure above). However, this carries the risk that the figure will no longer be visible if it is moved from its location. It is therefore better to have the figure as a local source file.
-
-So, we first need to upload a figure to GitHub and then refer to that figure in our file. (Note! This will become much easier later.)
-
-`````{exercise}
-On GitHub, under the `code` tab...
-
-1. Navigate to book/figures and click on `add file` $\rightarrow$ `Upload files`.
-
-```` {figure} ../figures/blank.png
-<!-- ```` {figure} figures/incl_fig.PNG -->
----
-width: 50%
----
-add file in the folder
-````
-2. Choose the figure you want to add (remember the file name!).
-3. Commit your changes to GitHub (the file will be uploaded).
-4. Navigate to book and open `intro.md` and click `edit this file`.
-5. Copy the code below into that file, and change the figure name to your own figure's name.
-
-````{code} myst
-``` {figure} figures/incl_fig.PNG
----
-width: 50%
-name: fig_myfirstfigure
----
-add file in the folder
-```
-````
-
-6. Commit your change and view the result on GitHub pages.
-
-`````
-
-```{warning}
-The code is case sensitive. So it matters whether your extension is .png or .PNG
-```
-
-```{tip}
-We have a page with all important [codes](#cheatsheet).
-
-You can find more information about figure options [here](https://teachbooks.io/manual/basic-features/figures.html).
-```
-
-You can position figures in different places (left / center / right / margin), adjust the size, add a caption, etc. Check the documentation above and try out the different settings.
 
 ## Your favorite equation
 

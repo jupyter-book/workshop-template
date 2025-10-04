@@ -1,4 +1,10 @@
-# Lesson 0: Head start with GitHub template
+---
+numbering:
+  title:
+    offset: 0
+---
+
+# Head start with GitHub template
 
 This lesson gives you a head start in creating your own online book using GitHub and the template repository [JB2_book_template](https://github.com/FreekPols/JB2_book_template).
 

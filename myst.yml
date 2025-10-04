@@ -3,7 +3,7 @@ version: 1
 project:
   id: 7204695b-7485-4989-863c-16cf6e4db155
   title: Jupyter Book 2 Head Start Template
-  # description:
+  description: This description goes in the preface of the pdf output. 
   # keywords: []
   authors:
     - name: Freek Pols
@@ -23,13 +23,6 @@ project:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
     # links to GH
 
-  # options for pdf output
-  options:
-    cover: logo.svg
-    logo: logo.svg
-    logo_width: 10
-    ToC_depth: 2
-
 
   # exports and downloads
   exports:
@@ -37,6 +30,12 @@ project:
       template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
       output: exports/book.pdf
       id: output-pdf
+    # options for pdf output that come with this template
+      cover: logo.svg
+      logo: logo.svg
+      logo_width: 5
+      ToC_depth: 2
+
   downloads:
     - id: output-pdf
       title: Download Book as PDF
@@ -59,8 +58,11 @@ project:
         - file: content/lessons/lesson2.md
         - file: content/lessons/lesson3.ipynb
         - file: content/lessons/lesson4.md
+        - file: content/lessons/lesson5.md
+        - file: content/lessons/lesson6.md
     - file: content/advanced_start.md
     - file: content/software.md
+    - file: content/gallery.md
 
 site:
   template: book-theme
@@ -74,3 +76,5 @@ site:
   actions:
     - title: report issue
       url: https://github.com/FreekPols/JB2_book_template/issues
+    - title: BIG PDF DOWNLOAD BUTTON
+      url: https://freekpols.github.io/JB2_book_template/build/book-3ca1524f3fcc07723738a49a0c9f9745.pdf
