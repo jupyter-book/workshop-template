@@ -72,63 +72,57 @@ The book will now be rebuilt. Once that's done, you can view the result on the G
 
 ```{admonition} Commit summary
 :class: dropdown
-If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed. This way, you can detect and undo any errors early. You can also explain why certain changes were made.
+If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed, see also [this more elaborative description](https://book.the-turing-way.org/collaboration/github-novice/github-novice-firststeps/#committing-or-saving-your-changes). This way, you can detect and undo any errors early. You can also explain why certain changes were made.
 ```
 
 
-## Create a chapter
+## Create a new chapter
+In order to make a new chapter, three things need to be done. 
+1. A new markdown file should be created
+2. A title should be specified in the file.
+3. The file should be included in the [ToC](lesson1_code_toc)
+
+::::{tab-set}
+:::{tab-item} Using the GitHub IDE
+1. Create a new markdown file 
+  - navigate to the folder where you want to include the sourcefile
+  - click `add file` / `+ Create new file`
+  - create a clear name for the file and use the .md extension (e.g. `newfile.md`)
+2. Create a [H1 heading](headings)
+  - use for the header `#` and include the title
+  - commit your changes
+3. Include the file in the [ToC](lesson1_code_toc).
+  - navigate to the `myst.yml` file in the root
+  - at the right location in your book, include the path to your file (e.g. `- file: content/lessons/newfile.md`)
+  - commit your changes and check the output on GitHub pages.
+:::
+:::{tab-item} Locally
+1. Create a new markdown file
+  - navigate to the folder where you want to include the sourcefile
+  - create a new file
+  - create a clear name for the file and use the .md extension (e.g. `newfile.md`)
+2. Create a [H1 heading](headings)
+  - use for the header `#` and include the title
+  - save your file
+3. Include the file in the [ToC](lesson1_code_toc).
+  - navigate to the `myst.yml` file in the root folder
+  - at the right location in your book, include the path to your file (e.g. `- file: content/lessons/newfile.md`)
+  - save your changes and check the out on your local server.
+:::
+::::
+
+### Create a section with your favorite equation
+Navigate back to your recently made markdown file and include a section including your favorite equation, consider you want an inline equation ($F = m a$) or centered and labeled:
+
+$$ F = m a $$ (eq:NewtonFirst)
 
 
-### Create a section
-
-### Include an equation
-
-# Your first changes via GitHub
-
-As explained in the previous chapter, your files are on GitHub and the template ensures the book is built. You can make changes directly to the files online in GitHub, and create or upload new files.
-
-Some files are already present in the template book. The folder structure is shown in ... BROKEN REF
-<!-- {numref}`Figure {number} <fig_templatecontent>`. -->
-
-``` {figure} ../figures/blank.png
-<!-- ``` {figure} figures/templatecontent.PNG -->
----
-width: 80%
-name: fig_templatecontent
----
-The folder structure in the template book.
-```
-
-We will now make a small change to one of the files and then look at the result of that change.
-
-````{exercise} Your first change
-Navigate to the file `book/some_content/overview.md`. Then click on the pencil on the right (edit this file).
-
-Change the text after the `#`. This is the title of the file.
-
-``` {figure} ../figures/blank.png
-<!-- ``` {figure} figures/eersteedit.gif -->
-```
-
-Optionally, make other changes in the text editor and when you're done, commit your changes to the "remote repository" by clicking the green `Commit changes` button.
-
-The book will now be rebuilt. Once that's done, you can view the result on the GitHub page.
-````
-
-```{admonition} Commit summary
-:class: dropdown
-If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed. This way, you can detect and undo any errors early. You can also explain why certain changes were made.
-```
-
-
-## Your favorite equation
-
-```{exercise} Add an equation
+```{tip} 
 Take a look at the [Cheatsheet page](#cheatsheet) to see how to add a formula and give it a try...
-```
 
-## Other changes
+Don't forget to commit your changes!
+```
 
 ```{exercise} Other changes
-Try making some other changes, for example by further developing the structure of the page into sections and subsections, each with some text. View the result.
+Try making some other changes, for example by further developing the structure of the page into sections and subsections, each with some text. Check the result regularly.
 ```

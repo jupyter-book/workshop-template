@@ -24,7 +24,7 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 
 If you have specified a ToC and create a new file, you'll need to add it to the `myst.yml` file to include it in the book.
 
-
+(headings)=
 ### Headings
 
 To make sections within a page, use a number of `#` symbols at the beginning of a line.
