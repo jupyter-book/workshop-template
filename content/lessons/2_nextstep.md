@@ -1,5 +1,4 @@
 ---
-
 numbering:
   title:
     offset: 0
@@ -11,6 +10,7 @@ kernelspec:
 
 # Include awesomeness
 
+We have covered the basics of building text files in markdown. However, we can include figures,  
 
 ## Include a figure
 

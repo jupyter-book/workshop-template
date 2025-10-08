@@ -124,5 +124,5 @@ Don't forget to commit your changes!
 ```
 
 ```{exercise} Other changes
-Try making some other changes, for example by further developing the structure of the page into sections and subsections, each with some text. Check the result regularly.
+Try making some other changes, for example by further developing the structure of the page into sections and subsections, each with some **text**. *Check* the result regularly.
 ```
