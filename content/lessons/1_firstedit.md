@@ -41,12 +41,15 @@ We will now make a small change to one of the files and then look at the result 
 ````{exercise} Your first change
 ::::{tab-set}
 :::{tab-item} GH IDE
-Navigate to the file `book/some_content/overview.md`. Then click on the pencil on the right (edit this file).
+Navigate to the file `Content/Lessons/1_firstedit.md`. Then click on the pencil on the right (edit this file).
 
-Change the text after the `#`. This is the title of the file.
+Change the text after the `#`. This is the **title** of the file.
 
-``` {figure} ../figures/blank.png
-<!-- ``` {figure} figures/eersteedit.gif -->
+
+```{figure} figures/firstedit.*
+:width: 100%
+
+Choose your file, click on edit and make changes. Ready? Commit your changes to your repository and see the output.
 ```
 
 Optionally, make other changes in the text editor and when you're done, commit your changes to the "remote repository" by clicking the green `Commit changes` button.
@@ -54,9 +57,9 @@ Optionally, make other changes in the text editor and when you're done, commit y
 The book will now be rebuilt. Once that's done, you can view the result on the GitHub page.
 :::
 :::{tab-item} Local
-Navigate to the file `book/some_content/overview.md` and open the file.
+Navigate to the file `Content/Lessons/1_firstedit.md` and open the file.
 
-Change the text after the `#`. This is the title of the file.
+Change the text after the `#`. This is the **title** of the file.
 
 Optionally, make other changes in the text editor. Check the results by running `myst start` in the CLI and opening the local server `http://localhost:3000/`. When you're done, commit your changes to the "remote repository".
 

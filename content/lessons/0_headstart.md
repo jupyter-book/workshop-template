@@ -168,3 +168,6 @@ Once the MyST server is running, it will automatically update as you make change
 ## Create a pdf export
 A clear advantage of JB2 over JB1 is the ability to easily create a high quality pdf export of your book (as well as other formats). We included a GitHb action that automatically creates a pdf export of your book using Typst when you push changes to your repository. You can also create the pdf locally if you have the Typst CLI installed. We cover the pdf export [later in more detail ](pdfoutput)
 
+```{tip}
+Checkout the content on your mobile phone as well! It just looks amazing.
+```
