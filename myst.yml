@@ -53,13 +53,15 @@ project:
     - file: content/3_cheat_sheet.md
     - file: content/lessons/your_turn.md          # dropdown menu
       children:
-        - file: content/lessons/lesson0.md
-        - file: content/lessons/lesson1.md
-        - file: content/lessons/lesson2.md
-        - file: content/lessons/lesson3.ipynb
-        - file: content/lessons/lesson4.md
-        - file: content/lessons/lesson5.md
-        - file: content/lessons/lesson6.md
+        - file: content/lessons/0_headstart.md
+        - file: content/lessons/1_firstedit.md
+        - file: content/lessons/2_nextstep.md
+          children:
+          - file: content/lessons/2a_plugins.md          
+        - file: content/lessons/3_interactive.ipynb
+        - file: content/lessons/4_styling.md
+        - file: content/lessons/5_GHworkflow.md
+        - file: content/lessons/6_pdfoutput.md
     - file: content/advanced_start.md
     - file: content/software.md
     - file: content/gallery.md
@@ -74,7 +76,7 @@ site:
     hide_authors: true
 
   actions:
-    - title: report issue
+    - title: Feedback
       url: https://github.com/FreekPols/JB2_book_template/issues
-    - title: BIG PDF DOWNLOAD BUTTON
+    - title: PDF
       url: https://freekpols.github.io/JB2_book_template/build/book-3ca1524f3fcc07723738a49a0c9f9745.pdf

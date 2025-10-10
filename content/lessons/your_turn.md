@@ -1,5 +1,5 @@
 (lessons-start)=
-# Get going yourself
+# Create your first Jupyter Book 2
 
 Now it's your turn to get going with creating content in a Jupyter Book.
 

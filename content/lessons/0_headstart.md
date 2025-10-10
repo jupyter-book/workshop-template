@@ -36,7 +36,7 @@ Follow these steps to create your own GHpages from the template.
 ```
 
 8. Use the book link  (`code` $\rightarrow$ below **About**) to your Github page where the book is hosted.
-9. The output resembles {numref}`Figuur {number} <fig_startscreen>`.
+9. The output resembles {numref}`Figure {number} <fig_startscreen>`.
 
 ```{figure} figures/startscreen.png
 :name: fig_startscreen
@@ -104,7 +104,7 @@ git push -u origin main
 Now, if you go back to your repository and click on `actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
 
 :::
-:::{tab-item} Entirely locally &#127798; 
+:::{tab-item} Entirely locally 🌶 
 If you prefer, you can also work entirely locally using command-line tools and a text editor.
 
 1. Clone the repository to your local machine using Git.
@@ -165,44 +165,9 @@ Once the MyST server is running, it will automatically update as you make change
 :::
 ::::
 
-## Export to pdf
+## Create a pdf export
+A clear advantage of JB2 over JB1 is the ability to easily create a high quality pdf export of your book (as well as other formats). We included a GitHb action that automatically creates a pdf export of your book using Typst when you push changes to your repository. You can also create the pdf locally if you have the Typst CLI installed. We cover the pdf export [later in more detail ](pdfoutput)
 
-You can export your book to a pdf in two ways, with LaTeX or Typst.
-Both methods have [advantages and disadvantages](https://mystmd.org/guide/creating-pdf-documents).
-
-### Configure pdf output
-
-We specified in the `myst.yml` file that we want to export to pdf using Typst.
-You can also choose LaTeX.
-See the `myst.yml` file, or [](#code_export) for the syntax.
-
-:::{literalinclude} ../../myst.yml
-:start-after: exports
-:end-at: - id: output-pdf
-:lineno-match:
-:caption: Example of the export section in the `myst.yml` file.
-:label: code_export
-:::
-
-You can specify the [output template](https://github.com/myst-templates).
-We won't go into detail here, but you can find more information [in the MyST Markdown documentations](https://mystmd.org/guide/creating-pdf-documents).
-
-### GitHub workflow
-
-This template includes a GitHub workflow that automatically builds the pdf for you with Typst when you push changes.
-Using the export options in `myst.yml`, a pdf will be built and committed to the `exports` directory when you push to GitHub.
-
-```{note}
-The GitHub workflow this only works when there are no errors in the markdown files.
-For instance, it breaks when figures are missing.
+```{tip}
+Checkout the content on your mobile phone as well! It just looks amazing.
 ```
-
-### Local pdf build
-
-If you have the Typst CLI installed, you can also build a pdf locally.
-
-```console
-myst build --typst
-```
-
-The book will be written to `exports/book.pdf`.
