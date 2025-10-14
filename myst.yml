@@ -29,12 +29,19 @@ project:
     - format: typst
       template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
       output: exports/book.pdf
-      id: output-pdf
-    # options for pdf output that come with this template
+      id: output-pdf_typst
       cover: logo.svg
       logo: logo.svg
       logo_width: 5
       ToC_depth: 2
+
+    - format: pdf
+      template: https://github.com/myst-templates/plain_latex_book.git        #plain_typst_book
+      output: exports/book_tex.pdf
+      id: output-pdf_tex
+
+    # options for pdf output that come with this template
+
 
   downloads:
     - id: output-pdf
@@ -59,7 +66,7 @@ project:
           children:
           - file: content/lessons/2a_plugins.md          
         - file: content/lessons/3_interactive.ipynb
-        - file: content/lessons/4_styling.md
+        # - file: content/lessons/4_styling.md
         - file: content/lessons/5_GHworkflow.md
         - file: content/lessons/6_pdfoutput.md
     - file: content/advanced_start.md
