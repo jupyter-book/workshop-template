@@ -17,8 +17,8 @@ This book provides an introduction for freshman students into the world of class
 ```
 ````{card}
 :link: https://freekpols.github.io/Mechanica/
-```{figure} https://freekpols.github.io/Mechanica/build/cover-d76f33acce0a96f26f1073dd186946fb.gif
-```
+<!-- ```{figure} https://freekpols.github.io/Mechanica/build/cover-d76f33acce0a96f26f1073dd186946fb.gif
+``` -->
 ````
 :::
 
