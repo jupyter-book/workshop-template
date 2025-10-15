@@ -81,3 +81,16 @@ for i in range(5):
     start, next = next, start + next
 ```
 
+
+
+```{warning} 
+Fantastic directive, needs some elaboration
+```
+
+```{mermaid}
+flowchart LR
+  A(["I don't know"])
+  A --> B(["Ask Dennis"])
+  A --> C(["Try Google"])
+  C --> B
+```
