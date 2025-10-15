@@ -80,7 +80,7 @@ If you are working with multiple people in GitHub, or on a large project yoursel
 In order to make a new chapter, three things need to be done. 
 1. A new markdown file should be created
 2. A title should be specified in the file.
-3. The file should be included in the [ToC](lesson1_code_toc)
+3. The file should be included in the [ToC](#lesson1_code_toc)
 
 ::::{tab-set}
 :::{tab-item} Using the GitHub IDE
@@ -88,10 +88,10 @@ In order to make a new chapter, three things need to be done.
   - navigate to the folder where you want to include the sourcefile
   - click `add file` / `+ Create new file`
   - create a clear name for the file and use the .md extension (e.g. `newfile.md`)
-2. Create a [H1 heading](headings)
+2. Create a [H1 heading](#headings)
   - use for the header `#` and include the title
   - commit your changes
-3. Include the file in the [ToC](lesson1_code_toc).
+3. Include the file in the [ToC](#lesson1_code_toc).
   - navigate to the `myst.yml` file in the root
   - at the right location in your book, include the path to your file (e.g. `- file: content/lessons/newfile.md`)
   - commit your changes and check the output on GitHub pages.
@@ -101,10 +101,10 @@ In order to make a new chapter, three things need to be done.
   - navigate to the folder where you want to include the sourcefile
   - create a new file
   - create a clear name for the file and use the .md extension (e.g. `newfile.md`)
-2. Create a [H1 heading](headings)
+2. Create a [H1 heading](#headings)
   - use for the header `#` and include the title
   - save your file
-3. Include the file in the [ToC](lesson1_code_toc).
+3. Include the file in the [ToC](#lesson1_code_toc).
   - navigate to the `myst.yml` file in the root folder
   - at the right location in your book, include the path to your file (e.g. `- file: content/lessons/newfile.md`)
   - save your changes and check the out on your local server.

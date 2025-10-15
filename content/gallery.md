@@ -17,8 +17,8 @@ This book provides an introduction for freshman students into the world of class
 ```
 ````{card}
 :link: https://freekpols.github.io/Mechanica/
-<!-- ```{figure} https://freekpols.github.io/Mechanica/build/cover-d76f33acce0a96f26f1073dd186946fb.gif
-``` -->
+```{figure} figures/mech.*
+``` 
 ````
 :::
 
@@ -30,7 +30,7 @@ The Turing Way is an open science, open collaboration, and community-driven proj
 ```
 ````{card}
 :link: https://book.the-turing-way.org/
-```{figure} https://book.the-turing-way.org/build/theturingway-pathway-5886c7b04b102fcc164996c236098e31.svg
+```{figure} https://github.com/the-turing-way/the-turing-way/blob/main/book/figures/theturingway-pathway.jpg
 
 The Turing Way project illustration by Scriberia. Zenodo. [@https://doi.org/10.5281/ZENODO.3332807]()
 ```
