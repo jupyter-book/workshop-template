@@ -25,3 +25,6 @@ https://mystmd.org/guide/website-navigation#use-the-edit-this-page-button
 action button
 frontmatter: hide
 fronmatter: numbering
+
+## Landing page
+https://mystmd.org/guide/website-landing-pages

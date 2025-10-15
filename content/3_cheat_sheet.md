@@ -331,12 +331,18 @@ Without cool text
 You can add special blocks that are highlighted in the text. See, for example, the warning below.
 
 ::::{card}
-```{warning}
+```{warning} This is a warning without icon
+:class: dropdown
+:open: true
+:icon: false
 Here is a warning
 ```
 :::{dropdown} Markdown syntax
 ````markdown
-```{warning}
+```{warning} This is a warning without icon
+:class: dropdown
+:open: true
+:icon: false
 Here is a warning
 ```
 ````

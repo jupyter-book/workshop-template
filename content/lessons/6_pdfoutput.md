@@ -6,7 +6,7 @@ numbering:
 ---
 
 (pdfoutput)=
-# Create pdf output
+# Create pdf output 🌶
 Jupyter Book 2 is centered around creating interactive online documentation. However, there are several instances when a pdf, next to the online book, is desired. We may consider a printed exam, a pdf version for plagiarism check, an journal article (using MySTMD), the ability to take notes for students, and so on.. 
 
 One of the strengths of Jupyter Book 2 is the easy of creating a high-quality pdf from the same source files as the online book. A [template](https://github.com/myst-templates) can be used to create a pdf with a consistent look and feel. These templates can be customized to fit the specific needs of the document being created.
@@ -69,7 +69,29 @@ The book will be built in the `exports` directory as specified in the `myst.yml`
 
 
 ### GH actions
-df
+Building and including your pdf is possible through a GitHub action that automatically builds the pdf when you push changes to GitHub. This has both is pros and cons. For instance, the build of your pdf is done prior to the build of your book. If there is an error in your book, the pdf AND your book will not be built. On the other hand, you do not need to install anything locally and the pdf is always up to date when you push changes.
+
+```{warming}
+The GitHub workflow this only works when there are no errors in the markdown files.
+For instance, it breaks when figures are missing.
+```
+
+There is a third option where you have a separate pdf build github action that only builds the pdf when you push to a specific branch, e.g. `main` or `release` or when you initialize the workflow yourselves. 
+
+````{markdown}
+```yml
+    # Install Typst for PDF generation
+    - name: Install Typst
+      run: |
+        typst --version
+
+    # Build the PDF using Typst
+    - name: Build PDF
+      run: |
+        myst build --typst
+```
+````
+
 
 ## Excluding and including sections for pdf[^1]
 [^1]: Directly copied from the official [Myst documentation](https://mystmd.org/guide/creating-pdf-documents#excluding-content-from-specific-exports).
@@ -94,20 +116,16 @@ You may use block metadata to insert page breaks into your PDF or docx export wi
 
 
 
-
 ### Configure pdf output
 
 
 
+### Typst
+
+When exporting to Typst format, you can provide Typst-specific math content using the typst option. This allows you to use native Typst syntax instead of relying on tex-to-typst conversion, which may give incorrect results.
+
+Example with typst argument in a math block:
+https://mystmd.org/guide/math#typst-math
 
 
-### GitHub workflow
-
-This template includes a GitHub workflow that automatically builds the pdf for you with Typst when you push changes.
-Using the export options in `myst.yml`, a pdf will be built and committed to the `exports` directory when you push to GitHub.
-
-```{note}
-The GitHub workflow this only works when there are no errors in the markdown files.
-For instance, it breaks when figures are missing.
-```
 
