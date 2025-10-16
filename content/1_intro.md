@@ -13,7 +13,7 @@ This template:
 - includes a GitHub Action to automatically build and deploy your book online and as a pdf
 
 
-Hence, the template allows you to engage with JB2 (and the underlying softawre MyST) without installing any software on your own computer. You only need a web browser and a GitHub account (we provide details on how to work locally on your own computer). 
+Hence, the template allows you to engage with JB2 (and the underlying softawre MyST) _without installing any software on your own computer._ You only need a web browser and a GitHub account (we provide details on how to work locally on your own computer). For those who are comfortable installing software locally (i.e., with a CLI) and/or do not want to use the template book structure, use the [Advanced Start](./advanced_start.md) instructions, denoted with red hot &#127798;.
 
 ```{warning} Work in Progress
 Materials in this document are under construction; the contents and order of the information and tasks may change, depending on workshop needs and feedback.
@@ -23,8 +23,7 @@ As this document serves both as a template _and_ a guide, it has the following s
 
 1. A quick introduction to key Jupyter Book 2, MyST and Markdown concepts.
 2. A tutorial with several steps to introduce you to editing and building your own book.
-3. Additional resources, for example, [how to work locally on your own computer](./advanced_start.md).
-
+3. Additional resources, for example, [Advanced Start instructions](./advanced_start.md) and [Software](./software.md).
 
 ```{note}
 The template and its content are not meant as a replacement of the documentation already available on the [Jupyter Book 2 website](https://next.jupyterbook.org/) and the [MyST website](https://mystmd.org/guide). It is designed to support new users of Jupyter Book 2 and MystMD, in particular for use in workshop settings where participants may not have time or ability to install the required software on a personal computer.
