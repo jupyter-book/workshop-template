@@ -86,7 +86,7 @@ for i in range(5):
 
 Various directives are available. These follow the same syntax as figures. For example, we can include a mermaid diagram:
 
-````{markdown}
+````markdown
 ```{mermaid}
 flowchart LR
   Start --> Stop
@@ -98,7 +98,7 @@ flowchart LR
   A(["Start"]) --> B{"Decision"}
   B --> C["Option A"] & D["Option B"]
 ```
-```` 
+````
 
 Resulting in:
 
