@@ -3,7 +3,7 @@ version: 1
 project:
   id: 7204695b-7485-4989-863c-16cf6e4db155
   title: Jupyter Book 2 Head Start Template
-  # description:
+  description: This description goes in the preface of the pdf output. 
   # keywords: []
   authors:
     - name: Freek Pols
@@ -23,22 +23,29 @@ project:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
     # links to GH
 
-  # options for pdf output
-  options:
-    cover: logo.svg
-    logo: logo.svg
-    logo_width: 10
-    ToC_depth: 2
-
 
   # exports and downloads
   exports:
     - format: typst
       template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
       output: exports/book.pdf
-      id: output-pdf
+      id: output-pdf_typst
+      cover: logo.svg
+      logo: logo.svg
+      logo_width: 5
+      ToC_depth: 2
+
+    - format: pdf
+      template: https://github.com/myst-templates/plain_latex_book.git        #plain_typst_book
+      output: exports/book_tex.pdf
+      id: output-pdf_tex
+
+    # options for pdf output that come with this template
+
+
   downloads:
     - id: output-pdf
+      title: Download Book as PDF
 
   # Jupyter Notebook configuration
   jupyter:
@@ -53,13 +60,18 @@ project:
     - file: content/3_cheat_sheet.md
     - file: content/lessons/your_turn.md          # dropdown menu
       children:
-        - file: content/lessons/lesson0.md
-        - file: content/lessons/lesson1.md
-        - file: content/lessons/lesson2.md
-        - file: content/lessons/lesson3.ipynb
-        - file: content/lessons/lesson4.md
+        - file: content/lessons/0_headstart.md
+        - file: content/lessons/1_firstedit.md
+        - file: content/lessons/2_nextstep.md
+          children:
+          - file: content/lessons/2a_plugins.md          
+        - file: content/lessons/3_interactive.ipynb
+        # - file: content/lessons/4_styling.md
+        - file: content/lessons/5_GHworkflow.md
+        - file: content/lessons/6_pdfoutput.md
     - file: content/advanced_start.md
     - file: content/software.md
+    - file: content/gallery.md
 
 site:
   template: book-theme
@@ -71,5 +83,7 @@ site:
     hide_authors: true
 
   actions:
-    - title: report issue
+    - title: Feedback
       url: https://github.com/FreekPols/JB2_book_template/issues
+    - title: PDF
+      url: exports/book.pdf

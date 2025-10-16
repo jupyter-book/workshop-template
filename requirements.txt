@@ -1,0 +1,5 @@
+jupyterlab
+mystmd
+jupyterlab_myst
+ipykernel
+ipywidgets
