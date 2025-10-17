@@ -36,3 +36,19 @@ The Turing Way project illustration by Scriberia. Zenodo. [@https://doi.org/10.5
 ```
 ````
 :::
+
+:::{grid} 1 1 2 2
+```{card} Myst Official Documentation
+:link: https://mystmd.org/guide
+
+MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication. Our powerful authoring framework supports blogs, online books, scientific papers, reports and journals articles.
+```
+````{card}
+:link: https://mystmd.org/guide
+```{figure} https://github.com/jupyter-book/mystmd/blob/main/docs/videos/links.mp4
+:class: framed
+
+Live graphs can be embedded directly in your documentation or articles with computation backed by Jupyter or JupyterLite – running locally, on Binder, or directly in your browser.
+```
+````
+:::

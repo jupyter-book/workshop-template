@@ -86,4 +86,6 @@ site:
     - title: Feedback
       url: https://github.com/FreekPols/JB2_book_template/issues
     - title: PDF
-      url: exports/book.pdf
+      url: ./exports/book.pdf
+    - title: PPT 
+      url: ./presentation/JB2.pptx
