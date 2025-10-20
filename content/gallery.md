@@ -1,12 +1,8 @@
 # Gallery
 
-use cases:
-- official textbook
-- cv
-- student portfolio
-- lab manual
-- documentation
-- ...
+Jupyter Book 2 technology has been applied across a wide range of use cases, including curricula vitae, official educational textbooks, student portfolios, lab manuals, and technical documentation.
+
+Below is a gallery showcasing three examples of such outputs.
 
 
 :::{grid} 1 1 2 2
@@ -45,10 +41,48 @@ MyST is an ecosystem of open-source, community-driven tools designed to revoluti
 ```
 ````{card}
 :link: https://mystmd.org/guide
-```{figure} https://github.com/jupyter-book/mystmd/blob/main/docs/videos/links.mp4
+```{figure} figures/mystvideo.mp4
 :class: framed
 
 Live graphs can be embedded directly in your documentation or articles with computation backed by Jupyter or JupyterLite – running locally, on Binder, or directly in your browser.
+```
+````
+:::
+
+
+:::{grid} 1 1 2 2
+```{card} Scientific Python
+:link: https://scientific-python.org/
+
+The scientific Python ecosystem is a loose federation of community-developed and -owned Python projects widely used in scientific research, technical computing, and data science. The scientific Python community of contributors and maintainers are employed by a variety of universities, research labs, and companies.
+```
+````{card}
+:link: https://scientific-python.org/
+```{figure} https://scientific-python.org/images/logo.svg
+:class: framed
+
+
+```
+````
+:::
+
+
+:::{grid} 1 1 2 2
+```{card} Project Pythia
+:link: https://projectpythia.org/
+
+Project Pythia is the education working group for Pangeo and is an educational resource for the entire geoscience community. Together these initiatives are helping geoscientists make sense of huge volumes of numerical scientific data using tools that facilitate open, reproducible science, and building a community of practice around these goals.
+
+Project Pythia is a home for Python-justified learning resources that are open-source, community-owned, geoscience-focused, and high-quality.
+```
+
+````{card}
+:link: https://projectpythia.org/
+
+```{figure} https://projectpythia.org/build/config-item-24692dda-db91094b9a012815ff824f457e3a9c55.svg
+:class: framed
+
+
 ```
 ````
 :::

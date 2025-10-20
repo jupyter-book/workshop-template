@@ -113,6 +113,9 @@ The content in these directives and roles will be included exactly as written in
 You may use block metadata to insert page breaks into your PDF or docx export with +++ { "page-break": true }. This will have no impact on your MyST site build nor other static exports that disregard “pages” (e.g. JATS).
 
 
++++{"no-pdf": true}
+This won't be in the pdf.
++++
 
 ### Configure pdf output
 

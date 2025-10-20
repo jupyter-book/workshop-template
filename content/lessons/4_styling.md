@@ -7,6 +7,10 @@ numbering:
 
 # Styling etc 🌶
 
+## Landing page customization
+
+
+
 ## The cruel difficulty of including correct chapter numbering
 
 ## Custom CSS

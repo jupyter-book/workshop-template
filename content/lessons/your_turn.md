@@ -10,7 +10,7 @@ There are some conditions to meet before you can get started:
 - A little bit of patience, it's a steep learning curve.
 
 Optional:
-- Software to write your code in, such as [Visual Studio Code](https://code.visualstudio.com/) (VSC).
+- [Software](#software) to write your code in, such as [Visual Studio Code](https://code.visualstudio.com/) (VSC).
 
 :::{tip}
 If you are feeling confident and would rather start building a document from scratch using the CLI on your computer, you can look at [the advanced start](#advanced-start) option &#127798;.

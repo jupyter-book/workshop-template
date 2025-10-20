@@ -15,7 +15,7 @@ project:
     content: CC-BY-4.0
 
   # abstract: Optional
-  date: 2025-09-29 # ${BUILD_DATE} 
+  date: 2025-10-20 # ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
   edit_url: 
   
@@ -29,16 +29,16 @@ project:
     - format: typst
       template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
       output: exports/book.pdf
-      id: output-pdf_typst
+      id: output-pdf
       cover: logo.svg
       logo: logo.svg
       logo_width: 5
       ToC_depth: 2
 
-    - format: pdf
-      template: https://github.com/myst-templates/plain_latex_book.git        #plain_typst_book
-      output: exports/book_tex.pdf
-      id: output-pdf_tex
+    # - format: pdf
+    #   template: https://github.com/myst-templates/plain_latex_book.git        #plain_typst_book
+    #   output: exports/book_tex.pdf
+    #   id: output-pdf_tex
 
     # options for pdf output that come with this template
 
