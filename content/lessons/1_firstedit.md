@@ -49,7 +49,6 @@ Navigate to the file `Content/Lessons/1_firstedit.md`. Then click on the pencil 
 
 Change the text after the `#`. This is the **title** of the file.
 
-
 ```{figure} figures/firstedit.*
 :width: 100%
 
@@ -65,22 +64,25 @@ Navigate to the file `Content/Lessons/1_firstedit.md` and open the file.
 
 Change the text after the `#`. This is the **title** of the file.
 
-Optionally, make other changes in the text editor. Check the results by running `myst start` in the CLI and opening the local server `http://localhost:3000/`. When you're done, commit your changes to the "remote repository".
+Optionally, make other changes in the text editor.
+Check the results by running `myst start` in the CLI and opening the local server `http://localhost:3000/`.
+When you're done, commit your changes to the "remote repository".
 
-The book will now be rebuilt. Once that's done, you can view the result on the GitHub page as well.
+The book will now be rebuilt.
+Once that's done, you can view the result on the GitHub page as well.
 
 :::
 :::
 ::::
 ````
 
-```{admonition} Commit summary
+:::{note} Commit summary
 :class: dropdown
 If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed, see also [this more elaborative description](https://book.the-turing-way.org/collaboration/github-novice/github-novice-firststeps/#committing-or-saving-your-changes). This way, you can detect and undo any errors early. You can also explain why certain changes were made.
-```
-
+:::
 
 ## Create a new chapter
+
 In order to make a new chapter, three things need to be done. 
 1. A new markdown file should be created
 2. A title should be specified in the file.
@@ -121,7 +123,7 @@ Navigate back to your recently made markdown file and include a section includin
 $$ F = m a $$ (eq:NewtonFirst)
 
 
-```{tip} 
+```{tip}
 Take a look at the [Cheatsheet page](#cheatsheet) to see how to add a formula and give it a try...
 
 Don't forget to commit your changes!
