@@ -94,6 +94,7 @@ To add a new page from a Markdown file,
 3. Include in the [ToC](#lesson1_code_toc)
 
 ```{exercise} Add a new page
+:label: ex-add-a-page
 ::::{tab-set}
 :::{tab-item} Using the GitHub IDE
 1. Create a new markdown file
@@ -124,6 +125,37 @@ To add a new page from a Markdown file,
 ::::
 ```
 
+## Headings
+
+Similarly to how your table of contents gives structure to your Jupyter Book,
+within a page you can build structure using headings.
+You can use levels of headings from 1 to 6 to structure a page.
+
+:::{note}
+In the [book theme](xref:myst-guide/website-templates#default-web-themes), headings are shown, and can be used to navigate a page, in the Contents menu at the right of a page.
+:::
+
+:::{exercise} Add headings to your new page
+
+Navigate to the Markdown file you added to the book in [](#ex-add-a-page).
+You have already added a level one heading, the title of the page.
+
+Add headings to represent the following structure.
+Refer to the [cheat sheet](#headings) if you need a reminder on the syntax.
+
+- Animals
+  - Dogs
+    - Bearded Collie
+    - Irish Wolfhound
+  - Cats
+    - Calico
+    - Tabby
+  - Hippos
+    - Common
+    - Pygmy
+- Food
+:::
+
 ## Create a section with your favorite equation
 Navigate back to your recently made markdown file and include a section including your favorite equation, consider you want an inline equation ($F = m a$) or centered and labeled:
 
@@ -131,7 +163,7 @@ $$ F = m a $$ (eq:NewtonFirst)
 
 
 ```{tip}
-Take a look at the [Cheatsheet page](#cheatsheet) to see how to add a formula and give it a try...
+Take a look at the [Cheatsheet page](#cheatsheet) to see how to add a formula and give it a try…
 
 Don't forget to commit your changes!
 ```
