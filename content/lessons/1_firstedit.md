@@ -156,8 +156,39 @@ Refer to the [cheat sheet](#headings) if you need a reminder on the syntax.
 - Food
 :::
 
+## Essential typography
+
+You should now be confident making changes locally or through the GH IDE.
+Try making the changes indicated in the following exercise.
+Refer to the [cheat sheet](#cheet-sheet) if you need a reminder on the syntax.
+
+:::{exercise} Typography
+Make this line bold.
+
+Make this line italic.
+
+Put these items in an unordered list,
+
+Elm
+Sycamore
+Oak
+Beech
+
+Put these items in an ordered list,
+
+Hydrogen
+Helium
+Lithium
+Beryllium
+Boron
+Carbon
+
+Put a line break between this sentence. And this sentence.
+:::
+
 ## Create a section with your favorite equation
-Navigate back to your recently made markdown file and include a section including your favorite equation, consider you want an inline equation ($F = m a$) or centered and labeled:
+
+Navigate back to your recently made markdown file and include a section including your favorite equation, consider you want an inline equation ($F = m a$) or centered and labelled:
 
 $$ F = m a $$ (eq:NewtonFirst)
 
