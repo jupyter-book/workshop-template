@@ -186,6 +186,11 @@ Carbon
 Put a line break between this sentence. And this sentence.
 :::
 
+:::{hint}
+Remember, new lines in a Markdown file don't create new paragraphs in the output.
+See the [cheat sheet](#line-breaks) for a reminder.
+:::
+
 ## Create a section with your favorite equation
 
 Navigate back to your recently made markdown file and include a section including your favorite equation, consider you want an inline equation ($F = m a$) or centered and labelled:
