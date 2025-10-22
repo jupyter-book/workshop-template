@@ -81,16 +81,22 @@ Once that's done, you can view the result on the GitHub page as well.
 If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed, see also [this more elaborative description](https://book.the-turing-way.org/collaboration/github-novice/github-novice-firststeps/#committing-or-saving-your-changes). This way, you can detect and undo any errors early. You can also explain why certain changes were made.
 :::
 
-## Create a new chapter
+## Adding a page
 
-In order to make a new chapter, three things need to be done. 
-1. A new markdown file should be created
-2. A title should be specified in the file.
-3. The file should be included in the [ToC](#lesson1_code_toc)
+The [](xref:myst-guide/table-of-contents) defines the structure of your Jupyter Book.
+Items in your `myst.yml`'s `toc` will be added to the book's table of contents.
+Markdown, TeX and Jupyter Notebook files will be rendered as pages (in the case of a website) or chapters (in the case of a document).
 
+To add a new page from a Markdown file,
+
+1. Create a new markdown file
+2. Add some content to the file
+3. Include in the [ToC](#lesson1_code_toc)
+
+```{exercise} Add a new page
 ::::{tab-set}
 :::{tab-item} Using the GitHub IDE
-1. Create a new markdown file 
+1. Create a new markdown file
   - navigate to the folder where you want to include the sourcefile
   - click `add file` / `+ Create new file`
   - create a clear name for the file and use the .md extension (e.g. `newfile.md`)
@@ -116,8 +122,9 @@ In order to make a new chapter, three things need to be done.
   - save your changes and check the out on your local server.
 :::
 ::::
+```
 
-### Create a section with your favorite equation
+## Create a section with your favorite equation
 Navigate back to your recently made markdown file and include a section including your favorite equation, consider you want an inline equation ($F = m a$) or centered and labeled:
 
 $$ F = m a $$ (eq:NewtonFirst)
