@@ -20,7 +20,7 @@ This file contains information about the title, author, and other metadata of th
 :::
 
 
-```{card} Official documentation
+```{tip} Official documentation
 See [here](https://mystmd.org/guide/table-of-contents) for a full explanation of the structure and TOC and [here](https://mystmd.org/guide/quickstart#configure-site-and-page-options) for more the website options.
 ```
 
