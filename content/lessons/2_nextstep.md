@@ -192,9 +192,12 @@ def fib(n):
 ```
 :::
 
-## Directives
+## Diagrams
 
-[Various directives](https://mystmd.org/guide/directives) are available. These follow the same syntax as figures. For example, we can include a mermaid diagram:
+MyST supports displaying [Mermaid](https://mermaid.js.org/) diagrams using the [`mermaid` directive](xref:myst-guide/diagrams).
+Mermaid let's you create a number of different types of diagrams using plain text.
+This is a great way to show diagrams in your book, while keeping the source easily editable in version control.
+For example, the following directive
 
 ````markdown
 ```{mermaid}
@@ -210,9 +213,9 @@ flowchart LR
 ```
 ````
 
-Resulting in:
+Renders as,
 
-```{mermaid} 
+```{mermaid}
 flowchart LR
   Start --> Stop
   A1(["Novice"]) --> B1
@@ -224,12 +227,11 @@ flowchart LR
   B --> C["Option A"] & D["Option B"]
 ```
 
-```{exercise} Create your own directive
-Create your own mermaid diagram or directive. For inspiration, see [these directives](https://mystmd.org/guide/directives) examples or [here](https://mystmd.org/guide/proofs-and-theorems).
-
-
+```{exercise} Create a diagram
+Create your own mermaid diagram.
+You can create a diagram from scratch, consulting the syntax in the [Mermaid documentation](https://mermaid.js.org/intro/),
+or copy [an example](https://mermaid.js.org/syntax/examples)
 ```
-
 
 `````{tab-set}
 
