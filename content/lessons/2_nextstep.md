@@ -29,9 +29,9 @@ If there is a feature you would like to add to your project,
 you could create a new role or directive in a plugin to extend the behaviour of MyST.
 :::
 
-## Include a figure
+## Images and figures
 
-The quickest way to include a figure is by using `![](url)` as done below
+The quickest way to include an image is with the Markdown notation `![alt text](url-or-path)` as done below
 
 ```markdown
 ![External image](https://polslab.tnw.tudelft.nl/figures/training.JPG)
@@ -39,29 +39,27 @@ The quickest way to include a figure is by using `![](url)` as done below
 resulting in
 ![External image](https://polslab.tnw.tudelft.nl/figures/training.JPG)
 
-This, however, gives us limited options to customize the figure. We can include more options using the [`figure` directive](#figures).
+However, this gives us limited options to customize the figure.
+We can include more options using the [`figure` directive](#figures).
 
-If we want to add a figure to our book, we can embed an URL to an external website (as in the figure above). However, this carries the risk that the figure will no longer be visible if it is moved from its location. It is therefore better to have the figure as a local source file.
+If we want to add a figure to our book, we can use the URL of an external website (as in the figure above).
+However, this carries the risk that the figure will no longer be visible if it is moved from its location.[^embeddingimages]
+It is therefore better to have the figure as a local source file where you build the book.
+We will do this by adding an image file to your git repository.
 
-So, we first need to upload a figure to GitHub and then refer to that figure in our file. 
-
-```{note} 
-This will become much easier later. Once you have cloned the repository to your local computer, you can simply add the figure file to the correct folder on your computer and push the changes to GitHub. 
-```
-
-`````{exercise} Include your first figure
+:::::{exercise} Include a figure
 ::::{tab-set}
 :::{tab-item} GitHub
-On GitHub, under the `code` tab...
+On GitHub, under the `code` tab…
 
 1. Navigate to content/figures and click on `add file` $\rightarrow$ `Upload files`.
 
-```` {figure} figures/incl_fig.*
+``` {figure} figures/incl_fig.*
 :width: 100%
 :name: fig_incl_fig
 
 Add a file in the folder by choosing `Upload files`
-````
+```
 2. Choose the figure you want to add (remember the file name!).
 3. Commit your changes to GitHub (the file will be uploaded).
 4. Navigate to the `book` folder and open `intro.md` and click `edit this file`.
@@ -69,10 +67,8 @@ Add a file in the folder by choosing `Upload files`
 
 ````{code} myst
 ``` {figure} figures/incl_fig.PNG
----
-width: 50%
-name: fig_myfirstfigure
----
+:width: 50%
+:name: fig_myfirstfigure
 add file in the folder
 ```
 ````
@@ -80,36 +76,38 @@ add file in the folder
 6. Commit your changes and view the result on GitHub pages.
 :::
 :::{tab-item} Local
-1. Add the figure file you want to include to the `content/figures` folder on your computer.
+1. Put the image file you want to include to the `content/figures` folder on your computer.
 2. Navigate to the `book` folder and open `intro.md`.
 3. Copy the code below into that file, and change the figure name to your own figure's name.
 ````{code} myst
 ``` {figure} figures/incl_fig.PNG
----
-width: 50%
-name: fig_myfirstfigure
----
+:width: 50%
+:name: fig_myfirstfigure
 add file in the folder
 ```
 ````
-4. Save your changes and view the results.
+4. Commit your changes and view the results.
 
+```{hint}
+Remember to add your image to the repository with `git add`.
+```
 :::
 ::::
-`````
+:::::
 
 ```{warning}
-The code is case sensitive. So it matters whether your extension is .png or .PNG. You can also use .* to avoid this issue, the system will then pick the right extension where the best options is chosen first (e.g. .gif over .png, and .csv over .jpg). This also avoids conversion issues for pdf output of non-static or non-supported formats
+The filename is case sensitive.
+So it matters whether your extension is .png or .PNG.
+You can also use .* to avoid this issue, the system will then pick the right extension where the best options is chosen first (*e.g.* .gif over .png, and .svg over .jpg).
+This also avoids conversion issues for pdf output of non-static or non-supported formats
 ```
 
 ```{tip}
-We have a page with all important [codes](#cheatsheet).
-
-You can find more information about figure options [here](https://mystmd.org/guide/figures).
-
+You can find more information about figure options [in the MyST documentation](xref:myst-guide/figures#figure-directive).
 ```
 
-You can position figures in different places (left / center / right / margin), adjust the size, add a caption, etc. Check the documentation above and try out the different settings.
+You can position figures in different places (left / center / right / margin), adjust the size, add a caption, _etc._.
+Check the documentation above and try out the different settings.
 
 ## Embed video (from YouTube) using iframe or video
 We can embed videos from YouTube using an iframe. For example, the following code embeds a video about Markdown:
@@ -296,3 +294,6 @@ Content for Tab 1
 Content for Tab 2
 :::
 :::
+::::
+
+[^embeddingimages]: Fetching images from someone else's site also puts strain on their web server, which they may not appreciate.

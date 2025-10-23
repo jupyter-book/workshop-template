@@ -395,6 +395,7 @@ Calculate $4+2$
 :::
 ::::
 
+(figures)=
 ## Figures
 A site/book naturally needs figures. There are roughly two ways to add a figure:
 
