@@ -154,6 +154,14 @@ Refer to the [cheat sheet](#headings) if you need a reminder on the syntax.
     - Common
     - Pygmy
 - Food
+  - Soup
+    - Carrot and coriander
+    - Miso
+    - Gazpacho
+  - Salad
+    - Caesar
+    - Greek
+    - Niçoise
 :::
 
 ## Essential typography
@@ -184,6 +192,12 @@ Boron
 Carbon
 
 Put a line break between this sentence. And this sentence.
+
+Make the following line an equation with a label,
+
+F = m a
+
+And reference that equation here.
 :::
 
 :::{hint}
@@ -191,19 +205,10 @@ Remember, new lines in a Markdown file don't create new paragraphs in the output
 See the [cheat sheet](#line-breaks) for a reminder.
 :::
 
-## Create a section with your favorite equation
+## Next steps
 
-Navigate back to your recently made markdown file and include a section including your favorite equation, consider you want an inline equation ($F = m a$) or centered and labelled:
-
-$$ F = m a $$ (eq:NewtonFirst)
-
-
-```{tip}
-Take a look at the [Cheatsheet page](#cheatsheet) to see how to add a formula and give it a try…
-
-Don't forget to commit your changes!
-```
-
-```{exercise} Other changes
-Try making some other changes, for example by further developing the structure of the page into sections and subsections, each with some **text**. *Check* the result regularly.
+```{exercise} Going further
+Try making some more changes to the page you created in [](#ex-add-a-page).
+Find an element in the [cheat sheet](#cheat-sheet) or [MyST Markdown guide](xref:myst-guide) that you haven't used yet, for example abbrevitions or a code block, and try adding it.
+Remember to check the result regularly.
 ```
