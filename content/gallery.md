@@ -79,7 +79,7 @@ Project Pythia is a home for Python-justified learning resources that are open-s
 ````{card}
 :link: https://projectpythia.org/
 
-```{figure} https://projectpythia.org/build/config-item-24692dda-db91094b9a012815ff824f457e3a9c55.svg
+```{figure} https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/logos/pythia_logo-white-rtext-blue.svg
 :class: framed
 
 
