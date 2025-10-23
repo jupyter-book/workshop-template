@@ -86,7 +86,7 @@ The code is case sensitive. So it matters whether your extension is .png or .PNG
 ```
 
 ```{tip}
-We have a page with all important [codes](#cheatsheet).
+We have a page with all important [codes](#cheat-sheet).
 
 You can find more information about figure options [here](https://mystmd.org/guide/figures).
 
