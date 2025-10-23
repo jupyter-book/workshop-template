@@ -396,6 +396,7 @@ Calculate $4+2$
 :::
 ::::
 
+(cheat_sheet_figures)=
 ## Figures
 A site/book naturally needs figures. There are roughly two ways to add a figure:
 

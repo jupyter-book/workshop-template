@@ -22,7 +22,7 @@ The quickest way to include a figure is by using `![](url)` as done below
 resulting in
 ![External image](https://polslab.tnw.tudelft.nl/figures/training.JPG)
 
-This, however, gives us limited options to customize the figure. We can include more options using the [`figure` directive](#figures).
+This, however, gives us limited options to customize the figure. We can include more options using the [`figure` directive](#cheat_sheet_figures).
 
 If we want to add a figure to our book, we can embed an URL to an external website (as in the figure above). However, this carries the risk that the figure will no longer be visible if it is moved from its location. It is therefore better to have the figure as a local source file.
 

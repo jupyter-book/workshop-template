@@ -27,11 +27,11 @@ project:
   # exports and downloads
   exports:
     - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
+      template: https://github.com/myst-templates/plain_typst_book.git
       output: exports/book.pdf
       id: output-pdf
-      cover: logo.svg
-      logo: logo.svg
+      cover: content/figures/logo.svg
+      logo: content/figures/logo.svg
       logo_width: 5
       ToC_depth: 2
 
@@ -63,9 +63,9 @@ project:
 site:
   template: book-theme
   options:
-    favicon: favicon.svg      # path to your favicon
+    favicon: content/figures/favicon.svg      # path to your favicon
     style: ./css/custom.css
-    logo: logo.svg            # path to your logo, shown top left at site
+    logo: content/figures/logo.svg            # path to your logo, shown top left at site
     folders: false
     hide_authors: true
 
