@@ -6,13 +6,21 @@ numbering:
 ---
 
 (pdfoutput)=
-# Create pdf output 🌶
-Jupyter Book 2 is centered around creating interactive online documentation. However, there are several instances when a pdf, next to the online book, is desired. We may consider a printed exam, a pdf version for plagiarism check, an journal article (using MySTMD), the ability to take notes for students, and so on…
+# Create PDF output 🌶
 
-One of the strengths of Jupyter Book 2 is the easy of creating a high-quality pdf from the same source files as the online book. A [template](https://github.com/myst-templates) can be used to create a pdf with a consistent look and feel. These templates can be customized to fit the specific needs of the document being created.
+Jupyter Book 2 is centered around creating interactive online documents. However, there are several instances when a PDF, next to the online book, is desired, for example:
 
-## Typst or LaTeX
-You can export your book to a pdf in two ways, with LaTeX or Typst. Both methods have [advantages and disadvantages](https://mystmd.org/guide/creating-pdf-documents). Typst and LaTeX are both powerful tools for generating high-quality PDFs from markup sources, but they differ in several key aspects:
+- for use in note taking applications (e.g., students annotating a textbook chapter, or reviewing the draft of a website),
+- if a printed copy of the book is required,
+- to more easily carry out a plagiarism check.
+
+One of the strengths of Jupyter Book 2 is the ease with which high-quality PDF's can be created from the same source files as an online book. To accomplish this, a [template](https://github.com/myst-templates) is used to create a PDF with a consistent look and feel between the two document formats. In addition, such templates can be customized to fit the specific needs of the documents being created.
+
+This exercise provides an overview the PDF output capabalities of the Jupyter Book 2 and MyST ecosystem, accompanied by exercises to get you started creating your own PDF output (with Typst) using two different templates.
+
+## PDF Generation: Typst and LaTeX
+
+Jupyter Book 2 currently supports two primary ways to export your book as a PDF: LaTeX or Typst. Both are powerful tools for generating high-quality PDFs, but they differ in several key aspects (additional advantages and disadvantages [described here](https://mystmd.org/guide/creating-pdf-documents)):
 
 | Feature            | Typst                                      | LaTeX                                      |
 |--------------------|--------------------------------------------|--------------------------------------------|
@@ -24,28 +32,33 @@ You can export your book to a pdf in two ways, with LaTeX or Typst. Both methods
 | **Features**       | Good support for math, figures, and tables | Extensive support for math, figures, tables, and packages|
 | **Output Quality** | High-quality, modern look                   | Professional, traditional academic look    |
 
-Choose Typst for simplicity and speed, or LaTeX for advanced customization and compatibility with academic standards. 
+In short: choose Typst for simplicity and speed, or LaTeX for advanced customization and compatibility with academic standards.
 
-Moreover, Typst has a more modern feel and look, which seems more compatible with the online book. Below we provide the screen shots of the pdf output using Typst (left) using the [plain_typst_template](https://github.com/myst-templates/plain_typst_book) and LaTeX (right) using the [plain_latex_template](https://github.com/myst-templates/plain_latex_book).
+Below we provide the screen shots of the PDF output using Typst (left) using the [plain_typst_template](https://github.com/myst-templates/plain_typst_book) and LaTeX (right) using the [plain_latex_template](https://github.com/myst-templates/plain_latex_book).
 
 ```{figure} figures/mystvstex.*
 :width: 100%
 :name: fig_mystvstex
 
-Comparison of pdf output using Typst (left) and LaTeX (right) using both the plain book template.
+Comparison of PDF output using Typst (left) and LaTeX (right) using both the plain book template.
 ```
 
 You can specify the [output template](https://github.com/myst-templates), download the template and tweak to match your preferences. We won't go into detail here, but you can find more information [in the MyST Markdown documentations](https://mystmd.org/guide/creating-pdf-documents).
 
-## Things to consider
-When starting your JB2 project, consider whether a pdf output is desired. If so, consider that interactive elements, some functionality and not all multimedia are supported in a pdf. For instance, a *.gif file cannot be included in a pdf. JB2 is thoughtful in this by choosing the best possible alternative if multiple files with the same name but different extensions are present: gif is chosen over png, png over jpg. Rather than specifying the extension, you can just use the file name and an asterisk, e.g. `![figure](figures/mystvstex.*)`.
+```{note}
+One reason Typst is preferred in this workshop is that the installation (both for local users and via GitHub Actions) is much faster and easier than LaTeX, as you will see when we implement the PDF generation in our workflow file.
+```
 
-For YT clips and online interactive materials embedded through iframes, you can make use of plugins. See for instance the [iframe-to-thumbnail plugin](https://github.com/jupyter-book/myst-plugins/tree/main/plugins/iframe-to-thumbnail-pdf). This plugin replaces the iframe with a thumbnail image that links to the original content as well as a QR code and a link in the caption.
+### Considerations
+
+When starting your own project, consider whether a PDF output is desired. If so, consider the interactive elements that may be included and wether or not, some functionality and not all multimedia are supported in a PDF. For instance, a *.gif file cannot be included in a PDF. JB2 is thoughtful in this by choosing the best possible alternative if multiple files with the same name but different extensions are present: gif is chosen over png, png over jpg. Rather than specifying the extension, you can just use the file name and an asterisk, e.g. `![figure](figures/mystvstex.*)`.
+
+For YouTube clips and online interactive materials embedded through iframes, you can make use of plugins. See for instance the [iframe-to-thumbnail plugin](https://github.com/jupyter-book/myst-plugins/tree/main/plugins/iframe-to-thumbnail-pdf). This plugin replaces the iframe with a thumbnail image that links to the original content as well as a QR code and a link in the caption.
 
 
 ## Export through GitHub actions or locally
 
-We specified in the `myst.yml` file that we want to export to pdf using Typst.
+We specified in the `myst.yml` file that we want to export to PDF using Typst.
 You can also choose LaTeX.
 See the `myst.yml` file, or [](#code_export) for the syntax.
 
@@ -59,7 +72,7 @@ See the `myst.yml` file, or [](#code_export) for the syntax.
 
 
 ### Local build
-When  both [myst](https://mystmd.org/guide/installing) and [typst](https://mystmd.org/guide/creating-pdf-documents#typst-install) are installed, you can build the pdf locally using the command line:
+When  both [myst](https://mystmd.org/guide/installing) and [typst](https://mystmd.org/guide/creating-pdf-documents#typst-install) are installed, you can build the PDF locally using the command line:
 
 ```console
 myst build --typst
@@ -69,14 +82,14 @@ The book will be built in the `exports` directory as specified in the `myst.yml`
 
 
 ### GH actions
-Building and including your pdf is possible through a GitHub action that automatically builds the pdf when you push changes to GitHub. This has both is pros and cons. For instance, the build of your pdf is done prior to the build of your book. If there is an error in your book, the pdf AND your book will not be built. On the other hand, you do not need to install anything locally and the pdf is always up to date when you push changes.
+Building and including your PDF is possible through a GitHub action that automatically builds the PDF when you push changes to GitHub. This has both is pros and cons. For instance, the build of your PDF is done prior to the build of your book. If there is an error in your book, the PDF AND your book will not be built. On the other hand, you do not need to install anything locally and the PDF is always up to date when you push changes.
 
 ```{warning}
 The GitHub workflow this only works when there are no errors in the markdown files.
 For instance, it breaks when figures are missing.
 ```
 
-There is a third option where you have a separate pdf build github action that only builds the pdf when you push to a specific branch, e.g. `main` or `release` or when you initialize the workflow yourselves.
+There is a third option where you have a separate PDF build github action that only builds the PDF when you push to a specific branch, e.g. `main` or `release` or when you initialize the workflow yourselves.
 
 ```yaml
     # Install Typst for PDF generation
@@ -91,7 +104,7 @@ There is a third option where you have a separate pdf build github action that o
 ```
 
 
-## Excluding and including sections for pdf[^1]
+## Excluding and including sections for PDF[^1]
 [^1]: Directly copied from the official [Myst documentation](https://mystmd.org/guide/creating-pdf-documents#excluding-content-from-specific-exports).
 
 
@@ -114,10 +127,10 @@ You may use block metadata to insert page breaks into your PDF or docx export wi
 
 
 +++{"no-pdf": true}
-This won't be in the pdf.
+This won't be in the PDF.
 +++
 
-### Configure pdf output
+### Configure PDF output
 
 
 
