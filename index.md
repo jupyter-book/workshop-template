@@ -12,7 +12,7 @@ site:
 
 </div>
 
-```{figure} Cover.PNG
+```{figure} content/figures/logo.svg
 :width: 80%
 :align: center
 ```
