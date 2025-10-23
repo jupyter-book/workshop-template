@@ -54,7 +54,7 @@ project:
           - file: content/lessons/2a_plugins.md          
         - file: content/lessons/3_interactive.ipynb
         # - file: content/lessons/4_styling.md
-        - file: content/lessons/5_GHworkflow.md
+        - file: content/lessons/5_workflows.md
         - file: content/lessons/6_pdfoutput.md
     - file: content/advanced_start.md
     - file: content/software.md
