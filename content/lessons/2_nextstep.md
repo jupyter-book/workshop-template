@@ -109,8 +109,10 @@ You can find more information about figure options [in the MyST documentation](x
 You can position figures in different places (left / center / right / margin), adjust the size, add a caption, _etc._.
 Check the documentation above and try out the different settings.
 
-## Embed video (from YouTube) using iframe or video
-We can embed videos from YouTube using an iframe. For example, the following code embeds a video about Markdown:
+## Embed a video (from YouTube)
+
+We can embed videos hosting platforms like YouTube or Vimeo using the [iframe directive](xref:myst-guide/figures#youtube-videos).
+For example, the following code embeds a video about Markdown,
 
 ````markdown
 ```{iframe} https://www.youtube.com/embed/dhzrlXzYOlU?si=n2U0HSJyotjp-r93
@@ -128,24 +130,25 @@ resulting in
 Purves et al. - Jupyter Book 2 0 – A Next Generation tool for sharing for Computational Content
 ```
 
-You can also use the [`video` directive](https://mystmd.org/guide/figures#videos) to embed videos. 
-
 ```{note}
-The use of iframe is not limited to YouTube videos. You can embed content from other websites that support iframe embedding.
+The use of iframe is not limited to videos.
+You can embed content from other websites that support iframe embedding.
 ```
+
+:::{note}
+You can also use the `figure` directive to include a video from a local file, just like with images.
+:::
 
 ```{tip}
 There is a [plugin available](https://github.com/jupyter-book/myst-plugins/tree/main/plugins/iframe-to-thumbnail-pdf) that converts the YouTube clip in a qr code and a thumbnail for pdf exports.
 ```
 
 ```{exercise} Embed your own video
-Embed a video of your choice using either the `iframe` or `video` directive. You can use a YouTube video or any other video that supports embedding.
+Embed a video of your choice using either the `iframe` or `video` directive.
+You can use a YouTube video or any other video that supports embedding.
 ```
 
-
-
 ## Include python code using code-block
-
 
 ```markdown
 ---
