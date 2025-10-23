@@ -233,6 +233,11 @@ You can create a diagram from scratch, consulting the syntax in the [Mermaid doc
 or copy [an example](https://mermaid.js.org/syntax/examples)
 ```
 
+## Admonitions
+
+[Admonitions](xref:myst-guide/admonitions) can be used to seperate text from the main text and highlight it appropriately.
+Here are a set of admonitions built in to Myst,
+
 `````{tab-set}
 
 ````{tab-item} Note
@@ -297,8 +302,15 @@ This is an error admonition
 
 `````
 
+::::{exercise} Admonitions
+Use an appropriate admonition to contain the following paragraphs.
 
+Hand wash only
 
+Syntax error
+
+Beware of the leopard
+::::
 
 ## Tabs, cards, grids
 We already made use of tabs in the exercises above. Tabs can be used to separate content into different sections that can be viewed by clicking on the tab headers.
@@ -311,7 +323,7 @@ Content for Tab 1
 ::: {tab-item} Tab 2
 Content for Tab 2
 :::
-::: 
+::::
 ```
 resulting in:
 :::: {tab-set}
