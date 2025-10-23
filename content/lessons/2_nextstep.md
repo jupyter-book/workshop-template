@@ -148,26 +148,49 @@ Embed a video of your choice using either the `iframe` or `video` directive.
 You can use a YouTube video or any other video that supports embedding.
 ```
 
-## Include python code using code-block
+## Displaying code
 
-```markdown
----
-kernelspec:
-  name: python3
-  display_name: 'Python 3'
----
+You can display code using Markdown syntax.
+
+````
+```language
+code
+```
+````
+
+for example,
+
+````
+``` python
+print("Hello world!")
+```
+````
+
+renders as,
+
+``` python
+print("Hello world!")
 ```
 
-md -> kernel specification at frontmatter
-```{code-cell} python
-start = 1
-next = 2
+You can also use the [`code` directive](xref:myst-guide/code#code-blocks) which will render the code in a block and has features line line numbers and captions.
 
-for i in range(5):
-    print(f"{start} + {next} = {start + next}")
-    start, next = next, start + next
+:::{exercise} Add a code block
+Take the following Python code snippet and put it in a code block with
+
+- Python syntax highlighting
+- Indicate the file name `fibonacci.py`
+- Add a caption explaining that this function returns the `n`th number in the Fibonacci series
+
 ```
-
+def fib(n):
+    if n < 0:
+        return
+    if n in [0, 1]:
+        return n
+    else:
+        return fib(n-2) + fib(n-1)
+```
+:::
 
 ## Directives
 
