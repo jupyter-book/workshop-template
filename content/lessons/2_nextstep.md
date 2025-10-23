@@ -14,6 +14,21 @@ In [](#fundamentals) we covered the basics of Jupyter Book structure and writing
 However, Jupyter Book can go far beyond basic text formatting and has tools to help you share information with figures, videos, special blocks, interactive elements and advanced cross-referencing.
 In this lesson we will look at some of these features that elevate your book over a plain-text document.
 
+## Directives and roles
+
+This lesson will make use of [roles and directives](xref:myst-guide/syntax-overview#directives-roles).
+These have a similar syntax, and are used to extend the basic markdown features.
+The main difference is that roles are written in-line and take a single argument, whereas directives are multi-line containers which may have multiple arguments and options.
+
+Both directives and roles use "fences", which are either (at least) three colons `:::` or backticks `` ``` ``.
+You can use more colons or backticks to nest directives.
+The [MyST documentation](xref:myst-guide/syntax-overview#directives-roles) explains the syntax, nesting and the difference between colons and backticks in more detail.
+
+:::{note}
+If there is a feature you would like to add to your project,
+you could create a new role or directive in a plugin to extend the behaviour of MyST.
+:::
+
 ## Include a figure
 
 The quickest way to include a figure is by using `![](url)` as done below
