@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 7204695b-7485-4989-863c-16cf6e4db155
-  title: Jupyter Book 2 Head Start Template
+  title: Jupyter Book 2 Workshop Template
   description: This description goes in the preface of the pdf output. 
   # keywords: []
   authors:
@@ -47,7 +47,7 @@ project:
     - file: content/3_cheat_sheet.md
     - file: content/lessons/your_turn.md          # dropdown menu
       children:
-        - file: content/lessons/0_headstart.md
+        - file: content/lessons/0_setup.md
         - file: content/lessons/1_firstedit.md
         - file: content/lessons/2_nextstep.md
           children:

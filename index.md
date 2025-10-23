@@ -1,5 +1,5 @@
 ---
-title: Jupyter Book 2 Head Start Template
+title: Jupyter Book 2 Workshop Template
 site:
   hide_outline: true
   hide_toc: true
@@ -8,7 +8,7 @@ site:
 
 <div style="text-align: center">
 
-# Jupyter Book 2 Head Start Template
+# Jupyter Book 2 Workshop Template
 
 </div>
 
