@@ -61,6 +61,7 @@ Markdown is a markup language where text formatting is done with small pieces of
 
 You can create a new line by either a hard enter and a blank line, a `\` at the end of the line and enter, or two spaces at the end of the line.
 
+(line-breaks)=
 ### New Lines
 
 Generally, in markdown, a single hard enter does not create a new line. You need to use one of the options below.
