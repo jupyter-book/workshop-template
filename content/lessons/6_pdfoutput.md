@@ -51,7 +51,7 @@ See the `myst.yml` file, or [](#code_export) for the syntax.
 
 :::{literalinclude} ../../myst.yml
 :start-after: exports
-:end-at: - id: output-pdf
+:end-at: ToC_depth: 2
 :lineno-match:
 :caption: Example of the export section in the `myst.yml` file, the book will be written to `exports/book.pdf`.
 :label: code_export

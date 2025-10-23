@@ -168,7 +168,7 @@ Refer to the [cheat sheet](#headings) if you need a reminder on the syntax.
 
 You should now be confident making changes locally or through the GH IDE.
 Try making the changes indicated in the following exercise.
-Refer to the [cheat sheet](#cheet-sheet) if you need a reminder on the syntax.
+Refer to the [cheat sheet](#cheat-sheet) if you need a reminder on the syntax.
 
 :::{exercise} Typography
 Make this line bold.
