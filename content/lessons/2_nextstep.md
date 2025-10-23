@@ -8,9 +8,11 @@ kernelspec:
   display_name: 'Python 3'
 ---
 
-# Add more functionality
+# More content
 
-We have covered the basics of building text files in markdown. However, we can include figures, videos, interactive materials etc. 
+In [](#fundamentals) we covered the basics of Jupyter Book structure and writing text content in markdown.
+However, Jupyter Book can go far beyond basic text formatting and has tools to help you share information with figures, videos, special blocks, interactive elements and advanced cross-referencing.
+In this lesson we will look at some of these features that elevate your book over a plain-text document.
 
 ## Include a figure
 
