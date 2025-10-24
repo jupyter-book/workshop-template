@@ -13,7 +13,7 @@ Optional:
 - [Software](#software) to write your code in, such as [Visual Studio Code](https://code.visualstudio.com/) (VSC).
 
 :::{tip}
-If you are feeling confident and would rather start building a document from scratch using the CLI on your computer, you can look at [the advanced start](#advanced-start) option &#127798;.
+If you are feeling confident and would rather start building a document from scratch using the CLI on your computer, you can look at [the advanced start](#advanced-start) option 🌶.
 :::
 
 We provide instructions for building using the GitHub dev IDE, as well as building locally. For the latter we assume knowledge about VSC, and the use of git.
