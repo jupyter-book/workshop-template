@@ -59,7 +59,13 @@ project:
     - file: content/advanced_start.md
     - file: content/software.md
     - file: content/gallery.md
+  abbreviations:
+    JB2: Jupyter Book 2
+    CI/CD: Continuous Integration/Continuous Deployment
+    GHA: GitHub Actions
+    GH: GitHub
 
+    
 site:
   template: book-theme
   options:
