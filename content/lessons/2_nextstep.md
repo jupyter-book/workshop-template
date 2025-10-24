@@ -313,7 +313,15 @@ Beware of the leopard
 ::::
 
 ## Tabs, cards, grids
-We already made use of tabs in the exercises above. Tabs can be used to separate content into different sections that can be viewed by clicking on the tab headers.
+
+MyST has a number of features for arranging and organising content, you have already seen some of these following these lessons.
+
+- [](xref:myst-guide/dropdowns-cards-and-tabs)
+- [](xref:myst-guide/asides)
+- [](xref:myst-guide/blocks)
+
+Tabs can be used to separate content into different sections that can be viewed by clicking on the tab headers.
+They are useful when you want to present a set of mutually exclusive options.
 
 ```markdown
 :::: {tab-set}
@@ -325,7 +333,9 @@ Content for Tab 2
 :::
 ::::
 ```
-resulting in:
+
+Renders as,
+
 :::: {tab-set}
 ::: {tab-item} Tab 1
 Content for Tab 1
@@ -335,5 +345,16 @@ Content for Tab 2
 :::
 :::
 ::::
+
+:::{exercise} Create a tab set for installing MyST
+Put the following instructions for installing MyST into a tab set,
+splitting instructions for `pip` and `npm` into different tabs
+
+Install MyST
+
+Using `pip` `pip install mystmd`
+
+Using `npm` `npm install -g mystmd`
+:::
 
 [^embeddingimages]: Fetching images from someone else's site also puts strain on their web server, which they may not appreciate.
