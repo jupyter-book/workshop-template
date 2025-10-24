@@ -10,7 +10,7 @@ We can distinguish between two structures: that of the book's content (a collect
 ### Table of Contents
 
 In the `myst.yml` file, you can specify the structure of the book as shown in [](#code_toc).
-Here you can indicate which files belong to the book and in what order.  
+Here you can indicate which files belong to the book and in what order.
 You can also create dropdown menus in your ToC by including `children`
 When not specifying a ToC, all files are automatically included in alphabetical order.
 
@@ -460,32 +460,62 @@ Embedded YT videos are not included in the PDF. A solution could be to include o
 (sec-ref)=
 ## References & Links
 
-You can included [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this. With the markdown syntax: `[text](link)`.
+You can included [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
+With the markdown syntax: `[text](link)`.
+`link` can take a number of forms including,
 
-Below a few examples of links and references to labeled items.
+- A URL
+- A label (like in the examples of figures and equations here)
+- A references to an external MyST project, using `xref:`
+- A wikipedia page, using `wiki:`
+- A DOI, using `doi:`
+
+If you leave the text empty, appropriate link text will be automatically generated.
+When referencing objects with a name or number, you can use `{name}` and `{number}` (or `%s`) in `text` to use the name and number in the link text respectively.
+
+Below are a few examples of references,
 
 ::::{card}
-* This is a [hyperlink](https://nos.nl)
-* This is a reference to equation {eq}`eq:Newton`
-* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`
-* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`
+- This is a [hyperlink](https://nos.nl)
+- This is a reference to equation [](eq:Newton)
+- This is a reference to a table [](tl_sanctions) or [Tab. %s](tl_sanctions)
+- This is a reference to a figure [](fig_sunset) or [**Fig. {name}**](fig_sunset)
+- This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
+- This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208)
+- This is a reference to a Wikipedia page [](wiki:Project_Jupyter)
+- This is a reference to a GitHub pull request [](https://github.com/jupyter-book/mystmd/pull/2106)
+- This is a reference to a file in GitHub [](https://github.com/jupyter-book/mystmd/blob/d39d9d68b2d67002771d95a87b56334d2d853585/README.md?#L1-L5)
 :::{dropdown} Markdown syntax
 ```markdown
-* This is a [hyperlink](https://nos.nl)
-* This is a reference to equation {eq}`eq:Newton`
-* This is a reference to a table like {numref}`Table {number} <tl_sanctions>`
-* This is a reference to a figure like {numref}`Figure {number} <fig_sunset>`
+- This is a [hyperlink](https://nos.nl)
+- This is a reference to equation [](eq:Newton)
+- This is a reference to a table [](tl_sanctions) or [Tab. %s](tl_sanctions)
+- This is a reference to a figure [](fig_sunset) or [**Fig. {name}**](fig_sunset)
+- This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
+- This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208)
+- This is a reference to a Wikipedia page [](wiki:Project_Jupyter)
+- This is a reference to a GitHub pull request [](https://github.com/jupyter-book/mystmd/pull/2106)
+- This is a reference to a file in GitHub [](https://github.com/jupyter-book/mystmd/blob/d39d9d68b2d67002771d95a87b56334d2d853585/README.md?#L1-L5)
 ```
 :::
 ::::
 
-### Cite
-It also possible by including the DOI: 
-- [](https://doi.org/10.1088/1361-6552/abf208) (syntax: `[](https://doi.org/10.1088/1361-6552/abf208)`) 
-- [@doi:10.1088/1361-6552/abf208] (syntax: `[@doi:10.1088/1361-6552/abf208]`) 
+:::{tip}
+Note how many of the references have dynamic popups.
+:::
 
-and even to specific pages of a book 
-- [@feynman1965feynman, p. 750]. (syntax: `[@feynman1965feynman, p. 750]`) 
-- @feynman1965feynman [p. 750] (syntax: `@feynman1965feynman [p. 750]`)
+## Citations
 
-Note that for the latter references, we made use of the `reference.bib` file which is located at `root`.
+You can cite entries in a Bibtex bibliography using  `@`.
+The bibliography file is named `reference.bib` and located at the project's root directory.
+
+::::{card}
+- @feynman1965feynman
+- @feynman1965feynman [p. 750]
+:::{dropdown} Markdown syntax
+```markdown
+- @feynman1965feynman
+- @feynman1965feynman [p. 750]
+```
+:::
+::::

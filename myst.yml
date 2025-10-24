@@ -13,6 +13,8 @@ project:
     - name: Jim Madge
   license:
     content: CC-BY-4.0
+  references:
+    myst-guide: https://mystmd.org/guide
 
   # abstract: Optional
   date: 2025-10-20 # ${BUILD_DATE} 
