@@ -470,6 +470,9 @@ With the markdown syntax: `[text](link)`.
 - A wikipedia page, using `wiki:`
 - A DOI, using `doi:`
 
+MyST lets you add labels to [any block of content](xref:myst-guide/cross-references#label-anything) by adding a label like `(label)=` before the block.
+This is a great way to reference things like sections or paragraphs, which don't otherwise have a label like figure directives or equations.
+
 If you leave the text empty, appropriate link text will be automatically generated.
 When referencing objects with a name or number, you can use `{name}` and `{number}` (or `%s`) in `text` to use the name and number in the link text respectively.
 
