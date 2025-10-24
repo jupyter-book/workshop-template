@@ -457,7 +457,7 @@ A super fun video from the project [Show the Physics](https://interactivetextboo
 Embedded YT videos are not included in the PDF. A solution could be to include our plugin [REF] which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
 ```
 
-(sec-ref)=
+(cheatsheet-ref)=
 ## References & Links
 
 You can included [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
@@ -501,7 +501,7 @@ Below are a few examples of references,
 ::::
 
 :::{tip}
-Note how many of the references have dynamic popups.
+Note how many of the references have dynamic tooltips.
 :::
 
 ## Citations
