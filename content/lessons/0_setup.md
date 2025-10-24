@@ -13,7 +13,7 @@ Follow these instruction to use the GitHub template repository to create your ow
 3. Choose a proper name of your repository (this will be also part of your URL!) and choose the option `public`.
 4. In your repository, click on `settings` and in the left menu on Pages and choose `Github actions`
 
-``` {figure} figures/start.*
+```{iframe} https://www.youtube.com/embed/UZpo_S8QNZI?si=dz-xbWzOyUUlIwJ5
 :name: vid_1
 
 Follow these steps to create your own repository from the template.
@@ -25,7 +25,7 @@ Follow these steps to create your own repository from the template.
 
 The book will now be deployed again - where now it can actually load GitHub pages. 
 
-``` {figure} figures/2ndpart.*
+``` {iframe} https://www.youtube.com/embed/gQP_gjrh7rQ?si=DWiL_J27_a35RV__
 :name: vid_2
 
 Follow these steps to create your own GHpages from the template.
@@ -73,7 +73,7 @@ It is possible to work directly in the GitHub environment: no need to install an
 2. Click on the drop down icon next to the pencil icon and choose `open in github.dev` This will start the GitHub development environment where you can edit the files directly in your browser.
 3. Edit the file by replacing the names with your own and commit your changes, see [](#vid_3)
 
-```{figure} figures/GHdev.*
+```{iframe} https://www.youtube.com/embed/MIJUMsTEfzY?si=upISYp21twTtAIFs
 :name: vid_3
 
 Working directly in the GitHub development environment.
