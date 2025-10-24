@@ -44,3 +44,13 @@ Try referencing some different types of node, like pages, sections, paragraphs, 
 :::{exercise} Reference a Wikipedia page
 Use `[](wiki:)` to create a reference to your favourite Wikipedia article.
 :::
+
+## DOIs
+
+::::{exercise} Reference a document by its DOI
+Use `[](doi:)` to create a reference to a document.
+
+:::{hint}
+You can find many documents with DOIs on [Zenodo](https://zenodo.org/)
+:::
+::::
