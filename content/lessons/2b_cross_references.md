@@ -54,3 +54,15 @@ Use `[](doi:)` to create a reference to a document.
 You can find many documents with DOIs on [Zenodo](https://zenodo.org/)
 :::
 ::::
+
+## GitHub
+
+Links to GitHub have dynamic tooltips which can show issues, pull requests, and lines of code.
+
+::::{exercise} Reference items in GitHub
+Use `[](https://github.com)` to create a references to GitHub objects.
+
+:::{hint}
+If you are not sure which GitHub repository to use, try [`mystmd`](https://github.com/jupyter-book/mystmd).
+:::
+::::
