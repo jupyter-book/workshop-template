@@ -1,4 +1,4 @@
-(cheatsheet)=
+(cheat-sheet)=
 # Markdown (Cheat sheet)
 
 Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
@@ -61,6 +61,7 @@ Markdown is a markup language where text formatting is done with small pieces of
 
 You can create a new line by either a hard enter and a blank line, a `\` at the end of the line and enter, or two spaces at the end of the line.
 
+(line-breaks)=
 ### New Lines
 
 Generally, in markdown, a single hard enter does not create a new line. You need to use one of the options below.
@@ -395,7 +396,7 @@ Calculate $4+2$
 :::
 ::::
 
-(figures)=
+(cheat_sheet_figures)=
 ## Figures
 A site/book naturally needs figures. There are roughly two ways to add a figure:
 

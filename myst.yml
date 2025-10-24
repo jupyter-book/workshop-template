@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 7204695b-7485-4989-863c-16cf6e4db155
-  title: Jupyter Book 2 Head Start Template
+  title: Jupyter Book 2 Workshop Template
   description: This description goes in the preface of the pdf output. 
   # keywords: []
   authors:
@@ -13,46 +13,33 @@ project:
     - name: Jim Madge
   license:
     content: CC-BY-4.0
+  references:
+    myst-guide: https://mystmd.org/guide
 
-  # abstract: Optional
   date: 2025-10-20 # ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
   edit_url: 
   
   plugins:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
-    # links to GH
 
 
   # exports and downloads
   exports:
     - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git        #plain_typst_book
+      template: https://github.com/myst-templates/plain_typst_book.git
       output: exports/book.pdf
       id: output-pdf
-      cover: logo.svg
-      logo: logo.svg
+      cover: content/figures/logo.svg
+      logo: content/figures/logo.svg
       logo_width: 5
       ToC_depth: 2
-
-    # - format: pdf
-    #   template: https://github.com/myst-templates/plain_latex_book.git        #plain_typst_book
-    #   output: exports/book_tex.pdf
-    #   id: output-pdf_tex
-
-    # options for pdf output that come with this template
-
-
-  downloads:
-    - id: output-pdf
-      title: Download Book as PDF
 
   # Jupyter Notebook configuration
   jupyter:
     binder:
       repo: https://github.com/executablebooks/thebe-binder-base
 
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
   toc:
     - file: index.md                      # the landing page
     - file: content/1_intro.md
@@ -60,7 +47,7 @@ project:
     - file: content/3_cheat_sheet.md
     - file: content/lessons/your_turn.md          # dropdown menu
       children:
-        - file: content/lessons/0_headstart.md
+        - file: content/lessons/0_setup.md
         - file: content/lessons/1_firstedit.md
         - file: content/lessons/2_nextstep.md
           children:
@@ -76,16 +63,12 @@ project:
 site:
   template: book-theme
   options:
-    favicon: favicon.svg      # path to your favicon
+    favicon: content/figures/favicon.svg      # path to your favicon
     style: ./css/custom.css
-    logo: logo.svg            # path to your logo, shown top left at site
+    logo: content/figures/logo.svg            # path to your logo, shown top left at site
     folders: false
     hide_authors: true
 
   actions:
     - title: Feedback
       url: https://github.com/FreekPols/JB2_book_template/issues
-    - title: PDF
-      url: ./exports/book.pdf
-    - title: PPT 
-      url: ./presentation/JB2.pptx

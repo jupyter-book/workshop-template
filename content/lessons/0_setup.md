@@ -4,13 +4,9 @@ numbering:
     offset: 0
 ---
 
-# Head start with GitHub template
+# Set up a new repository
 
-This lesson gives you a head start in creating your own online book using GitHub and the template repository [JB2_book_template](https://github.com/FreekPols/JB2_book_template).
-
-## Set up your own repository
-
-Follow these instruction to use this template for your own book.
+Follow these instruction to use the GitHub template repository to create your own book for this workshop:
 
 1. Go to this [repository](https://github.com/FreekPols/JB2_book_template.git)
 2. Click the green button `use this template` and click `create a new repository`.
