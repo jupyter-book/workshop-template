@@ -4,7 +4,7 @@ numbering:
     offset: 0
   start: 6
 ---
-# Build online with GitHub Actions
+# Build online with GitHub
 
 You may be familiar with GitHub Actions: it is a widely used continuous integration tool which can easily and automatically publish your Jupyter Book as a website. This lesson is designed to get you familiar with GitHub Actions in your Jupyter Book and learn how to manipulate them.
 
