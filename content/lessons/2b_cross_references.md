@@ -21,7 +21,7 @@ And reference it [here]().
 ## Referencing MyST projects
 
 The [MyST guide](xref:myst-guide) has already been added as an external reference for this project.
-It have been given the label `myst-guide`, so it can be reference with `[](xref:myst-guide)`.
+It has been given the label `myst-guide`, so it can be reference with `[](xref:myst-guide)`.
 
 :::{literalinclude} ../../myst.yml
 :start-at: references
