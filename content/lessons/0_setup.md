@@ -47,6 +47,11 @@ Follow these steps to create your own GHpages from the template.
 Once the book has been deploy, you can visit your site which looks like this.
 ```
 
+```{note} Attribution
+:icon: false
+This template workflow has been adapted from [teachbooks](https://teachbooks.io)
+```
+
 ## Repo folder structure
 
 Your GitHub repository looks like the one shown in {numref}`fig_folderstructure`. We have the following subfolders:
