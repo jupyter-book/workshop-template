@@ -1,5 +1,5 @@
 (advanced-start)=
-# Advanced start &#127798; 
+# Advanced start 🌶 
 
 The Jupyter Book and MyST CLIs both include tools to help get started writing quickly. You might want to follow this approach if:
 
