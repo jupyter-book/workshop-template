@@ -16,7 +16,7 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 
 :::{literalinclude} ../myst.yml
 :start-after: toc
-:end-at: - file: content/software.md
+:end-at: - file: content/gallery.md
 :lineno-match:
 :caption: The Table of Contents (ToC) for this book.
 :label: code_toc
@@ -129,6 +129,10 @@ Some examples of the notation
 
 You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
 
+```{tip} Typst
+Typst equations are also supported in Jupyter Book. See [Typst in Jupyter Book](https://mystmd.org/guide/math#typst-math) for more information.
+```
+
 ## Lists
 
 ### Ordered lists
@@ -197,6 +201,10 @@ The checks are interactive, you can tick or untick them.
 ```
 :::
 ::::
+
+```{note} Report issues
+Jupyter Book 2 trust on an active open source community. If you find any issues in your project, you can report them back to the [Jupyter Book GitHub repository](https://github.com/jupyter-book/mystmd/issues), like this issue on the checklist not rendering properly: [#2290](https://github.com/jupyter-book/mystmd/issues/2290). 
+```
 
 ## Tables
 
@@ -456,7 +464,7 @@ A super fun video from the project [Show the Physics](https://interactivetextboo
 ::::
 
 ```{warning} YT in pdf
-Embedded YT videos are not included in the PDF. A solution could be to include our plugin [REF] which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
+Embedded YT videos are not included in the PDF. A solution could be to include our [plugin](https://github.com/jupyter-book/myst-plugins) which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
 ```
 
 (cheatsheet-ref)=
