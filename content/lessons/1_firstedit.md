@@ -3,6 +3,7 @@ numbering:
   title:
     offset: 0
 ---
+(fundamentals)=
 # Jupyter Book Fundamentals
 
 ## Anatomy of a Jupyter Book

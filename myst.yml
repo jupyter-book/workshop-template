@@ -51,15 +51,22 @@ project:
         - file: content/lessons/1_firstedit.md
         - file: content/lessons/2_nextstep.md
           children:
-          - file: content/lessons/2a_plugins.md          
+            - file: content/lessons/2b_cross_references.md
+            - file: content/lessons/2a_plugins.md
         - file: content/lessons/3_interactive.ipynb
         # - file: content/lessons/4_styling.md
-        - file: content/lessons/5_GHworkflow.md
+        - file: content/lessons/5_workflows.md
         - file: content/lessons/6_pdfoutput.md
     - file: content/advanced_start.md
     - file: content/software.md
     - file: content/gallery.md
+  abbreviations:
+    JB2: Jupyter Book 2
+    CI/CD: Continuous Integration/Continuous Deployment
+    GHA: GitHub Actions
+    GH: GitHub
 
+    
 site:
   template: book-theme
   options:
