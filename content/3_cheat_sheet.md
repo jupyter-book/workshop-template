@@ -467,7 +467,7 @@ With the markdown syntax: `[text](link)`.
 `link` can take a number of forms including,
 
 - A URL
-- A label (like in the examples of figures and equations here)
+- A label prepended with a `#` (like in the examples of figures and equations here)
 - A references to an external MyST project, using `xref:`
 - A wikipedia page, using `wiki:`
 - A DOI, using `doi:`
@@ -482,9 +482,9 @@ Below are a few examples of references,
 
 ::::{card}
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](eq:Newton)
-- This is a reference to a table [](tl_sanctions) or [Tab. %s](tl_sanctions)
-- This is a reference to a figure [](fig_sunset) or [**Fig. {name}**](fig_sunset)
+- This is a reference to equation [](#eq:Newton)
+- This is a reference to a table [](#tl_sanctions) or [Tab. %s](#tl_sanctions)
+- This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
 - This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208) or [](doi:10.1088/1361-6552/abf208)
 - This is a reference to a Wikipedia page [](wiki:Project_Jupyter)
@@ -493,9 +493,9 @@ Below are a few examples of references,
 :::{dropdown} Markdown syntax
 ```markdown
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](eq:Newton)
-- This is a reference to a table [](tl_sanctions) or [Tab. %s](tl_sanctions)
-- This is a reference to a figure [](fig_sunset) or [**Fig. {name}**](fig_sunset)
+- This is a reference to equation [](#eq:Newton)
+- This is a reference to a table [](#tl_sanctions) or [Tab. %s](#tl_sanctions)
+- This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
 - This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208) or [](doi:10.1088/1361-6552/abf208)
 - This is a reference to a Wikipedia page [](wiki:Project_Jupyter)
