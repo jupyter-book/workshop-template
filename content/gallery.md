@@ -41,8 +41,8 @@ MyST is an ecosystem of open-source, community-driven tools designed to revoluti
 ```
 ````{card}
 :link: https://mystmd.org/guide
-```{figure} figures/mystvideo.mp4
-:class: framed
+```{iframe} https://cdn.curvenote.com/0198d368-fb53-7691-80d4-a6f7a2c88ca5/public/links-7fffe87911b1e26605748d6f347d29d6.mp4
+:align: center
 
 Live graphs can be embedded directly in your documentation or articles with computation backed by Jupyter or JupyterLite – running locally, on Binder, or directly in your browser.
 ```
