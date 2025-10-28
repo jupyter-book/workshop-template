@@ -51,8 +51,8 @@ project:
         - file: content/lessons/1_firstedit.md
         - file: content/lessons/2_nextstep.md
           children:
-            - file: content/lessons/2b_cross_references.md
             - file: content/lessons/2a_plugins.md
+        - file: content/lessons/reuse.md
         - file: content/lessons/3_interactive.ipynb
         # - file: content/lessons/4_styling.md
         - file: content/lessons/5_workflows.md
