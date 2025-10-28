@@ -17,8 +17,6 @@ Follow these instruction to use the GitHub template repository to create your ow
 GitHub Actions will be covered later in this workshop, so if you have no idea what this is, don't worry!
 ```
 
-```{figure} figures/1stpart.*
-
 ```{iframe} https://www.youtube.com/embed/UZpo_S8QNZI?si=dz-xbWzOyUUlIwJ5
 :name: vid_1
 
@@ -45,6 +43,11 @@ Follow these steps to create your own GHpages from the template.
 :width: 100%
 
 Once the book has been deploy, you can visit your site which looks like this.
+```
+
+```{note} Attribution
+:icon: false
+This template workflow has been adapted from [teachbooks](https://teachbooks.io)
 ```
 
 ## Repo folder structure

@@ -73,7 +73,6 @@ The book will now be rebuilt.
 Once that's done, you can view the result on the GitHub page as well.
 
 :::
-:::
 ::::
 ````
 
