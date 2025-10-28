@@ -47,7 +47,7 @@ Once the book has been deploy, you can visit your site which looks like this.
 
 ```{note} Attribution
 :icon: false
-This template workflow has been adapted from [teachbooks](https://teachbooks.io)
+The idea of a template workflow has been adapted from [teachbooks](https://teachbooks.io)
 ```
 
 ## Repo folder structure
