@@ -94,7 +94,7 @@ Like this
 For STEM subjects, mathematical equations and symbol are essential.
 You can include equations in JupyterBooks using the LaTeX syntax for mathematics.
 
-Labelled equations using double dollars, such as {eq}`Newton`, can be referenced.
+Labelled equations using double dollars, such as [](#Newton), can be referenced.
 
 ::::{card}
 $$ F_{\mathrm{res}} = m \cdot a$$ (Newton)
@@ -117,8 +117,9 @@ $s=v_{\mathrm{avg}}t$
 :::
 ::::
 
-Some examples of the notation
-
+:::{table} Some examples of LaTeX mathematics notation
+:label: tl_latex_maths
+:align: center
 | Name              | Syntax                      | Output                      |
 | ---               | ---                         | ---                         |
 | Greek script      | `\Delta \lambda`            | $\Delta \lambda$            |
@@ -130,6 +131,7 @@ Some examples of the notation
 | derivative        | `\frac{\Delta f}{\Delta t}` | $\frac{\Delta f}{\Delta t}$ |
 | integral          | `\int_a^b f(x) \mathrm{d}x` | $\int_a^b f(x) \mathrm{d}x$ |
 | sine              | `\sin(x)`                   | $\sin(x)$                   |
+:::
 
 You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
 
@@ -212,7 +214,7 @@ Jupyter Book 2 trust on an active open source community. If you find any issues 
 
 ## Tables
 
-Tables are created with the separator `|`
+In Markdown, tables are created with the separator `|`
 
 ::::{card}
 |Header 1|Header 2|Header 3|
@@ -229,36 +231,28 @@ Tables are created with the separator `|`
 :::
 ::::
 
-Or via …
+Using a `table` directive, like [](#tl_example) lets you add a caption and label so you can [reference](#cheatsheet-ref) it.
 
-::::{card}
-```{list-table} Overview of sanctions for certain behavior
-:header-rows: 1
-:name: tl_sanctions
-* - Behavior
-    - Sanction for 1st time
-    - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered
-    - A penalty
-    - exclusion
-```
-:::{dropdown} Markdown syntax
-````markdown
-```{list-table} Overview of sanctions for certain behavior
-:header-rows: 1
-:name: tl_sanctions
-* - Behavior
-    - Sanction for 1st time
-    - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered
-    - A penalty
-    - exclusion
-```
-````
-:::
+:::::{card}
+::::{table} An example table
+:name: tl_example
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| text 1   | text 2   | text 3   |
+| text 4   | text 5   | text 6   |
 ::::
-
-Method 2 has the advantage of allowing references to {numref}`Table {number} <tl_sanctions>`
+::::{dropdown} Markdown syntax
+```markdown
+:::{table} An example table
+:name: tl_example
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| text 1   | text 2   | text 3   |
+| text 4   | text 5   | text 6   |
+:::
+```
+::::
+:::::
 
 ## Blocks
 
