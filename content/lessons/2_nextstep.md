@@ -75,7 +75,7 @@ add file in the folder
 
 6. Commit your changes and view the result on GitHub pages.
 :::
-:::{tab-item} Local
+:::{tab-item} Locally
 1. Put the image file you want to include to the `content/figures` folder on your computer.
 2. Navigate to the `book` folder and open `intro.md`.
 3. Copy the code below into that file, and change the figure name to your own figure's name.
