@@ -17,9 +17,6 @@ Follow these instruction to use the GitHub template repository to create your ow
 GitHub Actions will be covered later in this workshop, so if you have no idea what this is, don't worry!
 ```
 
-```{figure} figures/1stpart.*
-```
-
 ```{iframe} https://www.youtube.com/embed/UZpo_S8QNZI?si=dz-xbWzOyUUlIwJ5
 :name: vid_1
 
