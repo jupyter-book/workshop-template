@@ -20,7 +20,7 @@ Review the [references section of the cheat sheet](#cheatsheet-ref) for a remind
 The labels you give MyST nodes are "global".
 You can refer to them in any part of your project, not just on the page where you defined them.
 
-Reference the equation with label `Newton` from the cheat sheet [here]().
+Reference the equation with label `eq_newton` from the cheat sheet [here]().
 :::
 
 :::{exercise} Label anything

@@ -94,13 +94,13 @@ Like this
 For STEM subjects, mathematical equations and symbol are essential.
 You can include equations in JupyterBooks using the LaTeX syntax for mathematics.
 
-Labelled equations using double dollars, such as [](#Newton), can be referenced.
+Labelled equations using double dollars, such as [](#eq_newton), can be referenced.
 
 ::::{card}
-$$ F_{\mathrm{res}} = m \cdot a$$ (Newton)
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq_newton)
 :::{dropdown} Markdown syntax
 ```markdown
-$$ F_{\mathrm{res}} = m \cdot a$$ (Newton)
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq_newton)
 ```
 :::
 ::::
@@ -488,7 +488,7 @@ Below are a few examples of references,
 
 ::::{card}
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](#Newton)
+- This is a reference to equation [](#eq_newton)
 - This is a reference to a table [](#tl_example) or [Tab. %s](#tl_example)
 - This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
@@ -499,7 +499,7 @@ Below are a few examples of references,
 :::{dropdown} Markdown syntax
 ```markdown
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](#Newton)
+- This is a reference to equation [](#eq_newton)
 - This is a reference to a table [](#tl_example) or [Tab. %s](#tl_example)
 - This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
