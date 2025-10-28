@@ -489,7 +489,7 @@ Below are a few examples of references,
 ::::{card}
 - This is a [hyperlink](https://nos.nl)
 - This is a reference to equation [](#Newton)
-- This is a reference to a table [](#tl_sanctions) or [Tab. %s](#tl_sanctions)
+- This is a reference to a table [](#tl_example) or [Tab. %s](#tl_example)
 - This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
 - This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208) or [](doi:10.1088/1361-6552/abf208)
@@ -500,7 +500,7 @@ Below are a few examples of references,
 ```markdown
 - This is a [hyperlink](https://nos.nl)
 - This is a reference to equation [](#Newton)
-- This is a reference to a table [](#tl_sanctions) or [Tab. %s](#tl_sanctions)
+- This is a reference to a table [](#tl_example) or [Tab. %s](#tl_example)
 - This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
 - This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208) or [](doi:10.1088/1361-6552/abf208)
