@@ -1,24 +1,36 @@
 ---
 numbering:
   title:
-    offset: 1
+    offset: 0
 ---
 
-# Cross-references
+# Reusing and sharing content
 
-MyST has strong support for referencing, with many links having dynamic, interactive tooltips.
-These features help to more seamlessly share data between MyST projects and other internet resources.
+MyST has strong support for referencing and reusing content.
+MyST nodes can be referenced or embedded, even from external projects!
+These features help to more seamlessly share content between MyST projects, so your project can become part of a larger network of resources.
+
+## Referencing
+
+### Internally
+
 Review the [references section of the cheat sheet](#cheatsheet-ref) for a reminder of the syntax.
 
-## Labels
+:::{exercise} Global labels
+The labels you give MyST nodes are "global".
+You can refer to them in any part of your project, not just on the page where you defined them.
 
-:::{exercise} Labels
+Reference the equation with label `Newton` from the cheat sheet [here]().
+:::
+
+:::{exercise} Label anything
 Add a label to this paragraph.
 
 And reference it [here]().
 :::
 
-## Referencing MyST projects
+
+### External MyST projects
 
 The [MyST guide](xref:myst-guide) has already been added as an external reference for this project.
 It has been given the label `myst-guide`, so it can be reference with `[](xref:myst-guide)`.
@@ -39,13 +51,25 @@ Try referencing some different types of node, like pages, sections, paragraphs, 
 2. Use the label you gave _The Turing Way_ to create a reference.
 :::
 
-## Wikipedia
+## Embedding
+
+### Internally
+
+### External MyST projects
+
+:::{embed} xref:myst-guide#sunset-figure
+
+## Referencing other internet resources
+
+Like with MyST references, some links to non-MyST resources are handled specially and have dynamic, interactive tooltips.
+
+### Wikipedia
 
 :::{exercise} Reference a Wikipedia page
 Use `[](wiki:)` to create a reference to your favourite Wikipedia article.
 :::
 
-## DOIs
+### DOIs
 
 ::::{exercise} Reference a document by its DOI
 Use `[](doi:)` to create a reference to a document.
@@ -55,7 +79,7 @@ You can find many documents with DOIs on [Zenodo](https://zenodo.org/)
 :::
 ::::
 
-## GitHub
+### GitHub
 
 Links to GitHub have dynamic tooltips which can show issues, pull requests, and lines of code.
 

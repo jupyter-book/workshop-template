@@ -90,13 +90,13 @@ Like this
 For STEM subjects, mathematical equations and symbol are essential.
 You can include equations in JupyterBooks using the LaTeX syntax for mathematics.
 
-Labelled equations using double dollars, such as {eq}`eq:Newton`, can be referenced.
+Labelled equations using double dollars, such as {eq}`Newton`, can be referenced.
 
 ::::{card}
-$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+$$ F_{\mathrm{res}} = m \cdot a$$ (Newton)
 :::{dropdown} Markdown syntax
 ```markdown
-$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+$$ F_{\mathrm{res}} = m \cdot a$$ (Newton)
 ```
 :::
 ::::
@@ -470,7 +470,7 @@ Embedded YT videos are not included in the PDF. A solution could be to include o
 (cheatsheet-ref)=
 ## References & Links
 
-You can included [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
+You can include [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
 With the markdown syntax: `[text](link)`.
 `link` can take a number of forms including,
 
@@ -490,7 +490,7 @@ Below are a few examples of references,
 
 ::::{card}
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](#eq:Newton)
+- This is a reference to equation [](#Newton)
 - This is a reference to a table [](#tl_sanctions) or [Tab. %s](#tl_sanctions)
 - This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
@@ -501,7 +501,7 @@ Below are a few examples of references,
 :::{dropdown} Markdown syntax
 ```markdown
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](#eq:Newton)
+- This is a reference to equation [](#Newton)
 - This is a reference to a table [](#tl_sanctions) or [Tab. %s](#tl_sanctions)
 - This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
