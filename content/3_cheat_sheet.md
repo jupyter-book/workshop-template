@@ -16,7 +16,7 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 
 :::{literalinclude} ../myst.yml
 :start-after: toc
-:end-at: - file: content/software.md
+:end-at: - file: content/gallery.md
 :lineno-match:
 :caption: The Table of Contents (ToC) for this book.
 :label: code_toc
@@ -48,6 +48,9 @@ Note also that a structured sections are preferred, that is not skipping a headi
 
 Markdown is a markup language where text formatting is done with small pieces of code (just like HTML). This is a table with some frequently used formatting options.
 
+:::{table} Some basic Markdown text formatting
+:label: tl_basic_formatting
+:align: center
 | Element | Syntax | Example |
 | --- | --- | --- |
 | Bold | `**bold text**` | **Bold** |
@@ -55,6 +58,7 @@ Markdown is a markup language where text formatting is done with small pieces of
 | Emphasis | `***emphasis***` | ***emphasis*** |
 | Inline Formula | `$F = m \cdot a$` | $F = m \cdot a$ |
 | Footnote | ` - A footnote reference[^myref]` <br> `[^myref]: This is an auto-numbered footnote definition.` | - A footnote reference[^myref] |
+:::
 
 [^myref]: This is an auto-numbered footnote definition.
 
@@ -90,13 +94,13 @@ Like this
 For STEM subjects, mathematical equations and symbol are essential.
 You can include equations in JupyterBooks using the LaTeX syntax for mathematics.
 
-Labelled equations using double dollars, such as {eq}`eq:Newton`, can be referenced.
+Labelled equations using double dollars, such as [](#eq_newton), can be referenced.
 
 ::::{card}
-$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq_newton)
 :::{dropdown} Markdown syntax
 ```markdown
-$$ F_{\mathrm{res}} = m \cdot a$$ (eq:Newton)
+$$ F_{\mathrm{res}} = m \cdot a$$ (eq_newton)
 ```
 :::
 ::::
@@ -113,8 +117,9 @@ $s=v_{\mathrm{avg}}t$
 :::
 ::::
 
-Some examples of the notation
-
+:::{table} Some examples of LaTeX mathematics notation
+:label: tl_latex_maths
+:align: center
 | Name              | Syntax                      | Output                      |
 | ---               | ---                         | ---                         |
 | Greek script      | `\Delta \lambda`            | $\Delta \lambda$            |
@@ -126,8 +131,13 @@ Some examples of the notation
 | derivative        | `\frac{\Delta f}{\Delta t}` | $\frac{\Delta f}{\Delta t}$ |
 | integral          | `\int_a^b f(x) \mathrm{d}x` | $\int_a^b f(x) \mathrm{d}x$ |
 | sine              | `\sin(x)`                   | $\sin(x)$                   |
+:::
 
 You can read about more of the LaTeX mathematics syntax in [the LaTeX wikibook](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+
+```{tip} Typst
+Typst equations are also supported in Jupyter Book. See [Typst in Jupyter Book](https://mystmd.org/guide/math#typst-math) for more information.
+```
 
 ## Lists
 
@@ -198,9 +208,13 @@ The checks are interactive, you can tick or untick them.
 :::
 ::::
 
+```{note} Report issues
+Jupyter Book 2 trusts on an active open source community. If you find any issues in your project, you can report them back to the [Jupyter Book GitHub repository](https://github.com/jupyter-book/mystmd/issues), like this issue on the checklist not rendering properly: [#2290](https://github.com/jupyter-book/mystmd/issues/2290). 
+```
+
 ## Tables
 
-Tables are created with the separator `|`
+In Markdown, tables are created with the separator `|`
 
 ::::{card}
 |Header 1|Header 2|Header 3|
@@ -217,36 +231,28 @@ Tables are created with the separator `|`
 :::
 ::::
 
-Or via …
+Using a `table` directive, like [](#tl_example) lets you add a caption and label so you can [reference](#cheatsheet-ref) it.
 
-::::{card}
-```{list-table} Overview of sanctions for certain behavior
-:header-rows: 1
-:name: tl_sanctions
-* - Behavior
-    - Sanction for 1st time
-    - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered
-    - A penalty
-    - exclusion
-```
-:::{dropdown} Markdown syntax
-````markdown
-```{list-table} Overview of sanctions for certain behavior
-:header-rows: 1
-:name: tl_sanctions
-* - Behavior
-    - Sanction for 1st time
-    - Sanction for 2nd time
-* - Not (timely or with a valid reason) deregistered
-    - A penalty
-    - exclusion
-```
-````
-:::
+:::::{card}
+::::{table} An example table
+:name: tl_example
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| text 1   | text 2   | text 3   |
+| text 4   | text 5   | text 6   |
 ::::
-
-Method 2 has the advantage of allowing references to {numref}`Table {number} <tl_sanctions>`
+::::{dropdown} Markdown syntax
+```markdown
+:::{table} An example table
+:name: tl_example
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| text 1   | text 2   | text 3   |
+| text 4   | text 5   | text 6   |
+:::
+```
+::::
+:::::
 
 ## Blocks
 
@@ -456,18 +462,18 @@ A super fun video from the project [Show the Physics](https://interactivetextboo
 ::::
 
 ```{warning} YT in pdf
-Embedded YT videos are not included in the PDF. A solution could be to include our plugin [REF] which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
+Embedded YT videos are not included in the PDF. A solution could be to include our [plugin](https://github.com/jupyter-book/myst-plugins) which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
 ```
 
 (cheatsheet-ref)=
 ## References & Links
 
-You can included [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
+You can include [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
 With the markdown syntax: `[text](link)`.
 `link` can take a number of forms including,
 
 - A URL
-- A label (like in the examples of figures and equations here)
+- A label prepended with a `#` (like in the examples of figures and equations here)
 - A references to an external MyST project, using `xref:`
 - A wikipedia page, using `wiki:`
 - A DOI, using `doi:`
@@ -482,9 +488,9 @@ Below are a few examples of references,
 
 ::::{card}
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](eq:Newton)
-- This is a reference to a table [](tl_sanctions) or [Tab. %s](tl_sanctions)
-- This is a reference to a figure [](fig_sunset) or [**Fig. {name}**](fig_sunset)
+- This is a reference to equation [](#eq_newton)
+- This is a reference to a table [](#tl_example) or [Tab. %s](#tl_example)
+- This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
 - This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208) or [](doi:10.1088/1361-6552/abf208)
 - This is a reference to a Wikipedia page [](wiki:Project_Jupyter)
@@ -493,9 +499,9 @@ Below are a few examples of references,
 :::{dropdown} Markdown syntax
 ```markdown
 - This is a [hyperlink](https://nos.nl)
-- This is a reference to equation [](eq:Newton)
-- This is a reference to a table [](tl_sanctions) or [Tab. %s](tl_sanctions)
-- This is a reference to a figure [](fig_sunset) or [**Fig. {name}**](fig_sunset)
+- This is a reference to equation [](#eq_newton)
+- This is a reference to a table [](#tl_example) or [Tab. %s](#tl_example)
+- This is a reference to a figure [](#fig_sunset) or [**Fig. {name}**](#fig_sunset)
 - This is a reference to an external MyST project [](xref:myst-guide/external-references#myst-xref)
 - This is a reference to a DOI [](https://doi.org/10.1088/1361-6552/abf208) or [](doi:10.1088/1361-6552/abf208)
 - This is a reference to a Wikipedia page [](wiki:Project_Jupyter)
