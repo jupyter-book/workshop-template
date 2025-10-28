@@ -23,7 +23,6 @@ project:
   plugins:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
 
-
   # exports and downloads
   exports:
     - format: typst
