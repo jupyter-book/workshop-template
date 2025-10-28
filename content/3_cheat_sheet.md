@@ -48,6 +48,9 @@ Note also that a structured sections are preferred, that is not skipping a headi
 
 Markdown is a markup language where text formatting is done with small pieces of code (just like HTML). This is a table with some frequently used formatting options.
 
+:::{table} Some basic Markdown text formatting
+:label: tl_basic_formatting
+:align: center
 | Element | Syntax | Example |
 | --- | --- | --- |
 | Bold | `**bold text**` | **Bold** |
@@ -55,6 +58,7 @@ Markdown is a markup language where text formatting is done with small pieces of
 | Emphasis | `***emphasis***` | ***emphasis*** |
 | Inline Formula | `$F = m \cdot a$` | $F = m \cdot a$ |
 | Footnote | ` - A footnote reference[^myref]` <br> `[^myref]: This is an auto-numbered footnote definition.` | - A footnote reference[^myref] |
+:::
 
 [^myref]: This is an auto-numbered footnote definition.
 

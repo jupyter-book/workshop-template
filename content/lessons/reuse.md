@@ -33,7 +33,7 @@ And reference it [here]().
 ### External MyST projects
 
 The [MyST guide](xref:myst-guide) has already been added as an external reference for this project.
-It has been given the label `myst-guide`, so it can be reference with `[](xref:myst-guide)`.
+It has been given the label `myst-guide`, so it can be referenced with `[](xref:myst-guide)`.
 
 :::{literalinclude} ../../myst.yml
 :start-at: references
@@ -53,11 +53,33 @@ Try referencing some different types of node, like pages, sections, paragraphs, 
 
 ## Embedding
 
+The [`embed` directive](xref:myst-guide/embed#docs-embed) allows you to reuse content in-place.
+This is helpful if you want to have the same content in two places, without repeating the source or interrupting the flow of a page with a link.
+
 ### Internally
+
+::::{exercise}
+
+Embed the table `tl_basic_formatting` from the cheat sheet using the `embed` directive syntax
+
+```markdown
+:::{embed} label
+:::
+```
+::::
 
 ### External MyST projects
 
-:::{embed} xref:myst-guide#sunset-figure
+Just like with cross-references, you can also embed content from external MyST projects.
+
+::::{exercise}
+Embed the figure `sunset-figure` the [MyST guide](xref:myst-guide)
+
+:::{hint}
+Remember that to reference an external MyST project you use `xref:` and the label given to the project in `myst.yml`.
+In this case that is `xref:myst-guide`.
+:::
+::::
 
 ## Referencing other internet resources
 
