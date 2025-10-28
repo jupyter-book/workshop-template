@@ -56,6 +56,13 @@ Change the text after the `#`. This is the **title** of the file.
 Choose your file, click on edit and make changes. Ready? Commit your changes to your repository and see the output.
 ```
 
+```{iframe} CANNOT_FIND_YOUTUBE_LINK
+:align: center
+:width: 100%
+
+Choose your file, click on edit and make changes. Ready? Commit your changes to your repository and see the output.
+```
+
 Optionally, make other changes in the text editor and when you're done, commit your changes to the "remote repository" by clicking the green `Commit changes` button.
 
 The book will now be rebuilt. Once that's done, you can view the result on the GitHub page.
