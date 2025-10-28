@@ -60,7 +60,7 @@ Optionally, make other changes in the text editor and when you're done, commit y
 
 The book will now be rebuilt. Once that's done, you can view the result on the GitHub page.
 :::
-:::{tab-item} Local
+:::{tab-item} Locally
 Navigate to the file `Content/Lessons/1_firstedit.md` and open the file.
 
 Change the text after the `#`. This is the **title** of the file.
@@ -78,7 +78,8 @@ Once that's done, you can view the result on the GitHub page as well.
 
 :::{note} Commit summary
 :class: dropdown
-If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed, see also [this more elaborative description](https://book.the-turing-way.org/collaboration/github-novice/github-novice-firststeps/#committing-or-saving-your-changes). This way, you can detect and undo any errors early. You can also explain why certain changes were made.
+If you are working with multiple people in GitHub, or on a large project yourself, it is wise to give the commit a recognizable title (commit message) and optionally add a summary (extended description) of exactly what was changed, see also [this more elaborative description](https://book.the-turing-way.org/collaboration/github-novice/github-novice-firststeps/#committing-or-saving-your-changes). 
+This way, you can detect and undo any errors early. You can also explain why certain changes were made.
 :::
 
 ## Adding a page
@@ -167,10 +168,11 @@ Refer to the [cheat sheet](#headings) if you need a reminder on the syntax.
 ## Essential typography
 
 You should now be confident making changes locally or through the GH IDE.
-Try making the changes indicated in the following exercise.
+Try making the changes indicated in the following exercise using the solution directive below.
 Refer to the [cheat sheet](#cheat-sheet) if you need a reminder on the syntax.
 
 :::{exercise} Typography
+:label: ex_typography
 Make this line bold.
 
 Make this line italic.
@@ -198,6 +200,11 @@ Make the following line an equation with a label,
 F = m a
 
 And reference that equation here.
+:::
+
+:::{solution} ex_typography
+:class: dropdown
+Optionally you can put your answers here.
 :::
 
 :::{hint}

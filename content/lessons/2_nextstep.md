@@ -75,7 +75,7 @@ add file in the folder
 
 6. Commit your changes and view the result on GitHub pages.
 :::
-:::{tab-item} Local
+:::{tab-item} Locally
 1. Put the image file you want to include to the `content/figures` folder on your computer.
 2. Navigate to the `book` folder and open `intro.md`.
 3. Copy the code below into that file, and change the figure name to your own figure's name.
@@ -203,6 +203,7 @@ For example, the following directive
 ```{mermaid}
 flowchart LR
   Start --> Stop
+
   A1(["Novice"]) --> B1
   A2(["I do know"]) --> B2 & B1
   B1(["Expert"])
@@ -218,6 +219,7 @@ Renders as,
 ```{mermaid}
 flowchart LR
   Start --> Stop
+
   A1(["Novice"]) --> B1
   A2(["I do know"]) --> B2 & B1
   B1(["Expert"])
@@ -235,7 +237,7 @@ or copy [an example](https://mermaid.js.org/syntax/examples)
 
 ## Admonitions
 
-[Admonitions](xref:myst-guide/admonitions) can be used to seperate text from the main text and highlight it appropriately.
+[Admonitions](xref:myst-guide/admonitions) can be used to separate text from the main text and highlight it appropriately.
 Here are a set of admonitions built in to Myst,
 
 `````{tab-set}
@@ -302,7 +304,18 @@ This is an error admonition
 
 `````
 
-::::{exercise} Admonitions
+Custom admonitions can also be created in a plugin, but hiding the icon and adding your own icon in the title is a quick way to get a custom look.
+
+````{myst}
+```{warning} 🌶 HOTHOTHOT
+:icon: false
+:class: dropdown
+
+This is a custom warning admonition with a custom icon, try changing it!
+```
+````
+
+:::{exercise} Admonitions
 Use an appropriate admonition to contain the following paragraphs.
 
 Hand wash only
@@ -310,7 +323,7 @@ Hand wash only
 Syntax error
 
 Beware of the leopard
-::::
+:::
 
 ## Tabs, cards, grids
 
