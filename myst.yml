@@ -15,7 +15,6 @@ project:
     content: CC-BY-4.0
   references:
     myst-guide: https://mystmd.org/guide
-    mechanica: https://freekpols.github.io/Mechanica
 
   date: 2025-10-20 # ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
