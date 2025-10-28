@@ -203,7 +203,7 @@ The checks are interactive, you can tick or untick them.
 ::::
 
 ```{note} Report issues
-Jupyter Book 2 trust on an active open source community. If you find any issues in your project, you can report them back to the [Jupyter Book GitHub repository](https://github.com/jupyter-book/mystmd/issues), like this issue on the checklist not rendering properly: [#2290](https://github.com/jupyter-book/mystmd/issues/2290). 
+Jupyter Book 2 trusts on an active open source community. If you find any issues in your project, you can report them back to the [Jupyter Book GitHub repository](https://github.com/jupyter-book/mystmd/issues), like this issue on the checklist not rendering properly: [#2290](https://github.com/jupyter-book/mystmd/issues/2290). 
 ```
 
 ## Tables
@@ -232,11 +232,11 @@ Or via …
 :header-rows: 1
 :name: tl_sanctions
 * - Behavior
-    - Sanction for 1st time
-    - Sanction for 2nd time
+  - Sanction for 1st time
+  - Sanction for 2nd time
 * - Not (timely or with a valid reason) deregistered
-    - A penalty
-    - exclusion
+  - A penalty
+  - exclusion
 ```
 :::{dropdown} Markdown syntax
 ````markdown
@@ -244,11 +244,11 @@ Or via …
 :header-rows: 1
 :name: tl_sanctions
 * - Behavior
-    - Sanction for 1st time
-    - Sanction for 2nd time
+  - Sanction for 1st time
+  - Sanction for 2nd time
 * - Not (timely or with a valid reason) deregistered
-    - A penalty
-    - exclusion
+  - A penalty
+  - exclusion
 ```
 ````
 :::
@@ -470,7 +470,7 @@ Embedded YT videos are not included in the PDF. A solution could be to include o
 (cheatsheet-ref)=
 ## References & Links
 
-You can included [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
+You can include [links](https://interactivetextbooks.tudelft.nl/showthephysics) like this.
 With the markdown syntax: `[text](link)`.
 `link` can take a number of forms including,
 
