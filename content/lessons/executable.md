@@ -2,6 +2,9 @@
 numbering:
   title:
     offset: 0
+kernelspec:
+    name: python3
+    display_name: 'Python 3'
 ---
 
 # Executable content introduction
@@ -35,6 +38,7 @@ Markdown cells will be rendered in exactly the same way as a Markdown file.
 So you can use all of the MyST Markdown you have already learned.
 Outputs such as images and interactive plots will also be rendered in the book.
 
+(label-notebooks)=
 Blocks can be labelled, either by editing a cell's JSON metadata, or with the following syntax,
 
 ```python
@@ -73,7 +77,7 @@ Rebuild the book and look at the new page.
 :::{exercise} Make changes
 Navigate to [your Jupyter Lab instance](http://locahost:8888).
 Make some changes to the notebook.
-Try adding
+Try adding,
 
 1. Markdown cells
 2. Code cells in Python
@@ -107,17 +111,59 @@ You will see MyST detect the notebook has been changed and re-run it automatical
 
 Unlike Jupyter notebook files, Markdown files do not store the output of executions.
 This means to include the outputs in our project, we must execute the cells at build time.
+To make a markdown file executable, you must first add a `kernelspec` to the files frontmatter.
+For example, in this page,
+
+```yaml
+---
+kernelspec:
+    name: python3
+    display_name: 'Python 3'
+---
+```
 
 :::{tip}
 The MyST Guide has a section on [the advantages of the `.md` and `.ipynb` formats](xref:myst-guide/md-vs-ipynb).
 :::
 
-::::{exercise} Code cells
+You can add a block of executable code using the [`code-cell` directive](xref:myst-guide/notebooks-with-markdown#code-cell).
+The directive has the format,
 
-:::{tip}
+```markdown
+:::{code-cell} <language>
+:key: value
+<code>
+:::
+```
+
+The key/value pairs allow you to tag the cell in the same way as [with `ipynb`](#label-notebooks).
+
+::::{exercise} Code cells
+:::{note}
 We will use the default Python kernel in these examples.
 However, you can use another kernel, such as Javascript, R or Julia [by changing the page frontmatter and updating code cell blocks](xref:myst-guide/notebooks-with-markdown#use-a-different-kernel).
 :::
+
+Put the following Python snippet in a code cell.
+
+```python
+def fib(n):
+    if n < 0:
+        return
+    if n in [0, 1]:
+        return n
+    else:
+        return fib(n-2) + fib(n-1)
+
+
+for i in range(10):
+    print(i, fib(i))
+```
+
+Rebuild the book (with the `--execute` flag) and look at the result.
+
+Now, add a `label` (using the key/value notation) to the code cell and reference it [here]().
+Make the code cell a figure by adding a `caption`; notice how the reference changes.
 ::::
 
 :::{exercise} Inline execution
