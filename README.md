@@ -1,6 +1,8 @@
-# JupyterBook2 Template
+# Workshop Template
 
 This repository provides a template for creating JB2 books using [MystMD](https://mystmd.org/). It is intended to be a general tool to support new users of Jupyter Book 2 and MystMD, in particular for use in workshop settings where participants may not have time or ability to install the required software on a personal computer.
+
+_The Workshop Template was created for JupyterCon 2025. Slides are in the Turing Way Github Organization: [slides](https://the-turing-way.github.io/Build-a-Jupyter-Book-with-The-Turing-Way/#/4) and [repository](https://github.com/the-turing-way/Build-a-Jupyter-Book-with-The-Turing-Way)._
 
 ## Features
 
