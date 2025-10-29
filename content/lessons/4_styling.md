@@ -52,3 +52,18 @@ fronmatter: numbering
 # Example header
 ## Subheader
 +++
+
+
+## subfigures side by side
+You can enhance your page using tailwind CSS classes. For example, to place two images side by side:
+
+::::{figure}
+:class: grid grid-cols-2 items-end gap-4
+:label: fig_combined2
+:width: 100%
+
+![Banff, Canada](https://github.com/rowanc1/pics/blob/main/banff-wide.png)
+![Golden Gate Bridge, San Francisco](https://github.com/rowanc1/pics/blob/main/sfo-wide.png)
+
+Some lovely pictures
+::::
