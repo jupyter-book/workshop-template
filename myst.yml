@@ -52,7 +52,7 @@ project:
           children:
             - file: content/lessons/2a_plugins.md
         - file: content/lessons/reuse.md
-        - file: content/lessons/3_interactive.ipynb
+        - file: content/lessons/executable.md
         # - file: content/lessons/4_styling.md
         - file: content/lessons/5_workflows.md
         - file: content/lessons/6_pdfoutput.md
