@@ -15,6 +15,7 @@ project:
     content: CC-BY-4.0
   references:
     myst-guide: https://mystmd.org/guide
+    jupyter: https://docs.jupyter.org/en/latest
 
   date: 2025-10-20 # ${BUILD_DATE} 
   github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
@@ -59,6 +60,7 @@ project:
     - file: content/advanced_start.md
     - file: content/software.md
     - file: content/gallery.md
+    # - file: content/example.ipynb
   abbreviations:
     JB2: Jupyter Book 2
     CI/CD: Continuous Integration/Continuous Deployment
