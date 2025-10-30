@@ -8,6 +8,17 @@ numbering:
 (pdfoutput)=
 # Create PDF output 🌶
 
+**WIP**
+
+- overview of PDF output stuff
+- install Typst (local and GHA with tab-set)
+- set up and build book as PDF with lapreprint Typst template
+- look at output
+- set up and build book with plain_typst_template
+- look at output
+- explain/illustrate setup: not committing PDF to repo; build in - GHA as a form of software testing
+- set up extra stuff: add MyST action button, add download on page, upload as artifact (GHA only)
+
 Jupyter Book 2 is centered around creating interactive online documents. However, there are several instances when a PDF, next to the online book, is desired, for example:
 
 - for use in note taking applications (e.g., students annotating a textbook chapter, or reviewing the draft of a website),
