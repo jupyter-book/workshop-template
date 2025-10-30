@@ -27,13 +27,9 @@ project:
   # exports and downloads
   exports:
     - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git
+      template: lapreprint-typst
       output: exports/book.pdf
       id: output-pdf
-      cover: content/figures/logo.svg
-      logo: content/figures/logo.svg
-      logo_width: 5
-      ToC_depth: 2
 
   # Jupyter Notebook configuration
   jupyter:
@@ -55,7 +51,11 @@ project:
         - file: content/lessons/executable.md
         # - file: content/lessons/4_styling.md
         - file: content/lessons/5_workflows.md
-        - file: content/lessons/6_pdfoutput.md
+        - file: content/lessons/6_pdfoverview.md
+          children:
+            - file: content/lessons/6a_myst.md
+            - file: content/lessons/6b_pdfgeneration.md
+            - file: content/lessons/6c_pdfoutput.md
     - file: content/advanced_start.md
     - file: content/software.md
     - file: content/gallery.md
