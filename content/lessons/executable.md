@@ -125,7 +125,7 @@ You will see MyST detect the notebook has been changed and re-run it automatical
 
 Unlike Jupyter notebook files, Markdown files do not store the output of executions.
 This means to include the outputs in our project, we must execute the cells at build time.
-To make a Markdown file executable, you must first add a `kernelspec` to the files [frontmatter](https://mystmd.org/guide/frontmatter).
+To make a Markdown file executable, you must first add a `kernelspec` to the files [frontmatter](xref:myst-guide/frontmatter).
 For example, in this page,
 
 ```yaml
