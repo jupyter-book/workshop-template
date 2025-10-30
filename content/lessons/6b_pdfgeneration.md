@@ -6,7 +6,7 @@ numbering:
 
 # PDFs with Typst and LaTeX 🌶
 
-Jupyter Book 2 currently supports two primary ways to export your book as a PDF: LaTeX or Typst. Both are powerful tools for generating high-quality PDFs, but they differ in several key aspects (additional advantages and disadvantages [described here](https://mystmd.org/guide/creating-pdf-documents)):
+Jupyter Book 2 currently supports _two_ primary ways to export your book as a PDF: LaTeX or Typst. Both are powerful tools for generating high-quality PDFs, but they differ in several key aspects (additional advantages and disadvantages [described here](https://mystmd.org/guide/creating-pdf-documents)):
 
 | Feature            | Typst                                      | LaTeX                                      |
 |--------------------|--------------------------------------------|--------------------------------------------|
@@ -35,14 +35,17 @@ You can specify the [output template](https://github.com/myst-templates), downlo
 One reason Typst is preferred in this workshop is that the installation (both for local users and via GitHub Actions) is much faster and easier than LaTeX, as you will see when we implement the PDF generation in our workflow file.
 ```
 
-### Considerations
+## Choosing Typst or LaTeX
 
 When starting your own project, consider whether a PDF output is desired. If so, consider the interactive elements that may be included and wether or not, some functionality and not all multimedia are supported in a PDF. For instance, a *.gif file cannot be included in a PDF. JB2 is thoughtful in this by choosing the best possible alternative if multiple files with the same name but different extensions are present: gif is chosen over png, png over jpg. Rather than specifying the extension, you can just use the file name and an asterisk, e.g. `![figure](figures/mystvstex.*)`.
 
 For YouTube clips and online interactive materials embedded through iframes, you can make use of plugins. See for instance the [iframe-to-thumbnail plugin](https://github.com/jupyter-book/myst-plugins/tree/main/plugins/iframe-to-thumbnail-pdf). This plugin replaces the iframe with a thumbnail image that links to the original content as well as a QR code and a link in the caption.
 
+## Additional Considerations 
 
-## Excluding and including sections for PDF[^1]
+**WIP**
+
+### Excluding and including sections for PDF[^1]
 [^1]: Directly copied from the official [Myst documentation](https://mystmd.org/guide/creating-pdf-documents#excluding-content-from-specific-exports).
 
 
@@ -67,10 +70,6 @@ You may use block metadata to insert page breaks into your PDF or docx export wi
 +++{"no-pdf": true}
 This won't be in the PDF.
 +++
-
-### Configure PDF output
-
-
 
 ### Typst
 
