@@ -214,9 +214,6 @@ To add a tag:
 This feature is especially useful for creating clean, reader-friendly notebooks where you want to focus on results rather than code details, see below. 
 
 
-The code above provides a semi-interactive simulation: you are able to change two parameters but cannot control/adapt the code itself. This will be available in the near feature.
-
-
 ```{code-cell} python
 :tags: [hide-input]
 
