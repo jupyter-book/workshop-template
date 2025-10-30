@@ -219,3 +219,8 @@ This feature is especially useful for creating clean, reader-friendly notebooks 
 
 print("This is the output of the cell, but the input code is hidden.")
 ```
+
+```{exercise} Remove input
+Create a code cell that calculates the square of numbers from 5 to 8 and prints the results.
+Remove the input code from being displayed by adding the appropriate tag.
+```
