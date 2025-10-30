@@ -1,12 +1,12 @@
 # Introduction
 
-This is the *Jupyter Book 2 Workshop Template,* designed to quickly and easily produce your own online interactive textbook as well as a high quality pdf enabled with Typst using [Jupyter Book 2](https://next.jupyterbook.org/) technology.
+This is the *Jupyter Book 2 Workshop Template,* designed to quickly and easily produce your own online interactive textbook as well as a high quality PDF enabled with Typst using [Jupyter Book 2](https://next.jupyterbook.org/) technology.
 
 This template:
-- provides a ready-to-use Jupyter Book 2 structure for creating an online book (i.e., website)
-- is pre-configured to produce a high quality pdf using Typst
-- includes a number of lessons to get you started understanding key components of a book and how to edit it 
-- includes a GitHub Action to automatically build and deploy your book online and as a pdf
+- provides a ready-to-use Jupyter Book 2 structure for creating an online book (i.e., website),
+- includes a number of lessons to get started understanding key components of a book and how to edit it,
+- includes a GitHub Action workflow to automatically build and deploy your book online,
+- provides instructions for generating a high quality PDF with Typst using a ready-to-go template, then deploy it online automatically using GitHub Actions.
 
 
 Hence, the template allows you to engage with JB2 (and the underlying softawre MyST) _without installing any software on your own computer._ You only need a web browser and a GitHub account (we provide details on how to work locally on your own computer). For those who are comfortable installing software locally (i.e., with a CLI) and/or do not want to use the template book structure, use the [Advanced Start](./advanced_start.md) instructions, denoted with red hot 🌶.
