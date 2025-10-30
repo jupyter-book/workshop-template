@@ -6,45 +6,56 @@ numbering:
 
 # Create a PDF 🌶
 
+Now that you have an understainding of document creation using MyST and our choice to use Typst for PDF generation, you are ready to create a PDF from your book repository using Jupyter Book.
+
+## Local PDF Output
+
+### Install Typst and generate a PDF
+
 **WIP**
 
-- install Typst (local and GHA with tab-set)
-- set up and build book as PDF with lapreprint Typst template
-- look at output
-- set up and build book with plain_typst_template
-- look at output
-- explain/illustrate setup: not committing PDF to repo; build in - GHA as a form of software testing
-- set up extra stuff: add MyST action button, add download on page, upload as artifact (GHA only)
-
-
-
-
-## Export through GitHub actions or locally
-
-We specified in the `myst.yml` file that we want to export to PDF using Typst.
-You can also choose LaTeX.
-See the `myst.yml` file, or [](#code_export) for the syntax.
-
-:::{literalinclude} ../../myst.yml
-:start-after: exports
-:end-at: ToC_depth: 2
-:lineno-match:
-:caption: Example of the export section in the `myst.yml` file, the book will be written to `exports/book.pdf`.
-:label: code_export
-:::
-
-
-### Local build
-When  both [myst](https://mystmd.org/guide/installing) and [typst](https://mystmd.org/guide/creating-pdf-documents#typst-install) are installed, you can build the PDF locally using the command line:
+:::{exercise} Confirm Typst installation
+**WIP**
+Run
 
 ```console
-myst build --typst
+typst --version
+```
+:::
+
+### Generate a PDF output with Typst
+
+You can build the PDF locally using the command line:
+
+```console
+jupyter book build --typst
 ```
 
-The book will be built in the `exports` directory as specified in the `myst.yml` file and the build files will be in the `_build` directory.
+:::{exercise} Generate a PDF using the CLI
+**WIP**
+--> set back to lapreprint Typst template
+- generate a PDF using the command line
+- answer questions (bullet list below)
+- look at the output. Can we do better? (yes)
 
+The template is...
+The PDF is found...
 
-### GH actions
+:::
+
+### Change the PDF template
+
+:::{exercise} Change the PDF template
+**WIP**
+change, view output
+:::
+
+:::{exercise} Explore Typst templates
+visit the repo, read doc, change some features of the template
+:::
+
+## PDF output with GH Actions
+
 Building and including your PDF is possible through a GitHub action that automatically builds the PDF when you push changes to GitHub. This has both is pros and cons. For instance, the build of your PDF is done prior to the build of your book. If there is an error in your book, the PDF AND your book will not be built. On the other hand, you do not need to install anything locally and the PDF is always up to date when you push changes.
 
 ```{warning}
@@ -65,3 +76,19 @@ There is a third option where you have a separate PDF build github action that o
       run: |
         myst build --typst
 ```
+
+```{tip} Good practice with PDFs and Git
+Don't commit PDF's. Hence the `.gitignore`. Don't let your GHA commit PDF's either (hence the artifact upload, which is shown later).
+In fact, PDF generation in GHA is a form of software testing: successful generation of the PDF indicates everything is working properly.
+```
+
+:::{exercise} Add PDF generation to GHA workflow
+**WIP**
+change, view output
+:::
+
+## More fun with PDF's
+
+add MyST action button, add download on page.
+
+Upload as artifact (GHA only). This can be done even if the website build fails.

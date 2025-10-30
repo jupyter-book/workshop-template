@@ -47,3 +47,16 @@ You can also include raw HTML in your Markdown files, but this will not be rende
 
 In the next chapter we cover most of the basic Markdown syntax you will need to create your own content.
 
+**WIP**
+- add explanation about themes and templates
+- explain using `myst.yml` that the book theme and Typst article template are specified
+
+See the `myst.yml` file, or [](#include_book_theme) for the syntax.
+
+:::{literalinclude} ../../myst.yml
+:start-after: exports
+:end-at: ToC_depth: 2
+:lineno-match:
+:caption: Example of the export section in the `myst.yml` file, the book will be written to `exports/book.pdf`.
+:label: include_book_theme
+:::
