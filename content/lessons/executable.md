@@ -26,7 +26,7 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-This will automatically open the Jupyter Lab interface (at [localhost:8888](http://localhost:8888) in your browser, which we will use later.
+This will automatically open the Jupyter Lab interface (at [localhost:8888](http://localhost:8888)) in your browser, which we will use later.
 
 ## Options
 
@@ -83,7 +83,7 @@ In page execution is not covered in this lesson.
 In this repository we have included a Jupyter notebook, `example.ipynb`, which has been executed and includes outputs.
 
 :::{exercise} Add a `.ipynb` file to the book
-Add the example notebook to the book by giving it an entry in the table of contents in `myst.yml`
+Add the example notebook to the book by giving it an entry in the table of contents in `myst.yml`.
 Rebuild the book and look at the new page.
 :::
 
@@ -125,7 +125,7 @@ You will see MyST detect the notebook has been changed and re-run it automatical
 
 Unlike Jupyter notebook files, Markdown files do not store the output of executions.
 This means to include the outputs in our project, we must execute the cells at build time.
-To make a markdown file executable, you must first add a `kernelspec` to the files frontmatter.
+To make a Markdown file executable, you must first add a `kernelspec` to the files [frontmatter](https://mystmd.org/guide/frontmatter).
 For example, in this page,
 
 ```yaml
@@ -195,3 +195,29 @@ The first 15 multiples of 23 are {eval}``
 For the second example, you may want to use a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
 :::
 ::::
+
+## Cell Tags and Hiding Input
+
+[Cell tags](http://localhost:3000/jup-nb#cell-tags-and-hiding-input) in Jupyter Notebooks are metadata labels that you can assign to individual cells.
+They are useful for customizing the behavior of cells, such as hiding code input.
+Markdown cells allow you to add tags as well.
+
+To hide the input of a code cell (so only the output is visible), you can add a tag like `hide_input` to that cell.
+JB2 recognizes this tag and will hide the code input when rendering or exporting the notebook. 
+
+To add a tag:
+
+1. Select the cell.
+2. Open the "View" menu and enable the "Cell Toolbar" → "Tags".
+3. Add the tag `hide_input` (or another tag recognized by your toolchain).
+
+This feature is especially useful for creating clean, reader-friendly notebooks where you want to focus on results rather than code details, see below. 
+
+
+The code above provides a semi-interactive simulation: you are able to change two parameters but cannot control/adapt the code itself. This will be available in the near feature.
+
+```python
+:tag: hide_input
+
+print("This is the output of the cell, but the input code is hidden.")
+```
