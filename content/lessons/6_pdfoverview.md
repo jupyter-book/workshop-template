@@ -8,7 +8,7 @@ numbering:
 (pdfoutput)=
 # Create PDF output 🌶
 
-Jupyter Book 2 is centered around creating interactive online documents. However, there are several instances when a PDF, next to the online book, is desired, for example:
+Jupyter Book is centered around creating interactive online documents. However, there are several instances when a PDF, next to the online book, is desired, for example:
 
 - for use in note taking applications (e.g., students annotating a textbook chapter, or reviewing the draft of a website),
 - if a printed copy of the book is required,

@@ -45,6 +45,19 @@ The PDF is found...
 
 ### Change the PDF template
 
+```yaml
+  exports:
+    - format: typst
+      template: https://github.com/myst-templates/plain_typst_book.git
+      output: exports/book.pdf
+      id: output-pdf
+      cover: content/figures/logo.svg
+      logo: content/figures/logo.svg
+      logo_width: 5
+      ToC_depth: 2
+```
+
+
 :::{exercise} Change the PDF template
 **WIP**
 change, view output
