@@ -61,10 +61,23 @@ Figures can be given a caption in a similar way,
 #| caption: Caption text
 ```
 
+We will explore using Jupyter notebooks as input for MyST in [](#lesson-exec-jupyternb).
+
 ### Executing at build time
+
+MyST can also execute content at build time, through connecting to a Jupyter server.
+Executable cells can be in the `.ipynb` format as well as written in Markdown using either the [`code-cell` directive](xref:myst-guide/notebooks-with-markdown#code-cell) or [`eval` role](xref:myst-guide/notebooks-with-markdown#myst-inline-expressions).
+
+We will cover executing at build time with Jupyter Notebooks in [](#lesson-exec-juypternb), and with Markdown in [](#lesson-exec-markdown).
 
 ### In page execution
 
+Through connecting your site to a remote Jupyter, it is also possible to execute code cells live, in the browser.
+This feature is excellent for presenting readers with interactive elements, such as data science workflows they can follow along, or exercises where they are invited to change code.
+
+In page execution is not covered in this lesson.
+
+(lesson-exec-juypternb)=
 ## Adding a Jupyter Notebook
 
 In this repository we have included a Jupyter notebook, `example.ipynb`, which has been executed and includes outputs.
@@ -107,6 +120,7 @@ Now, make changes to the notebook and save it **without** running the cells.
 You will see MyST detect the notebook has been changed and re-run it automatically.
 ::::
 
+(lesson-exec-markdown)=
 ## Executable Markdown
 
 Unlike Jupyter notebook files, Markdown files do not store the output of executions.
