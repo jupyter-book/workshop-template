@@ -1,5 +1,5 @@
 (cheat-sheet)=
-# Markdown (Cheat sheet)
+# Markdown Cheat Sheet
 
 Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
 
