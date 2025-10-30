@@ -200,7 +200,7 @@ For the second example, you may want to use a [list comprehension](https://docs.
 
 [Cell tags](http://localhost:3000/jup-nb#cell-tags-and-hiding-input) in Jupyter Notebooks are metadata labels that you can assign to individual cells.
 They are useful for customizing the behavior of cells, such as hiding code input.
-Markdown cells allow you to add tags as well.
+Markdown cells allow you to add tags as well, e.g. `:tags: [hide-input]`.
 
 To hide the input of a code cell (so only the output is visible), you can add a tag like `hide_input` to that cell.
 JB2 recognizes this tag and will hide the code input when rendering or exporting the notebook. 
@@ -216,8 +216,9 @@ This feature is especially useful for creating clean, reader-friendly notebooks 
 
 The code above provides a semi-interactive simulation: you are able to change two parameters but cannot control/adapt the code itself. This will be available in the near feature.
 
-```python
-:tag: hide_input
+
+```{code-cell} python
+:tags: [hide-input]
 
 print("This is the output of the cell, but the input code is hidden.")
 ```
