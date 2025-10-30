@@ -166,7 +166,18 @@ Now, add a `label` (using the key/value notation) to the code cell and reference
 Make the code cell a figure by adding a `caption`; notice how the reference changes.
 ::::
 
-:::{exercise} Inline execution
-:::
+You can also use the [`eval` role](xref:myst-guide/notebooks-with-markdown#myst-inline-expressions) to execute expressions in Markdown text.
 
-## In page execution
+::::{exercise} Inline execution
+Copy the following examples using the `eval` role and complete the statements to execute.
+
+```markdown
+$6872 \times 3409$ is {eval}``
+
+The first 15 multiples of 23 are {eval}``
+```
+
+:::{hint}
+For the second example, you may want to use a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions).
+:::
+::::
