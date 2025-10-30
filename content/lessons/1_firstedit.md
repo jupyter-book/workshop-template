@@ -50,13 +50,7 @@ Navigate to the file `Content/Lessons/1_firstedit.md`. Then click on the pencil 
 
 Change the text after the `#`. This is the **title** of the file.
 
-```{figure} figures/firstedit.*
-:width: 100%
-
-Choose your file, click on edit and make changes. Ready? Commit your changes to your repository and see the output.
-```
-
-```{iframe} CANNOT_FIND_YOUTUBE_LINK
+```{iframe} https://www.youtube.com/embed/bLhvq4a-03U?si=GQaFuZGn2-3E4b5Z
 :align: center
 :width: 100%
 
