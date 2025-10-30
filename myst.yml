@@ -18,7 +18,7 @@ project:
     jupyter: https://docs.jupyter.org/en/latest
 
   date: 2025-10-20 # ${BUILD_DATE} 
-  github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
+  github: https://github.com/jupyter-book/workshop-template # Change this URL to your GitHub repository
   edit_url: 
   
   plugins:
@@ -79,4 +79,4 @@ site:
 
   actions:
     - title: Feedback
-      url: https://github.com/FreekPols/JB2_book_template/issues
+      url: https://github.com/jupyter-book/workshop-template/issues
