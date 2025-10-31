@@ -22,7 +22,7 @@ You can install all of these in a virtual environment using `pip` and then launc
 ::::{tab-set}
 :::{tab-item} Linux and MacOS
 ```console
-python -m venv ./venv
+python3 -m venv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
 jupyter lab
