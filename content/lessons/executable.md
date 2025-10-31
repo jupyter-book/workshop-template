@@ -45,6 +45,8 @@ Blocks can be labelled, either by editing a cell's JSON metadata, or with the fo
 #| label: my-label
 ```
 
+Labels are particularly useful when integrating notebooks into larger documents such as theses or technical reports. By assigning labels to code blocks, and their corresponding outputs, you can reference them directly within your text, making it clear which code produced which figure, table, or result. [This example](https://luukfroling.github.io/BEP/#visualisation-reconstruction) makes use of labels to reference figures from the Python notebook.
+
 :::{note}
 This is the syntax for Python, where `#` is the comment character.
 For other languages, the syntax is the comment character followed by `|`.
