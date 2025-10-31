@@ -79,27 +79,15 @@ Python dependencies are managed in file `requirements.txt`, the contents of whic
 :label: include-requirements
 :::
 
-Note that only the packages required for completing the executable notebook lesson are included in this file, as other dependencies are installed during the respective lessons.
+Note that only `jupyter-book` is needed for building the book as described in most of the lessons in this workshop. The remaining packages are for the _executable content_ lesson, which requires editing and executing Jupyter Notebooks (`*.ipynb` files). In addition, `jupyter` is a metapackage that includes a number of other commonly used packages (e.g., Jupyter Lab, IPython, etc.): it is included here to cover the range of preferences and IDE's used by workshop participants; many of these are described briefly in the table below. For each individual participant, a smaller subset of packages could be used in practice.
 
-If you are sure you want to install these dependencies, download the file, navigate through the correct folder and use `pip install -r requirements.txt`.
-
-#### Quick-start environment
-
-If you are not following the lessons in this workshop from the very beginning, you should add `jupyter-book>=2.0.0a0` to `requirements.txt`.
-
-#### Using VSC
-
-If you are using VSC it is useful to add `jupyter` to `requirements.txt` as this enables VSC to use a Jupyter server to view, edit and execute Jupyter Notebooks.
-
-#### Package overview 
-
-An overview of commonly used packages is provided here:
+To install these dependencies ensure `requirements.txt` is in your working directory and run `pip install -r requirements.txt`.
 
 | Package | Description |
 |---|---|
 | jupyter-book>=2.0.0a0 | Tool to build publication-quality books and documentation from Jupyter notebooks and Markdown. |
 | jupyterlab | Web-based interactive development environment for notebooks, code, and data. |
-| ipykernel | IPython kernel for Jupyter, enables running Python code in notebooks. |
+| ipykernel | IPython kernel for Jupyter, enables running Python code in notebooks. Necessary for VSC to edit and execute notebook files. |
 | ipywidgets | Interactive HTML widgets for Jupyter notebooks and JupyterLab. |
 | jupyter | A metapackage that requires jupyterlab, ipywidgets and ipykernel, amongst other packages. |
 | mystmd | MyST Markdown support for Jupyter Book / Sphinx. |
