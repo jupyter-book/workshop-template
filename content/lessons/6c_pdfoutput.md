@@ -6,30 +6,38 @@ numbering:
 
 # Create a PDF 🌶
 
-Now that you have an understainding of document creation using MyST and our choice to use Typst for PDF generation, you are ready to create a PDF from your book repository using Jupyter Book.
+**outline**
+- include template in `myst.yml`
+- explore templates
+- include a template
+- build pdf locally and through GHA as tabset
+- see output
 
-## Local PDF Output
 
-### Install Typst and generate a PDF
 
-**WIP**
 
-:::{exercise} Confirm Typst installation
-**WIP**
-Run
 
-```console
-typst --version
+With a general understanding of document creation using MyST and our choice to use Typst for PDF generation, you are ready to create a PDF from your book repository using Jupyter Book.
+
+
+## Include a PDF template
+
+```yaml
+  exports:
+    - format: typst
+      template: https://github.com/myst-templates/plain_typst_book.git
+      output: exports/book.pdf
+      id: output-pdf
+      cover: content/figures/logo.svg
+      logo: content/figures/logo.svg
+      logo_width: 5
+      ToC_depth: 2
 ```
-:::
 
-### Generate a PDF output with Typst
+```{exercise} Explore templates
 
-You can build the PDF locally using the command line:
-
-```console
-jupyter book build --typst
 ```
+
 
 :::{exercise} Generate a PDF using the CLI
 **WIP**
@@ -43,19 +51,29 @@ The PDF is found...
 
 :::
 
-### Change the PDF template
 
-```yaml
-  exports:
-    - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git
-      output: exports/book.pdf
-      id: output-pdf
-      cover: content/figures/logo.svg
-      logo: content/figures/logo.svg
-      logo_width: 5
-      ToC_depth: 2
+## Build PDF outputs
+
+::::{tab-set} 
+:::{tab-item} GitHub Actions
+:::
+:::{tab-item} Locally
+To produce a PDF output locally, you need to have Typst/LaTeX installed on your system. 
+
+````{exercise} Install Typst
+Follow [these steps](xref:myst/creating-pdf-documents#typst-install) to install Typst locally.
+
+Check whether Typst is correctly installed by running the following command in your terminal:
+
+```console
+typst --version
 ```
+
+````
+:::
+::::
+
+
 
 
 :::{exercise} Change the PDF template
