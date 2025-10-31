@@ -40,7 +40,8 @@ resulting in
 ![External image](https://polslab.tnw.tudelft.nl/figures/training.JPG)
 
 However, this gives us limited options to customize the figure.
-We can include more options using the [`figure` directive](#cheat_sheet_figures).
+Moreover, we are dependent of a stable external URL.
+We can include our own figures and add more options using the [`figure` directive](#cheat_sheet_figures).
 
 If we want to add a figure to our book, we can use the URL of an external website (as in the figure above).
 However, this carries the risk that the figure will no longer be visible if it is moved from its location.[^embeddingimages]
@@ -361,13 +362,13 @@ Content for Tab 2
 
 :::{exercise} Create a tab set for installing MyST
 Put the following instructions for installing MyST into a tab set,
-splitting instructions for `pip` and `npm` into different tabs
+splitting instructions for `pip` and `npm` into different tabs.
 
 Install MyST
 
-Using `pip` `pip install mystmd`
+*Using pip:* `pip install mystmd`
 
-Using `npm` `npm install -g mystmd`
+*Using npm:* `npm install -g mystmd`
 :::
 
 [^embeddingimages]: Fetching images from someone else's site also puts strain on their web server, which they may not appreciate.
