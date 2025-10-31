@@ -11,6 +11,10 @@ kernelspec:
 
 MyST supports a number of ways to include executable content in your project.
 
+```{tip}
+Instructions are provided here for Jupyter Lab, however, you can use any IDE you are comfortable with. An explanation is provided on the [Software](#software) page.
+```
+
 ## Installing Jupyter
 
 Executable content in MyST is processed by a [Jupyter](xref:jupyter) server and appropriate [kernel](https://docs.jupyter.org/en/latest/glossary.html#term-kernel).
@@ -19,12 +23,40 @@ In this lesson, we will run a local Jupyter server to execute code cells.
 A pip requirements file, `requirements.txt` in the root of the repository specifies all of the dependencies you need.
 You can install all of these in a virtual environment using `pip` and then launch Jupyter.
 
+::::{tab-set}
+:::{tab-item} Linux and MacOS
 ```console
 python3 -m venv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
 jupyter lab
 ```
+:::
+:::{tab-item} Windows
+```console
+python -m venv venv
+```
+
+For Command Prompt
+
+```console
+venv\Scripts\activate.bat
+```
+
+For PowerShell
+
+```console
+venv\Scripts\activate.ps1
+```
+
+Then
+
+```console
+pip install -r requirements.txt
+jupyter lab
+```
+:::
+::::
 
 This will automatically open the Jupyter Lab interface (at [localhost:8888](http://localhost:8888)) in your browser, which we will use later.
 
