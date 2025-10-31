@@ -11,6 +11,10 @@ kernelspec:
 
 MyST supports a number of ways to include executable content in your project.
 
+```{tip}
+Instructions are provided here for Jupyter Lab, however, you can use any IDE you are comfortable with. An explanation is provided on the [Software](#software) page.
+```
+
 ## Installing Jupyter
 
 Executable content in MyST is processed by a [Jupyter](xref:jupyter) server and appropriate [kernel](https://docs.jupyter.org/en/latest/glossary.html#term-kernel).
