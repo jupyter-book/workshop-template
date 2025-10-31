@@ -41,7 +41,7 @@ One reason Typst is preferred in this workshop is that the installation (both fo
 
 When starting your own project, consider whether a PDF output is desired.
 If so, consider the interactive elements that may be included and wether or not, some functionality and not all multimedia are supported in a PDF.
-For instance, a *.gif file cannot be included in a PDF.
+For instance, a `*.gif` file cannot be included in a PDF.
 JB2 is thoughtful in this by choosing the best possible alternative if multiple files with the same name but different extensions are present: gif is chosen over png, png over jpg.
 Rather than specifying the extension, you can just use the file name and an asterisk, e.g. `![figure](figures/mystvstex.*)`.
 
