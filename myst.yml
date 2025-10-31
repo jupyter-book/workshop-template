@@ -65,6 +65,9 @@ project:
     CI/CD: Continuous Integration/Continuous Deployment
     GHA: GitHub Actions
     GH: GitHub
+    IDE: Integrated Development Environment
+    VSC: Visual Studio Code
+    CLI: commmand line interface
 
     
 site:
