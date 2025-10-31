@@ -8,7 +8,8 @@ numbering:
 
 ## Anatomy of a Jupyter Book
 
-A Jupyter Book is a collection of (markdown, jup. notebooks and/or tex) files and folders that together make up the content and structure of your book.
+A Jupyter Book is a collection of files and folders that together make up the content and structure of your book.
+Jupyter Book 2 (JB2) supports both [Markdown](https://en.wikipedia.org/wiki/Markdown) files and [Jupyter Notebooks](https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook) as content sources. 
 The structure of the book is specified in the `myst.yml` file, which is located in the root directory of your book.
 This file contains information about the title, author, and other metadata of the book, as well as documents and its structure to build the book itself.
 
@@ -24,6 +25,18 @@ This file contains information about the title, author, and other metadata of th
 ```{tip} Official documentation
 See [here](https://mystmd.org/guide/table-of-contents) for a full explanation of the structure and TOC and [here](https://mystmd.org/guide/quickstart#configure-site-and-page-options) for more the website options.
 ```
+
+## Markdown
+Markdown is a simple markup language: plain text that is *formatted* with small pieces of 'code'. This allows you to create rich, interactive books that combine text, code, and visualizations. This text can then be quickly exported to various other formats such as PDF, Word, HTML, etc.
+
+```{figure} figures/MyST.PNG
+:width:80%
+
+Documents made in MyST Markdown can be converted to many different formats. These can be saved as JSON, or rendered to a website (like this one!) or any number of formats including [PDF & LaTeX](https://mystmd.org/guide/creating-pdf-documents), [Word](https://mystmd.org/guide/creating-word-documents), [React](https://mystmd.org/guide/quickstart-myst-documents), or [JATS](https://mystmd.org/guide/creating-jats-xml). Picture taken from the MYST documentation [^MYST].
+```
+
+[^MYST]: https://mystmd.org/guide/
+
 
 ## Your first change
 
