@@ -11,6 +11,10 @@ kernelspec:
 
 MyST supports a number of ways to include executable content in your project.
 
+```{tip}
+Instructions are provided here for Jupyter Lab, however, you can use any IDE you are comfortable with. An explanation is provided on the [Software](#software) page.
+```
+
 ## Installing Jupyter
 
 Executable content in MyST is processed by a [Jupyter](xref:jupyter) server and appropriate [kernel](https://docs.jupyter.org/en/latest/glossary.html#term-kernel).
@@ -19,12 +23,40 @@ In this lesson, we will run a local Jupyter server to execute code cells.
 A pip requirements file, `requirements.txt` in the root of the repository specifies all of the dependencies you need.
 You can install all of these in a virtual environment using `pip` and then launch Jupyter.
 
+::::{tab-set}
+:::{tab-item} Linux and MacOS
 ```console
 python3 -m venv ./venv
 source ./venv/bin/activate
 pip install -r requirements.txt
 jupyter lab
 ```
+:::
+:::{tab-item} Windows
+```console
+python -m venv venv
+```
+
+For Command Prompt
+
+```console
+venv\Scripts\activate.bat
+```
+
+For PowerShell
+
+```console
+venv\Scripts\activate.ps1
+```
+
+Then
+
+```console
+pip install -r requirements.txt
+jupyter lab
+```
+:::
+::::
 
 This will automatically open the Jupyter Lab interface (at [localhost:8888](http://localhost:8888)) in your browser, which we will use later.
 
@@ -44,6 +76,8 @@ Blocks can be labelled, either by editing a cell's JSON metadata, or with the fo
 ```python
 #| label: my-label
 ```
+
+Labels are particularly useful when integrating notebooks into larger documents such as theses or technical reports. By assigning labels to code blocks, and their corresponding outputs, you can reference them directly within your text, making it clear which code produced which figure, table, or result. [This example](https://luukfroling.github.io/BEP/#visualisation-reconstruction) makes use of labels to reference figures from the Python notebook.
 
 :::{note}
 This is the syntax for Python, where `#` is the comment character.

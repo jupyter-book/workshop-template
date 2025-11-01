@@ -73,7 +73,7 @@ Embed the table `tl_basic_formatting` from the cheat sheet using the `embed` dir
 Just like with cross-references, you can also embed content from external MyST projects.
 
 ::::{exercise}
-Embed the figure `sunset-figure` the [MyST guide](xref:myst-guide)
+Embed the figure `sunset-figure` from the [MyST guide](xref:myst-guide)
 
 :::{hint}
 Remember that to reference an external MyST project you use `xref:` and the label given to the project in `myst.yml`.

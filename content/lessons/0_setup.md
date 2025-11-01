@@ -8,7 +8,7 @@ numbering:
 
 Follow these instruction to use the GitHub template repository to create your own book for this workshop:
 
-1. Go to this [repository](https://github.com/FreekPols/JB2_book_template.git)
+1. Go to the [repository for this book](https://github.com/jupyter-book/workshop-template/)
 2. Click the green button `use this template` and click `create a new repository`.
 3. Choose a proper name of your repository (this will be also part of your URL!) and choose the option `public`.
 4. In your repository, click on `settings` and in the left menu on Pages and choose `Github Actions`
@@ -95,7 +95,7 @@ You can also make changes locally then push them back to your GitHub repository.
 1. Clone the repository to your local machine using Git.
 
 ```console
-git clone git@github.com:<github_user_name>/JB2_book_template.git
+git clone git@github.com:<github_user_name>/workshop-template.git
 ```
 
 2. Make changes to the content files in the `content` directory using your text editor.
@@ -115,7 +115,7 @@ If you prefer, you can also work entirely locally using command-line tools and a
 1. Clone the repository to your local machine using Git.
 
 ```console
-git clone git@github.com:<github_user_name>/JB2_book_template.git
+git clone git@github.com:<github_user_name>/workshop-template.git
 ```
 
 2. Install MyST Markdown. Using `npm` or `pip`

@@ -15,7 +15,7 @@ _The Workshop Template was created for JupyterCon 2025. Slides are in the Turing
 
 ## Getting Started
 
-If you are using this Template to learn to use Jupyter Book 2 and/or MystMD, visit the GitHub Pages site [freekpols.github.io/JB2_book_template/](https://freekpols.github.io/JB2_book_template/) and follow the instructions.
+If you are using this Template to learn to use Jupyter Book 2 and/or MystMD, visit the GitHub Pages site [jupyter-book.github.io/workshop-template/](https://jupyter-book.github.io/workshop-template/) and follow the instructions.
 
 If you have used this GitHub template repository to create a new book project, delete and/or modify the contents of this README and start editing your book!
 

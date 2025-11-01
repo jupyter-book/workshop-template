@@ -1,5 +1,5 @@
 (cheat-sheet)=
-# Markdown (Cheat sheet)
+# Markdown Cheat Sheet
 
 Below is a set of frequently used markdown commands for Jupyter Book 2 made with MyST. A good practice is to download the source file by clicking the download icon at the top right of this page and inspect the code.
 
@@ -11,7 +11,7 @@ We can distinguish between two structures: that of the book's content (a collect
 
 In the `myst.yml` file, you can specify the structure of the book as shown in [](#code_toc).
 Here you can indicate which files belong to the book and in what order.
-You can also create dropdown menus in your ToC by including `children`
+You can also create dropdown menus in your ToC by including `children`.
 When not specifying a ToC, all files are automatically included in alphabetical order.
 
 :::{literalinclude} ../myst.yml
@@ -23,6 +23,8 @@ When not specifying a ToC, all files are automatically included in alphabetical 
 :::
 
 If you have specified a ToC and create a new file, you'll need to add it to the `myst.yml` file to include it in the book.
+Note that this is a {abbr}`.yml (a human-readable data format used to store and exchange structured data.)` file rather than a .md file.
+
 
 (headings)=
 ### Headings
@@ -42,7 +44,10 @@ Typically, a page only has a single level 1 heading, the page's title and higher
 Do not number your chapters and sections! This happens automatically.
 
 Note also that a structured sections are preferred, that is not skipping a heading.
+
+A chapter outline based on the headings in the page and their hierarchy is created automatically and shown in the right sidebar.
 ```
+
 
 ## Basic Formatting
 

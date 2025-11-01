@@ -18,7 +18,7 @@ project:
     jupyter: https://docs.jupyter.org/en/latest
 
   date: 2025-10-20 # ${BUILD_DATE} 
-  github: https://github.com/FreekPols/JB2_book_template # Change this URL to your GitHub repository
+  github: https://github.com/jupyter-book/workshop-template # Change this URL to your GitHub repository
   edit_url: 
   
   plugins:
@@ -27,13 +27,9 @@ project:
   # exports and downloads
   exports:
     - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git
+      template: lapreprint-typst
       output: exports/book.pdf
       id: output-pdf
-      cover: content/figures/logo.svg
-      logo: content/figures/logo.svg
-      logo_width: 5
-      ToC_depth: 2
 
   # Jupyter Notebook configuration
   jupyter:
@@ -43,8 +39,7 @@ project:
   toc:
     - file: index.md                      # the landing page
     - file: content/1_intro.md
-    - file: content/2_jup_nb.ipynb
-    - file: content/3_cheat_sheet.md
+    - file: content/2_cheat_sheet.md
     - file: content/lessons/your_turn.md          # dropdown menu
       children:
         - file: content/lessons/0_setup.md
@@ -55,9 +50,14 @@ project:
         - file: content/lessons/reuse.md
         - file: content/lessons/executable.md
         - file: content/lessons/5_workflows.md
-        - file: content/lessons/6_pdfoutput.md
+        - file: content/lessons/6_pdfoverview.md
+          children:
+            - file: content/lessons/6a_myst.md
+            - file: content/lessons/6b_pdfgeneration.md
+            - file: content/lessons/6c_pdfoutput.md
         # - file: content/lessons/7_styling.md
         - file: content/lessons/8_init.md
+
     - file: content/advanced_start.md
     - file: content/software.md
     - file: content/gallery.md
@@ -67,17 +67,20 @@ project:
     CI/CD: Continuous Integration/Continuous Deployment
     GHA: GitHub Actions
     GH: GitHub
+    IDE: Integrated Development Environment
+    VSC: Visual Studio Code
+    CLI: commmand line interface
 
     
 site:
   template: book-theme
   options:
-    favicon: content/figures/favicon.svg      # path to your favicon
+    favicon: ./content/figures/favicon.svg      # path to your favicon
     style: ./css/custom.css
-    logo: content/figures/logo.svg            # path to your logo, shown top left at site
+    logo: ./content/figures/logo.svg            # path to your logo, shown top left at site
     folders: false
     hide_authors: true
 
   actions:
     - title: Feedback
-      url: https://github.com/FreekPols/JB2_book_template/issues
+      url: https://github.com/jupyter-book/workshop-template/issues
