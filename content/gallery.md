@@ -2,21 +2,9 @@
 
 Jupyter Book 2 technology has been applied across a wide range of use cases, including curricula vitae, official educational textbooks, student portfolios, lab manuals, and technical documentation.
 
-Below is a gallery showcasing three examples of such outputs.
+Below is a gallery showcasing examples of such outputs.
 
 
-:::{grid} 1 1 2 2
-```{card} Introducing Classical Mechanics & Special Relativity
-:link: https://freekpols.github.io/Mechanica/
-
-This book provides an introduction for freshman students into the world of classical mechanics and special relativity theory
-```
-````{card}
-:link: https://freekpols.github.io/Mechanica/
-```{figure} figures/mech.*
-``` 
-````
-:::
 
 :::{grid} 1 1 2 2
 ```{card} The Turing Way handbook to reproducible, ethical and collaborative data science.
@@ -39,6 +27,7 @@ The Turing Way project illustration by Scriberia. Zenodo. [@https://doi.org/10.5
 
 MyST is an ecosystem of open-source, community-driven tools designed to revolutionize scientific communication. Our powerful authoring framework supports blogs, online books, scientific papers, reports and journals articles.
 ```
+
 ````{card}
 :link: https://mystmd.org/guide
 ```{iframe} https://cdn.curvenote.com/0198d368-fb53-7691-80d4-a6f7a2c88ca5/public/links-7fffe87911b1e26605748d6f347d29d6.mp4
@@ -49,6 +38,18 @@ Live graphs can be embedded directly in your documentation or articles with comp
 ````
 :::
 
+:::{grid} 1 1 2 2
+```{card} Introducing Classical Mechanics & Special Relativity
+:link: https://freekpols.github.io/Mechanica/
+
+This book provides an introduction for freshman students into the world of classical mechanics and special relativity theory
+```
+````{card}
+:link: https://freekpols.github.io/Mechanica/
+```{figure} figures/mech.*
+``` 
+````
+:::
 
 :::{grid} 1 1 2 2
 ```{card} Scientific Python
@@ -86,3 +87,19 @@ Project Pythia is a home for Python-justified learning resources that are open-s
 ```
 ````
 :::
+
+:::{grid} 1 1 2 2
+```{card} IRSA Tutorials
+:link: https://caltech-ipac.github.io/irsa-tutorials/
+
+IRSA (Infrared Science Archive) provides a variety of tutorials to help users understand and utilize the data and tools available through the archive.
+```
+
+````{card}
+:link: https://caltech-ipac.github.io/irsa-tutorials/
+```{figure} https://caltech-ipac.github.io/irsa-tutorials/build/irsa_logo-9468ac2f2e35864214fa6e30abde87ea.png
+:class: framed
+
+IRSA Tutorials logo
+```
+````
