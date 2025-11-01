@@ -23,7 +23,7 @@ With a general understanding of document creation using MyST and our choice to u
 To produce a PDF output locally, you need to have Typst installed on your system. 
 
 ````{exercise} Install Typst
-Follow [these steps](xref:myst/creating-pdf-documents#typst-install) to install Typst locally.
+Follow [these steps](xref:myst-guide/creating-pdf-documents#typst-install) to install Typst locally.
 
 Check whether Typst is correctly installed by running the following command in your terminal:
 
