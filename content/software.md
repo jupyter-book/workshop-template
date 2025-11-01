@@ -64,25 +64,40 @@ Extensions in Visual Studio Code (VSC) are powerful add-ons that enhance the fun
 * MyST-Markdown: The official Markdown syntax extension
 
 
-## Requirements.txt
+## Virtual Environment and Dependencies
 
-A `requirements.txt` file is included for this workshop that contains the basic dependencies needed to complete it. Note in particular that 
+It is assumed that you are able to create and activate a virtual environment in order to complete this workshop using a personal computer. As the primary tools are Python packages available using `pip`, the choice of environment manager is somewhat trivial. To keep things simple we suggest using Python `venv` or Conda.
 
-We included a [requirements.txt](../..requirements.txt) file with all dependencies that are likely to be used.
-These include:
+Python's `venv` is used in the GitHub Actions workflows.
+
+### Python Dependencies
+
+Python dependencies are managed in file `requirements.txt`, the contents of which are included here:
+
+:::{literalinclude} ../requirements.txt
+:caption: Python dependencies in file `requirements.txt`
+:label: include-requirements
+:::
+
+Note that only `jupyter-book` is needed for building the book as described in most of the lessons in this workshop. The remaining packages are for the _executable content_ lesson, which requires editing and executing Jupyter Notebooks (`*.ipynb` files). In addition, `jupyter` is a metapackage that includes a number of other commonly used packages (e.g., Jupyter Lab, IPython, etc.): it is included here to cover the range of preferences and IDE's used by workshop participants; many of these are described briefly in the table below. For each individual participant, a smaller subset of packages could be used in practice.
+
+To install these dependencies ensure `requirements.txt` is in your working directory and run `pip install -r requirements.txt`.
+
 | Package | Description |
 |---|---|
 | jupyter-book>=2.0.0a0 | Tool to build publication-quality books and documentation from Jupyter notebooks and Markdown. |
 | jupyterlab | Web-based interactive development environment for notebooks, code, and data. |
-| mystmd | MyST Markdown support for Jupyter Book / Sphinx (optional / commented). |
-| jupyterlab_myst | JupyterLab extension to render MyST Markdown and improve notebook/Markdown integration. |
-| ipykernel | IPython kernel for Jupyter, enables running Python code in notebooks. |
+| ipykernel | IPython kernel for Jupyter, enables running Python code in notebooks. Necessary for VSC to edit and execute notebook files. |
 | ipywidgets | Interactive HTML widgets for Jupyter notebooks and JupyterLab. |
+| jupyter | A metapackage that requires jupyterlab, ipywidgets and ipykernel, amongst other packages. |
+| mystmd | MyST Markdown support for Jupyter Book / Sphinx. |
+| jupyterlab_myst | JupyterLab extension to render MyST Markdown and improve notebook/Markdown integration. |
 | numpy | Core library for numerical computing with arrays and linear algebra. |
 | matplotlib | 2D plotting library for generating figures and visualizations. |
-| scipy | Scientific computing library (optional / commented). |
+| scipy | Scientific computing library. |
 
-If you are sure you want to install these dependencies, download the file, navigate through the correct folder and use `pip install -r requirements.txt`.
+## PDF Generation with Typst
 
-## Typst
-For this template we use Typst to produce a high quality pdf. If you want to create pdf's locally, you'll have to install Typst. Follow the [Typst installation instructions](https://github.com/typst/typst?tab=readme-ov-file#installation) for several options to install Typst. We strongly recommend using the latest releases of Typst. If you get a confusing Typst error, a good first step is to upgrade your version of Typst.
+For this template we use Typst to produce a high quality PDF (explained in detail as part of the PDF Output lesson). If you want to create PDF's locally, you'll have to install Typst. The [Typst installation instructions](https://github.com/typst/typst?tab=readme-ov-file#installation) provides several options to install Typst: we strongly recommend using the latest releases.
+
+If you get a confusing error, a good first step is to upgrade your version of Typst.
