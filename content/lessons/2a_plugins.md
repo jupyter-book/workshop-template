@@ -31,3 +31,9 @@ Also then momentum transfer takes place and A is launched under an angle.
 ```{tip} 
 Plugins are shared in a [GitHub repo](https://github.com/jupyter-book/myst-plugins/)
 ```
+
+```{exercise} Include a plugin
+Look at the different plugins available in the [myst-plugins GitHub repo](https://github.com/jupyter-book/myst-plugins/). 
+Include one of them in your own `myst.yml` file and use it in a page of your book.
+Rebuild the book and look at your changes.
+```

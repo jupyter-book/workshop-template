@@ -49,13 +49,15 @@ project:
             - file: content/lessons/2a_plugins.md
         - file: content/lessons/reuse.md
         - file: content/lessons/executable.md
-        # - file: content/lessons/4_styling.md
         - file: content/lessons/5_workflows.md
         - file: content/lessons/6_pdfoverview.md
           children:
             - file: content/lessons/6a_myst.md
             - file: content/lessons/6b_pdfgeneration.md
             - file: content/lessons/6c_pdfoutput.md
+        # - file: content/lessons/7_styling.md
+        - file: content/lessons/8_init.md
+
     - file: content/advanced_start.md
     - file: content/software.md
     - file: content/gallery.md
