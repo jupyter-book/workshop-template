@@ -6,6 +6,28 @@ numbering:
 
 # Set up a new repository
 
+The instructions on this page guide you through the process of:
+
+- making your own book by creating a (new) GitHub repository from a template repository,
+- making an edit to your book, 
+- "building" your book and viewing it in a web browser via a local server and/or online with GitHub pages.
+
+`````{tip}
+We recommend you complete the lessons in this workshop by installing Jupyter Book on your computer and building the book using a command line interface (CLI). This is referred to as the **local** approach. If you are unable to use the CLI, or do not wish to, tt is possible to complete this workshop by working entirely in the browser. This is referred to as the **online** approach. When instructions are different for each approach, tab sets will be used, as illustrated here:
+
+::::{tab-set}
+:::{tab-item} Local
+Instructions specific for those working using a CLI and Jupyter Book installed "locally." 
+:::
+:::{tab-item} Online 
+Instructions specific for those working online using tools available via `github.com` (e.g., the `github.dev` IDE) and GitHub Actions workflows.
+:::
+::::
+
+`````
+
+## Create a repository 
+
 Follow these instruction to use the GitHub template repository to create your own book for this workshop:
 
 1. Go to the [repository for this book](https://github.com/jupyter-book/workshop-template/)
@@ -25,60 +47,104 @@ Follow these steps to create your own repository from the template.
 
 5. Click on `code` and click on the `gear-icon` (near **About**) at the right site of the page. 
 6. Check the box **Use your GitHub Pages website**.
-7. Go to `Actions` in the topmenu, click on the (red) `initial commit` and click `re-run all jobs`
+7. Go to `Actions` in the top menu, click on the (red) `initial commit` and click `re-run all jobs`
 
 The book will now be deployed again - where now it can actually load GitHub pages. 
 
 ``` {iframe} https://www.youtube.com/embed/gQP_gjrh7rQ?si=DWiL_J27_a35RV__
 :name: vid_2
 
-Follow these steps to create your own GHpages from the template.
+Follow these steps to create your own GH Pages site from the template.
 ```
 
-8. Use the book link  (`code` $\rightarrow$ below **About**) to your Github page where the book is hosted.
-9. The output resembles {numref}`Figure {number} <fig_startscreen>`.
+## View your book online
+
+The previous stps set up your repository with GitHub Pages, which a GitHub Actions workflow to automatically build your book (a website) and deploy it online. The URL of your book is based on your GitHub username:
+
+```
+https://USERNAME.github.io/workshop-template
+```
+
+This is, in fact, how the website for this document is created:\
+https://jupyter-book.github.io/workshop-template/
+
+You can also find the link easily from you GitHub repository home page under the "About" section on the right-hand side (illustrated in {numref}`Figure {number} <fig_folderstructure>`).
+
+The home page of your new book website should look like {numref}`Figure {number} <fig_startscreen>`.
 
 ```{figure} figures/startscreen.png
 :name: fig_startscreen
 :width: 100%
 
-Once the book has been deploy, you can visit your site which looks like this.
+The home page of your new site, which you can visit once the GitHub Action workflow has successfully completed.
 ```
 
-```{note} Attribution
-:icon: false
-The idea of a template workflow has been adapted from [teachbooks](https://teachbooks.io)
+```{tip}
+Checkout the content on your mobile phone as well! It just looks amazing.
 ```
 
 ## Repo folder structure
 
-Your GitHub repository looks like the one shown in {numref}`fig_folderstructure`. We have the following subfolders:
+Your GitHub repository may look similar to the one shown in {numref}`fig_folderstructure`; note the following directories:
 
-- Content: the source files of your book (in markdown or jupyter notebook format)
-- Exports: the folder which may include a pdf export of your book
-- Figures: the folder which includes figures for your book (*could be in content folder*)
-- Lessons: the folder which includes the lessons of this tutorial (*could be in Content folder*)
-- .github/workflows: the folder which includes the GitHub Actions (automated workflows) to build and deploy your book
-- css: the folder which includes the custom css file to change the layout of your book
-- pdf_template_book: the folder which includes the [typst template](https://github.com/myst-templates/plain_typst_book) to create a pdf export of your book
+- `content`: the source files of your book (in markdown or jupyter notebook format),
+- `content/figures`: the folder which includes figures for your book,
+- `content/lessons`: the folder which includes the lessons of this workshop,
+- `.github/workflows`: the folder which includes the GitHub Actions (automated workflows) to build and deploy your book,
+- `css`: a folder which includes a custom css file to change the layout of your book,
+- A `myst.yml` file which defines the structure and settings of your Jupyter Book.
 
 ```{figure} figures/Folderstructure.png
 :name: fig_folderstructure
 :width: 100%
 
-Once the book has been deploy, you can visit your site which looks like this.
+Illustration of repository folder structure.
 ```
 
-## Make and deploy changes
+As proceed through the workshop you will edit the files in your new repository.
+
+## Edit the book
 
 You have a number of options for making changes to the book's source and seeing how they affect the output.
 
 ::::{tab-set}
-:::{tab-item} Using the GitHub IDE
+:::{tab-item} Local
 
-It is possible to work directly in the GitHub environment: no need to install anything as this is already covered with the GH Actions that we created.
+1. Clone the repository to your local machine using Git.
 
-1. Click on the index.md file in the Content folder
+```console
+git clone git@github.com:<github_user_name>/workshop-template.git
+```
+
+2. Install Jupyter Book, using the virtual environment manager of your choice (all of the tools used today can easily be handled using `pip`)
+
+```console
+pip install -r requirements.txt
+```
+
+3. Make a change to one of the files in the `content` directory using a text editor.
+
+4. (optional) Commit the the change using Git and push it to the remote repository (this will trigger the GitHub Actions workflow and rebuild the website, which can be viewed at the same URL described above). If you go back to your repository and click on the `Actions` tab you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes!
+
+5. Build the book from source and serve it locally.
+
+```console
+jupyter book start
+```
+
+5. Preview the book in your browser at [`http://localhost:3000`](http://localhost:3000)
+
+```{tip}
+The localhost address may be different than `3000` (check the CLI output).
+
+Once the MyST server is running, it will automatically update as you make changes to the source.
+```
+:::
+:::{tab-item} Online
+
+To work online, you must "edit" a file by making a commit using GitHub's online tools:
+
+1. Click on the `index.md` file in the Content folder
 2. Click on the drop down icon next to the pencil icon and choose `open in github.dev` This will start the GitHub development environment where you can edit the files directly in your browser.
 3. Edit the file by replacing the names with your own and commit your changes, see [](#vid_3)
 
@@ -88,91 +154,9 @@ It is possible to work directly in the GitHub environment: no need to install an
 Working directly in the GitHub development environment.
 ```
 
-Now, if you go back to your repository and click on `Actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
-:::
-:::{tab-item} Using your favourite editor
-You can also make changes locally then push them back to your GitHub repository.
-1. Clone the repository to your local machine using Git.
-
-```console
-git clone git@github.com:<github_user_name>/workshop-template.git
-```
-
-2. Make changes to the content files in the `content` directory using your text editor.
-3. Commit and push your changes. For example
-
-```console
-git commit -a
-git push -u origin main
-```
-
-Now, if you go back to your repository and click on `Actions` you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes live!
-
-:::
-:::{tab-item} Entirely locally 🌶 
-If you prefer, you can also work entirely locally using command-line tools and a text editor.
-
-1. Clone the repository to your local machine using Git.
-
-```console
-git clone git@github.com:<github_user_name>/workshop-template.git
-```
-
-2. Install MyST Markdown. Using `npm` or `pip`
-
-```console
-npm install -g mystmd
-```
-
-```console
-pip install mystmd
-```
-
-`````{hint}
-To build a pdf using Typst you will need to install the Typst CLI.
-There are a [number of options for installing Typst](https://github.com/typst/typst?tab=readme-ov-file#installation).
-
-````{dropdown} Common options for installing Typst
-Using brew
-
-```console
-brew install typst
-```
-
-Using cargo
-
-```console
-cargo install --locked typst-cli
-```
-
-Using winget
-
-```console
-winget install --id Typst.Typst
-```
-
-````
-`````
-
-3. Make changes to the content files in the `content` directory using your text editor.
-4. Serve the book locally.
-
-```console
-myst start
-```
-
-5. Preview the book in your browser at [`http://localhost:3000`](http://localhost:3000)
-
-```{tip}
-Once the MyST server is running, it will automatically update as you make changes to the source.
-```
-
+Now, if you go back to your repository and click on the `Actions` tab you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes!
 :::
 ::::
 
-## Create a pdf export
-A clear advantage of JB2 over JB1 is the ability to easily create a high quality pdf export of your book (as well as other formats). We included a GitHb Action workflow that automatically creates a pdf export of your book using Typst when you push changes to your repository. You can also create the pdf locally if you have the Typst CLI installed. We cover the pdf export [later in more detail ](#pdfoutput)
-
-```{tip}
-Checkout the content on your mobile phone as well! It just looks amazing.
-```
+## Create a PDF export
+A clear advantage of JB2 over JB1 is the ability to easily create a high quality PDF export of your book (as well as other formats). In a [later lesson of this workshop](#pdfoutput), we will build a PDF locally and/or modify the GitHb Action workflow to automatically create a PDF export of your book using Typst when changes are pushed changes to your repository.
