@@ -57,7 +57,7 @@ High-level overview of Jupyter Book 2 components. Picture taken from Figure 1 of
 
 For our purposes, a _theme_ or _template_ defines the final appearance of our document. Though a concise explanation is provided [here](https://mystmd.org/guide/overview#overview-themes), for this workshop it is sufficient to know that there are a number of different themes and templates available in the MyST ecosystem, and that it is possible to customize them to a high degree. An overview is provided at the [`myst-templates` GitHub organization](https://github.com/myst-templates).
 
-Note in particular that there are currently only two themes in this organization: `book-theme` and `article-theme`. These are the [two themese bundled with MyST](https://mystmd.org/guide/website-templates#default-web-themes) and correspond to the two types of _websites_ that can be created. The code snippet below is from the `myst.yml` file of this book, which indicates the `book-theme` is used:
+Note in particular that there are currently only two themes in this organization: `book-theme` and `article-theme`. These are the [two themes bundled with MyST](https://mystmd.org/guide/website-templates#default-web-themes) and correspond to the two types of _websites_ that can be created. The code snippet below is from the `myst.yml` file of this book, which indicates the `book-theme` is used:
 
 :::{literalinclude} ../../myst.yml
 :start-at: site:
@@ -80,7 +80,7 @@ There is a relatively large number of templates listed in the [`myst-templates` 
 ## Summary
 
 That's enough detail about the MyST ecosystem for now. The main takeaways from this page are to recognize:
-- themese and templates are used to customize the creation of final documents for a given source
+- themes and templates are used to customize the creation of final documents for a given source
 - this book is initially set up with the `book-theme` for website generation and the `lapreprint-typst` template for PDF generation
 
 Up to this point in the workshop you have been modifying the source code and using the `book-theme` to view changes on the rendered website; however, you have not yet generated a PDF. After a quick introduction to LaTeX and Typst on the following page, we will do just that in the next round of exercises! 

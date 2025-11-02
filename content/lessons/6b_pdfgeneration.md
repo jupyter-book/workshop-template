@@ -37,13 +37,16 @@ We won't go into detail here, but you can find more information [in the MyST Mar
 One reason Typst is preferred in this workshop is that the installation (both for local users and via GitHub Actions) is much faster and easier than LaTeX, as you will see when we implement the PDF generation in our workflow file.
 ```
 
-## Choosing Typst or LaTeX
+## Interactive file types
 
 When starting your own project, consider whether a PDF output is desired.
-If so, consider the interactive elements that may be included and wether or not, some functionality and not all multimedia are supported in a PDF.
-For instance, a `*.gif` file cannot be included in a PDF.
+If so, consider the interactive elements that may be included and that some functionality and multimedia types are not supported in a PDF.
+For instance, a `*.gif` file or movie cannot be included in a PDF.
 JB2 is thoughtful in this by choosing the best possible alternative if multiple files with the same name but different extensions are present: gif is chosen over png, png over jpg.
-Rather than specifying the extension, you can just use the file name and an asterisk, e.g. `![figure](figures/mystvstex.*)`.
+
+```{tip}
+When incorporating interactive media files with an alternative "static" file extension, rather than specifying the filename with extension, you can just use the file name and an asterisk, e.g. `![figure](figures/mystvstex.*)`. Then Jupyter Book 2 will include the proper file type depending on the export format being used.
+```
 
 For YouTube clips and online interactive materials embedded through iframes, you can make use of plugins.
 See for instance the [iframe-to-thumbnail plugin](https://github.com/jupyter-book/myst-plugins/tree/main/plugins/iframe-to-thumbnail-pdf).
