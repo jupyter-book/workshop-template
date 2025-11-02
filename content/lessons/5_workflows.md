@@ -28,6 +28,16 @@ By the end of this workshop you will read and modify workflow files to customize
 
 ## Read it
 
+In your folder of the repository there is a hidden folder called `.github`, and inside that is another folder called `workflows`. Inside that folder is a file called `deploy.yml` (or similar). This file defines the workflow that builds and deploys your Jupyter Book to GitHub Pages.
+
+````{exercise} Explore the workflow file
+Find the workflow file and open it to see what is inside.
+
+```{warning} do not change anything yet!
+Changing the workflow file before you understand it may break your book build! Luckily, you can always revert changes using git.
+```
+````
+
 **WIP**
 - find the file
 - identify the trigger
