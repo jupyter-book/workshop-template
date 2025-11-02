@@ -19,6 +19,5 @@ One of the strengths of Jupyter Book 2 is the ease with which high-quality PDF's
 This lesson provides an overview the PDF output capabalities of the Jupyter Book 2 and MyST ecosystem, accompanied by exercises to get you started creating your own PDF output (with Typst) using two different templates. The following pages:
 
 1. introduce document generation with MyST (including an explanation of templates),
-2. present an overview and comparison of PDF generation with Typst and LaTeX,
-3. provide exercises to generate a PDF with a Typst template, both locally and using GitHub Actions, and
-4. give additional insight into the Typst template and how to customize your book.
+2. present an overview and comparison of PDF generation with Typst and LaTeX, and
+3. provide exercises to generate a PDF with a Typst template, both locally and using GitHub Actions.

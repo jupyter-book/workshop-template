@@ -55,7 +55,7 @@ project:
             - file: content/lessons/6a_myst.md
             - file: content/lessons/6b_pdfgeneration.md
             - file: content/lessons/6c_pdfoutput.md
-            - file: content/lessons/6d_typsttemplate.md
+            # - file: content/lessons/6d_typsttemplate.md
         # - file: content/lessons/7_styling.md
         - file: content/lessons/8_init.md
 

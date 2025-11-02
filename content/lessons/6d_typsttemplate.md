@@ -6,13 +6,11 @@ numbering:
 
 # Working with the template
 
-This page provides additional information about the [Typst template `plain_typst_book`](https://github.com/myst-templates/plain_typst_book) which was set up for this book as part of the exercises on the previous page. 
+_This is a partially completed file that gives some information about the template, but was not included in the workshop._
 
-**WIP**
-- brief overview of how the template works (repo, inclusion, etc)
-- summary of how to "view" it
-- examples of usage (options)
-- more advanced explanations, if needed
+This page provides additional information about the [Typst template `plain_typst_book`](https://github.com/myst-templates/plain_typst_book) which was set up for this book as part of the exercises on the previous page.
+
+An introduction to the template and it's features is provided on the `README.md` of the repository. In addition, an example book is built using a GitHub Actions worfklow similar to what was created as part of the exercises on the previous page. It is deployed at [myst-templates.github.io/plain_typst_book/](https://myst-templates.github.io/plain_typst_book/) and illustrates how the PDF can be included as a downloadable file from the website. The source code is located in the `example/` directory, and is inteneded to serve as a reference for using the template.
 
 
 ## Excluding and including sections for PDF[^1]
