@@ -4,6 +4,7 @@ numbering:
     offset: 0
   start: 6
 ---
+(gha-workflows)=
 # Build online with GitHub
 
 You may be familiar with GitHub Actions: it is a widely used continuous integration tool which can easily and automatically publish your Jupyter Book as a website. This lesson is designed to get you familiar with GitHub Actions in your Jupyter Book and learn how to manipulate them.
@@ -31,44 +32,50 @@ By the end of this workshop you will read and modify workflow files to customize
 In your folder of the repository there is a hidden folder called `.github`, and inside that is another folder called `workflows`. Inside that folder is a file called `deploy.yml` (or similar). This file defines the workflow that builds and deploys your Jupyter Book to GitHub Pages.
 
 ````{exercise} Explore the workflow file
-Find the workflow file and open it to see what is inside.
+Find the workflow file and open it to see what is inside. See if you can answer the following questions:
+
+- What version of Python is being used?
+- What type of virtual environment is created, and how?
+- What command is used to build the book?
+- Can you see where the HTML build files are uploaded as an artifact and deployed to a GitHub Pages server?
 
 ```{warning} do not change anything yet!
 Changing the workflow file before you understand it may break your book build! Luckily, you can always revert changes using git.
 ```
 ````
 
-**WIP**
-- find the file
-- identify the trigger
-- describe the environment created
-- itendify the steps
-
 ## Observe it
 
-**WIP**
-- make a commit to the repo
-- visit the Actions tab
-- observe the workflow running
-- dig deeper 
+Now that you have seen the "steps" of the workflow, it is good to see them "in action" in the Browser.
+
+````{exercise} Watch the workflow execute
+Make a commit and push it to your repository. Then visit the "Actions" tab and watch the workflow execute. Specifically, note:
+
+- the green, yellow or red "dot" indicating status of the workflow, 
+- when you click on the most recent workflow run, you will see a summary of the job,
+- after clicking on the "box" in the workflow diagram, you can see all of the workflow steps,
+- you can investigate each step to see the command line output.
+````
+
+Understanding where this information is available in your repository is especially useful when debugging problems with your website and PDF build. It is also important to know that this is where you can search for error logs (in the CLI), especially when problems may not occur in your local setup, but your website is not deploying properly.
 
 ## Break it
 
-**WIP**
-- introduce an error
-- observe the failure
-- fix the error
+To make sure you know what a "problem" looks like, we can intentionally break the workflow.
+
+````{exercise} Force an error in the workflow
+Introduce an error in the workflow and watch the Actions and workflow pages to observe what it looks like when an error occurs.
+
+There are many ways to accomplish this; perhaps the easiest would be to modify the terminal commands in one of the workflow steps (e.g., replace `jupyter book build` with `jupyter book break`, which does not exist).
+
+Revert the error afterwards.
+````
 
 ## Change it
 
 Here we will modify the workflow to add a new feature: automatically updating the "last edited" date in our published book.
 
-The following bash script will modify `date:` field in the `myst.yml` file.
-
-**WIP**
-- add to workflow file
-- commit, push, observe
-- quiz quetsion: what is the date?! file edited, time of commit, time of push, other?... answer = whenever the first line in the code snippet below is executed in the cloud (e.g., time of push + time to set up venv and start build).
+The following bash script will modify `date:` field in the `myst.yml` file:
 
 ```yml
 - name: Add current date to myst.yml
@@ -80,4 +87,25 @@ The following bash script will modify `date:` field in the `myst.yml` file.
       grep -nE '^\s*date:' myst.yml
 ```
 
-date:  ${BUILD_DATE} 
+````{exercise} Modify the workflow file
+
+Modify `deploy.yml` to implement the feature.
+
+Confirm this was done successfully by checking the rendered website online.
+````
+
+````{exercise} Test your understanding 
+
+Although the time is not displayed in our update, what is the actual date and time that is represented in the value `BUILD_DATE`?
+
+A. time that file was edited
+B. time of commit
+C. time of push
+D. other
+
+```{tip} Check your answer
+:class: dropdown
+The answer is D, other. The time represented by `BUILD_DATE` corresponds to the moment when the first line in the code snippet added to the workflow file was executed in the cloud. It is closest to the time of the push, plus the extra time needed to set up the virtual environmnet and start the book build process.
+```
+
+````
