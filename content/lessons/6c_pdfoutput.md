@@ -17,6 +17,8 @@ In this lesson, we will:
 
 ```{warning}
 To complete this lesson locally, you will need to install Typst. If this is not possible, or you are following the online-only path, you can complete the exercises using GitHub Actions. As before, the exercises in this lesson use **Local** and **Online** to distinguish instructions for each case.
+
+This lesson also uses GitHub Actions for _both_ local and online approaches. If you struggle with some of the GHA exercises below, refer to [the previous lesson](#gha-workflows).
 ```
 
 ## Install Typst
