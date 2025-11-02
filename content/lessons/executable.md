@@ -210,7 +210,7 @@ for i in range(10):
 
 Rebuild the book (with the `--execute` flag) and look at the result.
 
-Now, add a `label` (using the key/value notation) to the code cell and reference it [here]().
+Now, add a `label` (using the key/value notation) to the code cell and reference it `[here]()`.
 Make the code cell a figure by adding a `caption`; notice how the reference changes.
 ::::
 
