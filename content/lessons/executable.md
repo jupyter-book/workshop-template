@@ -102,7 +102,7 @@ We will explore using Jupyter notebooks as input for MyST in [](#lesson-exec-jup
 MyST can also execute content at build time, through connecting to a Jupyter server.
 Executable cells can be in the `.ipynb` format as well as written in Markdown using either the [`code-cell` directive](xref:myst-guide/notebooks-with-markdown#code-cell) or [`eval` role](xref:myst-guide/notebooks-with-markdown#myst-inline-expressions).
 
-We will cover executing at build time with Jupyter Notebooks in [](#lesson-exec-juypternb), and with Markdown in [](#lesson-exec-markdown).
+We will cover executing at build time with Jupyter Notebooks in [](#lesson-exec-jupyternb), and with Markdown in [](#lesson-exec-markdown).
 
 ### In page execution
 
@@ -111,7 +111,7 @@ This feature is excellent for presenting readers with interactive elements, such
 
 In page execution is not covered in this lesson.
 
-(lesson-exec-juypternb)=
+(lesson-exec-jupyternb)=
 ## Adding a Jupyter Notebook
 
 In this repository we have included a Jupyter notebook, `example.ipynb`, which has been executed and includes outputs.
