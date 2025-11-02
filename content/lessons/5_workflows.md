@@ -77,7 +77,7 @@ Here we will modify the workflow to add a new feature: automatically updating th
 
 The following bash script will modify `date:` field in the `myst.yml` file:
 
-```yml
+```yaml
 - name: Add current date to myst.yml
   shell: bash
   run: |
@@ -86,6 +86,8 @@ The following bash script will modify `date:` field in the `myst.yml` file:
       echo "myst.yml:"
       grep -nE '^\s*date:' myst.yml
 ```
+
+In addition, this simple script requires setting `${BUILD_DATE}` for the `date` field value in `myst.yml`.
 
 ````{exercise} Modify the workflow file
 
