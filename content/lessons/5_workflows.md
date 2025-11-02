@@ -87,6 +87,8 @@ The following bash script will modify `date:` field in the `myst.yml` file:
       grep -nE '^\s*date:' myst.yml
 ```
 
+In addition, this simple script requires setting `${BUILD_DATE}` for the `date` field value in `myst.yml`.
+
 ````{exercise} Modify the workflow file
 
 Modify `deploy.yml` to implement the feature.
