@@ -17,7 +17,7 @@ project:
     myst-guide: https://mystmd.org/guide
     jupyter: https://docs.jupyter.org/en/latest
 
-  date: 2025-11-02 # ${BUILD_DATE} 
+  date: 2025-11- # ${BUILD_DATE} 
   github: https://github.com/jupyter-book/workshop-template # Change this URL to your GitHub repository
   edit_url: 
   
