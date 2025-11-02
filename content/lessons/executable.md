@@ -232,7 +232,7 @@ For the second example, you may want to use a [list comprehension](https://docs.
 
 ## Cell Tags and Hiding Input
 
-[Cell tags](xref:myst-guide.notebook-configuration#notebook-cell-tags) in Jupyter Notebooks are metadata labels that you can assign to individual cells.
+[Cell tags](xref:myst-guide/notebook-configuration#notebook-cell-tags) in Jupyter Notebooks are metadata labels that you can assign to individual cells.
 They are useful for customizing the behavior of cells, such as hiding code input.
 Markdown cells allow you to add tags as well, e.g. `:tags: [hide-input]`.
 
