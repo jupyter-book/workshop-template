@@ -40,7 +40,7 @@ typst --version
 :::
 :::{tab-item} Online
 
-Until you get to the Lesson "PDF output with GH Actions" you won't be generating PDF's, but you can still follow the exercise to learn how the template is defined and used in your Juypter Book.
+Until you get to the Lesson "PDF output with GH Actions" you won't be generating PDF's, but you can still follow the exercise to learn how the template is defined and used in your Jupyter Book.
 
 :::
 ::::
@@ -74,7 +74,7 @@ Review the contents of the `myst.yml` file and answer the following questions:
 ````
 
 ```{tip} Good practice with PDFs and Git
-Git is not intended for use with binary files like PDF's. When working with PDF's locally you may be tempted to commit the generated file to your repository, especially if you intend to share your work online. However, this will lead to unecessary large Git workspace and is not recommended. For this reason the `.gitignore`  file already ignores PDF files, and the upcoming exercise with GH Actions illustrates how a PDF can be generated online and saved as a downloadable artifact, rather than committing it to the repository.
+Git is not intended for use with binary files like PDF's. When working with PDF's locally you may be tempted to commit the generated file to your repository, especially if you intend to share your work online. However, this will lead to unnecessary large Git workspace and is not recommended. For this reason the `.gitignore`  file already ignores PDF files, and the upcoming exercise with GH Actions illustrates how a PDF can be generated online and saved as a downloadable artifact, rather than committing it to the repository.
 ```
 
 (section:pdf-with-gha)=
@@ -170,7 +170,7 @@ You can complete the exercises in this section in any order.
 
 ### Customize the PDF output
 
-The `plain_typst_book` template includes options that can be set by the user to customize how the PDF is generated. For exapmle, `cover`, `logo` `logo_width` and `ToC_depth` are added to the `myst.yml` file.
+The `plain_typst_book` template includes options that can be set by the user to customize how the PDF is generated. For example, `cover`, `logo` `logo_width` and `ToC_depth` are added to the `myst.yml` file.
 
 ```yaml
   exports:
