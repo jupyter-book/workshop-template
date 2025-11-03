@@ -265,8 +265,11 @@ Remove the input code from being displayed by adding the appropriate tag.
 
 (GHA-example)=
 ## GitHub Actions Example
-````{dropdown}
-:closed:
+
+Here is an example GitHub Action workflow file to illustrate one possible way to build a virtual environment and execute notebooks during the book build. We will cover other aspects of the workflow file in later lessons (for example, GH Actions itself and PDF generation).
+
+````{tip} GitHub 
+:dropdown:
 
 :::{code} yaml
 name: MyST GitHub Pages Deploy
