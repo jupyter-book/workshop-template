@@ -26,7 +26,7 @@ If you have specified a ToC and create a new file, you'll need to add it to the 
 Note that this is a {abbr}`.yml (a human-readable data format used to store and exchange structured data.)` file rather than a .md file.
 
 
-(headings)=
+(headings_cheat_sheet)=
 ### Headings
 
 To make sections within a page, use a number of `#` symbols at the beginning of a line.
