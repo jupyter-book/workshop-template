@@ -100,14 +100,14 @@ Confirm this was done successfully by checking the rendered website online.
 
 Although the time is not displayed in our update, what is the actual date and time that is represented in the value `BUILD_DATE`?
 
-A. time that file was edited
-B. time of commit
-C. time of push
+A. time that file was edited  
+B. time of commit  
+C. time of push  
 D. other
 
 ```{tip} Check your answer
 :class: dropdown
-The answer is D, other. The time represented by `BUILD_DATE` corresponds to the moment when the first line in the code snippet added to the workflow file was executed in the cloud. It is closest to the time of the push, plus the extra time needed to set up the virtual environmnet and start the book build process.
+The answer is D, other. The time represented by `BUILD_DATE` corresponds to the moment when the first line in the code snippet added to the workflow file was executed in the cloud. It is closest to the time of the push, plus the extra time needed to set up the virtual environment and start the book build process.
 ```
 
 ````
