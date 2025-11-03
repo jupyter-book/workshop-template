@@ -215,6 +215,8 @@ The checks are interactive, you can tick or untick them.
 
 ```{note} Report issues
 Jupyter Book 2 trusts on an active open source community. If you find any issues in your project, you can report them back to the [Jupyter Book GitHub repository](https://github.com/jupyter-book/mystmd/issues), like this issue on the checklist not rendering properly: [#2290](https://github.com/jupyter-book/mystmd/issues/2290). 
+
+When reported, the developers will try to fix the issue as soon as possible - as can be seen above!
 ```
 
 ## Tables
