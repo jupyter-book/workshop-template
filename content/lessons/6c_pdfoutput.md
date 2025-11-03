@@ -28,7 +28,7 @@ To produce a PDF output locally, you need to have Typst installed on your system
 ````{exercise} Install Typst
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Install Typst using the nstructions available at the [Typst GitHub repo](https://github.com/typst/typst?tab=readme-ov-file#installation) and Jupyter Book 2 context is provided [here](xref:myst-guide/creating-pdf-documents#typst-install).
 
@@ -54,7 +54,7 @@ Once Typst is installed and available in your terminal it can be used with Jupyt
 ````{exercise} Generate a PDF of your book
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Generate a PDF using the command `jupyter book build --pdf`.
 
@@ -107,7 +107,7 @@ jobs:
 ````{exercise} Change the workflow
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, update your `deploy.yml` file to build the PDF as part of your GitHub Action workflow.
 
@@ -147,7 +147,7 @@ It turns out the `lapreprint-typst` template is not ideal for rendering content 
 ````{exercise} Change the template
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, update your `myst.yml` file to use the `plain_typst_book` template in your book, then rebuild the PDF.
 
@@ -187,7 +187,7 @@ The `plain_typst_book` template includes options that can be set by the user to 
 ````{exercise} Add template options
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, update your `myst.yml` file to customize the PDF output, then rebuild the PDF. Feel free to experiment with the images and parameters.
 :::
@@ -216,7 +216,7 @@ site:
 ````{exercise} Add PDF Download button
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, add a PDF download button. Once the `myst.yml` file has been updated the PDF must be regenerated and the website updated.
 
