@@ -16,7 +16,7 @@ The instructions on this page guide you through the process of:
 We recommend you complete the lessons in this workshop by installing Jupyter Book on your computer and building the book using a command line interface (CLI). This is referred to as the **local** approach. If you are unable to use the CLI, or do not wish to, tt is possible to complete this workshop by working entirely in the browser. This is referred to as the **online** approach. When instructions are different for each approach, tab sets will be used, as illustrated here:
 
 ::::{tab-set}
-:::{tab-item} Local
+:::{tab-item} Locally
 Instructions specific for those working using a CLI and Jupyter Book installed "locally." 
 :::
 :::{tab-item} Online 
@@ -108,7 +108,7 @@ As proceed through the workshop you will edit the files in your new repository.
 You have a number of options for making changes to the book's source and seeing how they affect the output.
 
 ::::{tab-set}
-:::{tab-item} Local
+:::{tab-item} Locally
 
 1. Clone the repository to your local machine using Git.
 

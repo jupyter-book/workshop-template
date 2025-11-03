@@ -215,6 +215,8 @@ The checks are interactive, you can tick or untick them.
 
 ```{note} Report issues
 Jupyter Book 2 trusts on an active open source community. If you find any issues in your project, you can report them back to the [Jupyter Book GitHub repository](https://github.com/jupyter-book/mystmd/issues), like this issue on the checklist not rendering properly: [#2290](https://github.com/jupyter-book/mystmd/issues/2290). 
+
+When reported, the developers will try to fix the issue as soon as possible - as can be seen above!
 ```
 
 ## Tables
@@ -468,6 +470,13 @@ A super fun video from the project [Show the Physics](https://interactivetextboo
 
 ```{warning} YT in pdf
 Embedded YT videos are not included in the PDF. A solution could be to include our [plugin](https://github.com/jupyter-book/myst-plugins) which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
+```
+
+Using the same iframe directive, you can also embed other web content, like quizzes from a repository:
+
+```{iframe} https://tudelft.h5p.com/content/1292579840119552937/embed
+:width: 100%
+
 ```
 
 (cheatsheet-ref)=

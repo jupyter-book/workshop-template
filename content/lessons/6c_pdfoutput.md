@@ -16,7 +16,7 @@ In this lesson, we will:
 - Explore how the PDF can be customized and shared via the book website
 
 ```{warning}
-To complete this lesson locally, you will need to install Typst. If this is not possible, or you are following the online-only path, you can complete the exercises using GitHub Actions. As before, the exercises in this lesson use **Local** and **Online** to distinguish instructions for each case.
+To complete this lesson locally, you will need to install Typst. If this is not possible, or you are following the online-only path, you can complete the exercises using GitHub Actions. As before, the exercises in this lesson use **Locally** and **Online** to distinguish instructions for each case.
 
 This lesson also uses GitHub Actions for _both_ local and online approaches. If you struggle with some of the GHA exercises below, refer to [the previous lesson](#gha-workflows).
 ```
@@ -28,7 +28,7 @@ To produce a PDF output locally, you need to have Typst installed on your system
 ````{exercise} Install Typst
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Install Typst using the nstructions available at the [Typst GitHub repo](https://github.com/typst/typst?tab=readme-ov-file#installation) and Jupyter Book 2 context is provided [here](xref:myst-guide/creating-pdf-documents#typst-install).
 
@@ -40,7 +40,7 @@ typst --version
 :::
 :::{tab-item} Online
 
-Until you get to the Lesson "PDF output with GH Actions" you won't be generating PDF's, but you can still follow the exercise to learn how the template is defined and used in your Juypter Book.
+Until you get to the Lesson "PDF output with GH Actions" you won't be generating PDF's, but you can still follow the exercise to learn how the template is defined and used in your Jupyter Book.
 
 :::
 ::::
@@ -54,7 +54,7 @@ Once Typst is installed and available in your terminal it can be used with Jupyt
 ````{exercise} Generate a PDF of your book
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Generate a PDF using the command `jupyter book build --pdf`.
 
@@ -74,7 +74,7 @@ Review the contents of the `myst.yml` file and answer the following questions:
 ````
 
 ```{tip} Good practice with PDFs and Git
-Git is not intended for use with binary files like PDF's. When working with PDF's locally you may be tempted to commit the generated file to your repository, especially if you intend to share your work online. However, this will lead to unecessary large Git workspace and is not recommended. For this reason the `.gitignore`  file already ignores PDF files, and the upcoming exercise with GH Actions illustrates how a PDF can be generated online and saved as a downloadable artifact, rather than committing it to the repository.
+Git is not intended for use with binary files like PDF's. When working with PDF's locally you may be tempted to commit the generated file to your repository, especially if you intend to share your work online. However, this will lead to unnecessary large Git workspace and is not recommended. For this reason the `.gitignore`  file already ignores PDF files, and the upcoming exercise with GH Actions illustrates how a PDF can be generated online and saved as a downloadable artifact, rather than committing it to the repository.
 ```
 
 (section:pdf-with-gha)=
@@ -107,7 +107,7 @@ jobs:
 ````{exercise} Change the workflow
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, update your `deploy.yml` file to build the PDF as part of your GitHub Action workflow.
 
@@ -147,7 +147,7 @@ It turns out the `lapreprint-typst` template is not ideal for rendering content 
 ````{exercise} Change the template
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, update your `myst.yml` file to use the `plain_typst_book` template in your book, then rebuild the PDF.
 
@@ -170,7 +170,7 @@ You can complete the exercises in this section in any order.
 
 ### Customize the PDF output
 
-The `plain_typst_book` template includes options that can be set by the user to customize how the PDF is generated. For exapmle, `cover`, `logo` `logo_width` and `ToC_depth` are added to the `myst.yml` file.
+The `plain_typst_book` template includes options that can be set by the user to customize how the PDF is generated. For example, `cover`, `logo` `logo_width` and `ToC_depth` are added to the `myst.yml` file.
 
 ```yaml
   exports:
@@ -187,7 +187,7 @@ The `plain_typst_book` template includes options that can be set by the user to 
 ````{exercise} Add template options
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, update your `myst.yml` file to customize the PDF output, then rebuild the PDF. Feel free to experiment with the images and parameters.
 :::
@@ -216,7 +216,7 @@ site:
 ````{exercise} Add PDF Download button
 
 ::::{tab-set} 
-:::{tab-item} Local
+:::{tab-item} Locally
 
 Using the example code provided above, add a PDF download button. Once the `myst.yml` file has been updated the PDF must be regenerated and the website updated.
 

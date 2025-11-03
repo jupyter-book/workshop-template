@@ -60,6 +60,10 @@ jupyter lab
 
 This will automatically open the Jupyter Lab interface (at [localhost:8888](http://localhost:8888)) in your browser, which we will use later.
 
+```{tip} Using GitHub actions
+One can use GitHub Actions to execute content at build time on GitHub servers as well, see an example `deploy.yml` [below](#GHA-example). More on the GitHub actions in the next lesson.
+```
+
 ## Options
 
 ### Jupyter Notebook outputs
@@ -258,3 +262,90 @@ print("This is the output of the cell, but the input code is hidden.")
 Create a code cell that calculates the square of numbers from 5 to 8 and prints the results.
 Remove the input code from being displayed by adding the appropriate tag.
 ```
+
+(GHA-example)=
+## GitHub Actions Example
+
+Here is an example GitHub Action workflow file to illustrate one possible way to build a virtual environment and execute notebooks during the book build. We will cover other aspects of the workflow file in later lessons (for example, GH Actions itself and PDF generation).
+
+````{tip} GitHub Action workflow example
+:class: dropdown
+
+:::{code} yaml
+name: MyST GitHub Pages Deploy
+on:
+  push:
+    branches: [main]
+env:
+  # `BASE_URL` determines the website is served from, including CSS & JS assets
+  # You may need to change this to `BASE_URL: ''`
+  BASE_URL: /${{ github.event.repository.name }}
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+      - uses: typst-community/setup-typst@v4
+
+    # Install Python and dependencies
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'   # or your version
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install jupyter-server nbclient nbformat ipykernel jupyter-client
+          # pip install plotly kaleido          
+          python -m ipykernel install --user --name=python3
+          
+    # Install MyST 
+      - name: Install MyST Markdown
+        run: npm install -g mystmd
+      
+    # Build PDF
+      - name: Build PDF
+        run: |
+          myst build --pdf
+
+      - name: Upload Output PDF as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Output PDF
+          path: exports/book.pdf
+          compression-level: 0
+    
+          # Build book
+      - name: Build execute 
+        run: myst build --execute --html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './_build/html'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+:::
+````
