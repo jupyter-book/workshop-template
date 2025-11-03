@@ -472,6 +472,13 @@ A super fun video from the project [Show the Physics](https://interactivetextboo
 Embedded YT videos are not included in the PDF. A solution could be to include our [plugin](https://github.com/jupyter-book/myst-plugins) which creates a QR code that links to the video, as well as a thumbnail of the video - taken from YT.
 ```
 
+Using the same iframe directive, you can also embed other web content, like quizzes from a repository:
+
+```{iframe} https://tudelft.h5p.com/content/1292579840119552937/embed
+:width: 100%
+
+```
+
 (cheatsheet-ref)=
 ## References & Links
 
