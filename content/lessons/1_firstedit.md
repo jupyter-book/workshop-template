@@ -74,7 +74,7 @@ Optionally, make other changes in the text editor and when you're done, commit y
 
 The book will now be rebuilt. Once that's done, you can view the result on the GitHub page.
 :::
-:::{tab-item} Locally
+:::{tab-item} Local
 Navigate to the file `Content/Lessons/1_firstedit.md` and open the file.
 
 Change the text after the `#`. This is the **title** of the file.
@@ -124,7 +124,7 @@ To add a new page from a Markdown file,
   - at the right location in your book, include the path to your file (e.g. `- file: content/lessons/newfile.md`)
   - commit your changes and check the output on GitHub pages.
 :::
-:::{tab-item} Locally
+:::{tab-item} Local
 1. Create a new markdown file
   - navigate to the folder where you want to include the sourcefile
   - create a new file
