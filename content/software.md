@@ -85,7 +85,7 @@ To install these dependencies ensure `requirements.txt` is in your working direc
 
 | Package | Description |
 |---|---|
-| jupyter-book>=2.0.0a0 | Tool to build publication-quality books and documentation from Jupyter notebooks and Markdown. |
+| jupyter-book>=2.0.0 | Tool to build publication-quality books and documentation from Jupyter notebooks and Markdown. |
 | jupyterlab | Web-based interactive development environment for notebooks, code, and data. |
 | ipykernel | IPython kernel for Jupyter, enables running Python code in notebooks. Necessary for VSC to edit and execute notebook files. |
 | ipywidgets | Interactive HTML widgets for Jupyter notebooks and JupyterLab. |

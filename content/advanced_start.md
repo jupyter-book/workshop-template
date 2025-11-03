@@ -16,7 +16,7 @@ There are [a number of options for installing Jupyter Book](https://next.jupyter
 Two common methods are using `pip`
 
 ```console
-pip install "jupyter-book>=2.0.0a0"
+pip install "jupyter-book>=2.0.0"
 ```
 
 or `npm`
