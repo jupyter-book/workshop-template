@@ -116,7 +116,7 @@ To add a new page from a Markdown file,
   - navigate to the folder where you want to include the sourcefile
   - click `add file` / `+ Create new file`
   - create a clear name for the file and use the .md extension (e.g. `newfile.md`)
-2. Create a [H1 heading](#headings)
+2. Create a [H1 heading](#headings_cheat_sheet)
   - use for the header `#` and include the title
   - commit your changes
 3. Include the file in the [ToC](#lesson1_code_toc).
@@ -129,7 +129,7 @@ To add a new page from a Markdown file,
   - navigate to the folder where you want to include the sourcefile
   - create a new file
   - create a clear name for the file and use the .md extension (e.g. `newfile.md`)
-2. Create a [H1 heading](#headings)
+2. Create a [H1 heading](#headings_cheat_sheet)
   - use for the header `#` and include the title
   - save your file
 3. Include the file in the [ToC](#lesson1_code_toc).
@@ -140,7 +140,7 @@ To add a new page from a Markdown file,
 ::::
 ```
 
-## Headings
+## Using Headings
 
 Similarly to how your table of contents gives structure to your Jupyter Book,
 within a page you can build structure using headings.
@@ -156,7 +156,7 @@ Navigate to the Markdown file you added to the book in [](#ex-add-a-page).
 You have already added a level one heading, the title of the page.
 
 Add headings to represent the following structure.
-Refer to the [cheat sheet](#headings) if you need a reminder on the syntax.
+Refer to the [cheat sheet](#headings_cheat_sheet) if you need a reminder on the syntax.
 
 - Animals
   - Dogs
