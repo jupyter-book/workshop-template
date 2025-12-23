@@ -23,7 +23,8 @@ project:
   
   plugins:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
-
+    - https://github.com/jupyter-book/myst-plugins/releases/download/page-last-updated/page-last-updated.mjs
+  
   # exports and downloads
   exports:
     - format: typst
