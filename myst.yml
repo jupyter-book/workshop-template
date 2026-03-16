@@ -23,7 +23,7 @@ project:
   
   plugins:
     - https://github.com/TUD-JB-Templates/JB2_plugins/releases/download/experiment/experiment.mjs
-    - https://github.com/jupyter-book/myst-plugins/releases/download/page-last-updated/page-last-updated.mjs
+    - https://github.com/jupyter-book/myst-plugins/releases/download/page-last-updatedv1.1/page-last-updated.mjs
   
   # exports and downloads
   exports:
@@ -45,6 +45,7 @@ project:
       children:
         - file: content/lessons/0_setup.md
         - file: content/lessons/1_firstedit.md
+        - file: content/lessons/1_landingpage.md
         - file: content/lessons/2_nextstep.md
           children:
             - file: content/lessons/2a_plugins.md
@@ -78,10 +79,12 @@ site:
   template: book-theme
   options:
     favicon: ./content/figures/favicon.svg      # path to your favicon
-    style: ./css/custom.css
+    style: ./style/custom.css
     logo: ./content/figures/logo.svg            # path to your logo, shown top left at site
     folders: false
     hide_authors: true
+  parts: 
+    footer: style/footer.md
 
   actions:
     - title: Feedback
