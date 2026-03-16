@@ -8,12 +8,14 @@ site:
   hide_outline: true
   hide_toc: true
   hide_title_block: true
+
+no-update-date: true
 ---
 # Create your landing page
 
 +++ { "kind": "split-image" }
 # Create your landing page
-a comprehensive resource for educators, researchers, and students
+a great way to welcome your visitors and provide clear directions.
 
 {button}`Check out the full documentation <https://mystmd.org>`
 
@@ -45,12 +47,14 @@ site:
   hide_title_block: true
 ---
 ```
+
+As we make use of the [page-last-updated plugin](https://jupyter-book.github.io/myst-plugins/page-last-updated/), we also set `no-update-date: true` to hide the date of the last update.
 +++
 
 ## Create specific blocks
-You can create specific blocks which are styled differently. For instance, we used split-image at the top of the page. And `justified` for the section on hiding the outline and table of contents. 
+You can create specific blocks which are styled differently. For instance, we used split-image at the top of the page. And `justified` for the [section on hiding the outline and table of contents](#hide-outline-and-table-of-contents). 
 
-To create a split image landing page, you can use the `split-image` directive. This allows you to have an image on one side and text on the other side. You can customize the content and layout to fit your needs, e.g. include a button that links to some other page or website.
+To create a *split image* on your landing page, you can use the `split-image` directive. This allows you to have an image on one side and text on the other side. You can customize the content and layout to fit your needs, e.g. include a button that links to some other page or website.
 
 ```markdown
 
@@ -58,7 +62,7 @@ To create a split image landing page, you can use the `split-image` directive. T
 
 # Create your landing page
 
-a comprehensive resource for educators, researchers, and students
+a great way to welcome your visitors and provide clear directions.
 
 {button}`Check out the full documentation <https://mystmd.org>`
 
