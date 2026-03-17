@@ -11,7 +11,7 @@ site:
 
 no-update-date: true
 ---
-# Create your landing page
+# Create your own landing page
 
 +++ { "kind": "split-image" }
 # Create your landing page
@@ -28,11 +28,11 @@ a great way to welcome your visitors and provide clear directions.
 A landing page is the first page that a visitor of your website will see. Hence, you want to make sure it has the right vibe and contains the right information. As in books, the cover can be set differently than its content. 
 
 In Jupyter Book you have the option to:
-- create a custom landing page using a split image.
-- create sections 
-- hide table of contents
-- add a custom footer.
-- add cards in a grid to link to specific pages or other websites.
+- create a custom [landing page](https://jupyter-book.github.io/example-landing-pages/) using a split image.
+- create sections using [blocks](https://mystmd.org/guide/blocks#blocks)
+- hide [table of contents](https://mystmd.org/guide/website-navigation#hide-the-primary-sidebar)
+- add a [custom footer](https://mystmd.org/guide/website-navigation#style-your-footer).
+- add [cards](https://mystmd.org/guide/dropdowns-cards-and-tabs#cards) in a grid to link to specific pages or other websites.
 
 
 +++ {"kind": "justified"}
@@ -71,7 +71,7 @@ a great way to welcome your visitors and provide clear directions.
 +++
 ```
 
-In a similar we used the justified block: 
+In a similar we used the justified block which creates a block that spans the full width of the screen: 
 ```markdown
 +++ {"kind": "justified"}
 ```
@@ -118,3 +118,34 @@ See the collection of interactive textbooks published
 ````
 
 +++
+
++++ {"kind": "justified"}
+## Gallery of landing pages
+Below is a selection of landing pages created by the Jupyter Book community. You can use these for inspiration when creating your own landing page.
+
+````{grid} 2
+```{card}
+:header: mystmd
+:link: https://mystmd.org/
+
+The official documentation of MyST
+```
+```{card}
+:header: Jupyter Book
+:link: https://jupyterbook.org/
+
+The official documentation of Jupyter Book
+```
+```{card}
+:header: personal website
+:link: https://polslab.tnw.tudelft.nl
+
+A personal website
+```
+```{card}
+:header: Educational book
+:link: https://topocondmat.org/
+
+Landing page of an educational book.
+```
+````
