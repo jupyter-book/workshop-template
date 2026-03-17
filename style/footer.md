@@ -45,7 +45,7 @@ Go make your own Jupyter Book!
 
 :::{div}
 
-Here some more text... possibly
+This workshop may be used by anyone, for any purpose, under the terms of the CC-BY-4.0 license. Please credit the authors if you use this material, and share any improvements you make!
 :::
 
 ::::
