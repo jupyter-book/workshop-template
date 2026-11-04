@@ -7,7 +7,7 @@ kernelspec:
   name: python3
   display_name: 'Python 3'
 ---
-
+(nextstep)=
 # More content
 
 In [](#fundamentals) we covered the basics of Jupyter Book structure and writing text content in markdown.

@@ -11,6 +11,7 @@ site:
 
 no-update-date: true
 ---
+(landingpage)=
 # Create your own landing page
 
 +++ { "kind": "split-image" }
