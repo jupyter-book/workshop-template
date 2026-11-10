@@ -1,57 +1,20 @@
-# This file has been modified, but was initially created automatically with `myst init --gh-pages` 🪄 💚
-# Ensure your GitHub Pages settings for this repository are set to deploy with **GitHub Actions**.
-# ... 
+name: Deploy
 
-name: Build and Deploy Website and PDF
 on:
   push:
-    # Runs on pushes targeting the default branch
-    branches: [main]
-env:
-  # `BASE_URL` determines the website is served from, including CSS & JS assets
-  # You may need to change this to `BASE_URL: ''`
-  BASE_URL: /${{ github.event.repository.name }}
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    # branches: [main]
+      
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+  
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-      - uses: actions/configure-pages@v6
-      - uses: typst-community/setup-typst@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Install Python dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install numpy matplotlib 
-
-      - name: Build HTML
-        run: jupyter book build --execute --html
-        
-      - name: Upload Output HTML as Artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: './_build/html'
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-    
+    uses: FreekPols/JB-workflows/.github/workflows/workshop.yml@main
+    with:
+      build_pdf: false
+      execute_python: false
+      run_nb_checks: false
+      run_fig_checks: false
+      run_code_checks: false
