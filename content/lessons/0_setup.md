@@ -13,7 +13,7 @@ The instructions on this page guide you through the process of:
 - "building" your book and viewing it in a web browser via a local server and/or online with GitHub pages.
 
 `````{tip}
-We recommend you complete the lessons in this workshop by installing Jupyter Book on your computer and building the book using a command line interface (CLI). This is referred to as the **local** approach. If you are unable to use the CLI, or do not wish to, tt is possible to complete this workshop by working entirely in the browser. This is referred to as the **online** approach. When instructions are different for each approach, tab sets will be used, as illustrated here:
+We recommend you complete the lessons in this workshop by installing Jupyter Book on your computer and building the book using a command line interface (CLI). This is referred to as the **local** approach. If you are unable to use the CLI, or do not wish to, it is possible to complete this workshop by working entirely in the browser. This is referred to as the **online** approach. When instructions are different for each approach, tab sets will be used, as illustrated here:
 
 ::::{tab-set}
 :::{tab-item} Locally
@@ -116,29 +116,23 @@ You have a number of options for making changes to the book's source and seeing 
 git clone git@github.com:<github_user_name>/workshop-template.git
 ```
 
-2. Install Jupyter Book, using the virtual environment manager of your choice (all of the tools used today can easily be handled using `pip`)
+2. Install [pixi](https://pixi.prefix.dev/latest/installation/) as your package manager. If you use a terminal to go to the root of your project folder and run 'pixi install', all required dependencies will be installed.
 
-```console
-pip install -r requirements.txt
-```
+3. From the root of your project folder run: `pixi run editor`. This will start Jupyter Lab as your editor.
+  
+4. Make a change to one of the files in the `content` directory and save it.
 
-3. Make a change to one of the files in the `content` directory using a text editor.
-
-4. (optional) Commit the the change using Git and push it to the remote repository (this will trigger the GitHub Actions workflow and rebuild the website, which can be viewed at the same URL described above). If you go back to your repository and click on the `Actions` tab you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes!
-
-5. Build the book from source and serve it locally.
-
-```console
-jupyter book start
-```
-
-5. Preview the book in your browser at [`http://localhost:3000`](http://localhost:3000)
+5. Run `pixi run preview` to have your book instantely build in your browser at [`http://localhost:3000`](http://localhost:3000).
 
 ```{tip}
 The localhost address may be different than `3000` (check the CLI output).
 
 Once the MyST server is running, it will automatically update as you make changes to the source.
 ```
+
+6. (optional) Commit the the change using Git and push it to the remote repository (this will trigger the GitHub Actions workflow and rebuild the website, which can be viewed at the same URL described above). If you go back to your repository and click on the `Actions` tab you will see that the workflow is running to build and deploy your book. After a few minutes, you can refresh your book page and see your changes!
+
+
 :::
 :::{tab-item} Online
 
@@ -160,3 +154,5 @@ Now, if you go back to your repository and click on the `Actions` tab you will s
 
 ## Create a PDF export
 A clear advantage of JB2 over JB1 is the ability to easily create a high quality PDF export of your book (as well as other formats). In a [later lesson of this workshop](#pdfoutput), we will build a PDF locally and/or modify the GitHb Action workflow to automatically create a PDF export of your book using Typst when changes are pushed changes to your repository.
+
+Can't wait? Run 'pixi run pdf' and your pdf is build on the spot.
