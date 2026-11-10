@@ -6,7 +6,7 @@ kernelspec:
     name: python3
     display_name: 'Python 3'
 ---
-
+(executable)=
 # Executable content introduction
 
 MyST supports a number of ways to include executable content in your project.
@@ -297,12 +297,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 24
       - uses: typst-community/setup-typst@v4
 
     # Install Python and dependencies

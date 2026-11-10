@@ -185,19 +185,28 @@ You should now be confident making changes locally or through the GH IDE.
 Try making the changes indicated in the following exercise using the solution directive below.
 Refer to the [cheat sheet](#cheat-sheet) if you need a reminder on the syntax.
 
-:::{exercise} Typography
-:label: ex_typography
+:::{exercise} bold
+:label: ex_bold
 Make this line bold.
+:::
 
+:::{exercise} italic
+:label: ex_italic
 Make this line italic.
+:::
 
-Put these items in an unordered list,
+::: unordered list
+:label: ex_unordered list.
+Put these items in an unordered list:
 
 Elm
 Sycamore
 Oak
 Beech
+:::
 
+:::{exercise} ordered list
+:label: ex_unordered_list
 Put these items in an ordered list,
 
 Hydrogen
@@ -207,19 +216,23 @@ Beryllium
 Boron
 Carbon
 
+:::{exercise} line break
+:label: ex_line_break
 Put a line break between this sentence. And this sentence.
 
+:::{exercise} labeled equation
+:label: ex_labeled_equation
 Make the following line an equation with a label,
 
 F = m a
-
-And reference that equation here.
 :::
 
-:::{solution} ex_typography
-:class: dropdown
-Optionally you can put your answers here.
+
+:::{exercise} reference to the equation
+:label: ex_ref_eq
+And reference that equation here: 
 :::
+
 
 :::{hint}
 Remember, new lines in a Markdown file don't create new paragraphs in the output.

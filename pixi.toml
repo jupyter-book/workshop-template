@@ -1,0 +1,22 @@
+[workspace]
+authors = ["FreekPols <c.f.j.pols@tudelft.nl>"]
+channels = ["conda-forge"]
+name = "workshop-template"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+editor = "jupyter lab"
+preview = "myst start"
+pdf = "myst build --pdf"
+
+[dependencies]
+jupyterlab = ">=4.6.6,<5"
+mystmd = ">=1.12.0,<2"
+jupytext = ">=1.19.6,<2"
+numpy = ">=2.5.4,<3"
+matplotlib = ">=3.11.2,<4"
+jupyterlab-git = ">=0.55.0,<0.56"
+
+[pypi-dependencies]
+jupyterlab-myst = ">=2.7.0, <3"

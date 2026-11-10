@@ -2,9 +2,9 @@
 version: 1
 project:
   id: 7204695b-7485-4989-863c-16cf6e4db155
-  title: Jupyter Book 2 Workshop Template
+  title: Jupyter Book 2 Workshop
   description: This description goes in the preface of the pdf output. 
-  # keywords: []
+  keywords: [JupyterBook; Myst; Mystmd; workshop; template; pixi; open science; open education]
   authors:
     - name: Freek Pols
     - name: Luuk Fröling
